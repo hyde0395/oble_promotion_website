@@ -23,13 +23,13 @@ const Navbar = () => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">문구</NavLinks>
-              <NavLinks to="aboudt">문구</NavLinks>
-              <NavLinks to="aboutd">문구</NavLinks>
+              <NavLinks to="about">문구1</NavLinks>
+              <NavLinks to="aboudt">문구2</NavLinks>
+              <NavLinks to="aboutd">문구3</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="a">문구</NavBtnLink>
+            <NavBtnLink to="a">문구4</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

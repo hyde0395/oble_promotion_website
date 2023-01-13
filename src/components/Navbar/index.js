@@ -12,24 +12,25 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">OBLE</NavLogo>
-          <MobileIcon>
+          <NavLogo to="/">Oble</NavLogo>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">문구1</NavLinks>
-              <NavLinks to="aboudt">문구2</NavLinks>
-              <NavLinks to="aboutd">문구3</NavLinks>
+              <NavLinks to="about">60초 자동상담</NavLinks>
+              <NavLinks to="aboudt">상품소개</NavLinks>
+              <NavLinks to="aboutd">진행과정</NavLinks>
+              <NavLinks to="aboutd">제안서받기</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="a">문구4</NavBtnLink>
+            <NavBtnLink to="a">상담 받아보기</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

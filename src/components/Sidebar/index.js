@@ -1,12 +1,32 @@
 import React from "react";
-
-const Sidebar = () => {
+import {
+  SidebarContainer,
+  Icon,
+  CloseIcon,
+  SidebarWrapper,
+  SidebarMenu,
+  SidebarLink,
+  SideBtnWrap,
+  SidebarRoute,
+} from "./SidebarElements";
+const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
-      <SidebarContainer>
-        <Icon>
+      <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
+        <SidebarWrapper>
+          <SidebarMenu>
+            <SidebarLink to="about">문구</SidebarLink>
+            <SidebarLink to="about">문구</SidebarLink>
+            <SidebarLink to="about">문구</SidebarLink>
+            <SidebarLink to="about">문구</SidebarLink>
+          </SidebarMenu>
+          <SideBtnWrap>
+            <SidebarRoute to="about">문구</SidebarRoute>
+          </SideBtnWrap>
+        </SidebarWrapper>
       </SidebarContainer>
     </>
   );

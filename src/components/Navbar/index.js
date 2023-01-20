@@ -17,14 +17,14 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Oble</NavLogo>
+          <NavLogo to="/">OH! BLE</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
               <NavLinks to="aboutd">60초 자동상담</NavLinks>
-              <NavLinks to="about">상품소개</NavLinks>
+              <NavLinks to="about">오블소개</NavLinks>
               <NavLinks to="aboutd">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>
             </NavItem>

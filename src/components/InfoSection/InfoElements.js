@@ -23,7 +23,7 @@ export const InfoWrapper = styled.div`
 
 export const InfoRow = styled.div`
   display: grid;
-  grid-auto-columns: minmax(auto, 1tr);
+  grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2' col1` : `'col1 col2'`};
@@ -37,13 +37,13 @@ export const InfoRow = styled.div`
 export const Colmn1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-auto-flow: col1;
+  grid-area: col1;
 `;
 
 export const Colmn2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-auto-flow: col2;
+  grid-area: col2;
 `;
 
 export const TextWrapper = styled.div`

@@ -29,7 +29,7 @@ const HeroSection = () => {
             <p />
             정직하게 해야 성공합니다.
           </HeroH1>
-          <HeroP>이런 말 들어 보신적 있으신가요?</HeroP>
+          <HeroP>처음하는 사람도 누구나 쉽게, 오블 마켓팅!</HeroP>
           <HeroBtnWrapper>
             <Button
               to="dkjad"

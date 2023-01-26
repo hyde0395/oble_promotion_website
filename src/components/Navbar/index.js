@@ -23,8 +23,8 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">60초 자동상담</NavLinks>
-              <NavLinks to="aboudt">상품소개</NavLinks>
+              <NavLinks to="aboutd">60초 자동상담</NavLinks>
+              <NavLinks to="about">상품소개</NavLinks>
               <NavLinks to="aboutd">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>
             </NavItem>

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 const KakaoButton = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -8,17 +7,15 @@ const KakaoButton = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) {
-          kakao.init("JavaScript 서비스 Key");
+          kakao.init("c271a26ef129b946fd580bb08f9f0112");
         }
       }
-
       window.Kakao.Channel.createChatButton({
         container: "#kakao-talk-channel-chat-button",
-        channelPublicId: "xkAERxj",
+        channelPublicId: "_xjivGK",
         title: "consult",
         size: "small",
         color: "yellow",
-        shape: "pc",
         supportMultipleDensities: true,
       });
       document.body.appendChild(script);
@@ -27,7 +24,15 @@ const KakaoButton = () => {
   }, []);
   return (
     <>
-      <div id="kakao-talk-channel-chat-button"></div>
+      <div
+        style={{
+          position: "fixed",
+          zIndex: "999",
+          bottom: "5px",
+          right: "10px",
+        }}
+        id="kakao-talk-channel-chat-button"
+      ></div>
     </>
   );
 };

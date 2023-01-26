@@ -10,6 +10,10 @@ export const HeroContainer = styled.div`
   height: 700px;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    height: 830px;
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -69,6 +73,8 @@ export const HeroP = styled.p`
   color: #000000;
   font-size: 24px;
   text-align: center;
+  justify-content: center;
+  justify-items: center;
   max-width: 600px;
 
   @media screen and (max-width: 768px) {
@@ -110,6 +116,8 @@ export const HeroVideo = styled.video`
   margin-left: 100px;
 
   @media screen and (max-width: 960px) {
+    width: 300px;
+    height: 200px;
   }
 
   @media screen and (max-width: 768px) {

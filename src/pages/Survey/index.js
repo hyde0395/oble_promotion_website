@@ -4,7 +4,7 @@ import * as Styled from "./styled";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import Slider from "react-slick";
-
+import Data2 from "../../components/Survey2/Data2";
 const Survey = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,19 +16,9 @@ const Survey = (props) => {
   }
 
   //  이중 map 으로 Data.answer의 개수만큼 질문개수가 만들어지게 설정
+  // map : Data[i]의 개수만큼 map ( porp에서 갯수를 가져올 수 있음)
 
-  // 1단계 map : Data[i]의 개수만큼 map
-  // 2단계 map : Data[i].answer의 개수만큼 질문 보여줌
-
-  // const question_list = Data[i].answer.map((number, idx) => {
-  //   return (
-  //     <Styled.ButtonStyled>
-  //       <div>{Data[props.num].answer[idx]}</div>
-  //     </Styled.ButtonStyled>
-  //   );
-  // });
-
-  const question_list = Data[0].answer.map((number, idx) => {
+  const question_list = Data[props.num].answer.map((number, idx) => {
     return (
       <Styled.ButtonStyled>
         <div>{Data[props.num].answer[idx]}</div>
@@ -36,16 +26,15 @@ const Survey = (props) => {
     );
   });
 
-  const Data_list = [0, 1, 2, 3, 4, 5, 6].map((number, i) => {
-    const question_list = Data[i].answer.map((number, idx) => {
-      return (
-        <Styled.ButtonStyled>
-          <div>{Data[props.num].answer[idx]}</div>
-        </Styled.ButtonStyled>
-      );
-    });
-    return { question_list };
-  });
+  //  이 값은 단답형 설문조사 하기 위해
+
+  // const question_list2 = Data2[props.num].answer.map((number, idx) => {
+  //   return (
+  //     <Styled.ButtonStyled>
+  //       <div>{Data2[props.num].answer[idx]}</div>
+  //     </Styled.ButtonStyled>
+  //   );
+  // });
 
   return (
     <>
@@ -55,32 +44,7 @@ const Survey = (props) => {
         <Styled.BoxStyled>
           <p>{Data[props.num].question}</p>
         </Styled.BoxStyled>
-        <Styled.Flex>
-          {question_list}
-          {/* <Styled.ButtonStyled>
-            <div>{Data[props.num].answer[0]}</div>
-          </Styled.ButtonStyled>
-          <Styled.ButtonStyled>
-            <div>{Data[props.num].answer[1]}</div>
-          </Styled.ButtonStyled>
-          <Styled.ButtonStyled>
-            <div>{Data[props.num].answer[2]}</div>
-          </Styled.ButtonStyled>
-          <Styled.ButtonStyled>
-            <div>{Data[props.num].answer[3]}</div>
-          </Styled.ButtonStyled>
-          <Styled.ButtonStyled>
-            <div>{Data[props.num].answer[4]}</div>
-          </Styled.ButtonStyled> */}
-          {/* <Styled.ButtonFlex>
-            <Styled.ButtonStyled2>
-              <div>이전</div>
-            </Styled.ButtonStyled2>
-            <Styled.ButtonStyled2>
-              <div>다음</div>
-            </Styled.ButtonStyled2>
-          </Styled.ButtonFlex> */}
-        </Styled.Flex>
+        <Styled.Flex>{question_list}</Styled.Flex>
       </div>
     </>
   );

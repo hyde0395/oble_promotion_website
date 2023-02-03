@@ -18,21 +18,33 @@ const Test = () => {
     dots: false,
     infinite: false,
     speed: 500,
-
+    // beforeChange: handleBeforeChange,
+    // afterChange: handleAfterChange,
     draggable: false,
   };
+
+  // const [dragging, setDragging] = useState(false);
+  // const handleBeforeChange = useCallback(() => {
+  //   setDragging(true);
+  // }, [setDragging]);
+
+  // const handleAfterChange = useCallback(() => {
+  //   setDragging(false);
+  // }, [setDragging]);
 
   // 숫자 표시해주는 기능
 
   const [currentPage, setCurrentPage] = useState(1);
   const pageCounter = 22;
-  // const slider = useRef(null);
+  const slider = useRef(null);
   const handlePrevSlide = () => {
     // slider.current.slickPrev();
+    // previous();
     currentPage > 1 && setCurrentPage(currentPage - 1);
   };
   const handleNextSlide = () => {
     // slider.current.slickNext();
+    // next();
     currentPage < pageCounter && setCurrentPage(currentPage + 1);
   };
 
@@ -40,18 +52,6 @@ const Test = () => {
   const slickRef = useRef(null);
   const previous = useCallback(() => slickRef.current.slickPrev(), []);
   const next = useCallback(() => slickRef.current.slickNext(), []);
-
-  // var status = ".pagingInfo";
-  // var slickElement = ".slideshow";
-
-  // slickElement.on(
-  //   "init reInit afterChange",
-  //   function (event, slick, currentSlide, nextSlide) {
-  //     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-  //     var i = (currentSlide ? currentSlide : 0) + 1;
-  //     status.text(i + "/" + slick.slideCount);
-  //   }
-  // );
 
   return (
     <>

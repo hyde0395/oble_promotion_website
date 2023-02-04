@@ -7,46 +7,31 @@ import "slick-carousel/slick/slick-theme.css";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import * as Styled from "./Survey/styled";
-
+import Start from "./Start";
 const Test = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
+  // 페이지 숫자 보여주는 기능
+  const pageCounter = 22;
+  const [state, setState] = useState({
+    activeSlide: 0,
+  });
+  // 기본 세팅
+
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
+    beforeChange: (current, next) => setState({ activeSlide: next }),
     // beforeChange: handleBeforeChange,
     // afterChange: handleAfterChange,
     draggable: false,
   };
 
-  // const [dragging, setDragging] = useState(false);
-  // const handleBeforeChange = useCallback(() => {
-  //   setDragging(true);
-  // }, [setDragging]);
-
-  // const handleAfterChange = useCallback(() => {
-  //   setDragging(false);
-  // }, [setDragging]);
-
-  // 숫자 표시해주는 기능
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageCounter = 22;
   const slider = useRef(null);
-  const handlePrevSlide = () => {
-    // slider.current.slickPrev();
-    // previous();
-    currentPage > 1 && setCurrentPage(currentPage - 1);
-  };
-  const handleNextSlide = () => {
-    // slider.current.slickNext();
-    // next();
-    currentPage < pageCounter && setCurrentPage(currentPage + 1);
-  };
 
   // 옆으로 넘어가는 슬라이더 기능
   const slickRef = useRef(null);
@@ -57,7 +42,9 @@ const Test = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
+
       <Slider ref={slickRef} {...settings}>
+        <Start></Start>
         <Survey num="0"></Survey>
         <Survey num="1"></Survey>
         <Survey num="2"></Survey>
@@ -79,18 +66,18 @@ const Test = () => {
         <Styled.ButtonFlex>
           <Styled.ButtonStyled2
             onClick={() => {
-              handlePrevSlide();
+              // handlePrevSlide();
               previous();
             }}
           >
             <div>이전</div>
           </Styled.ButtonStyled2>
           <p>
-            {currentPage} / {pageCounter}
+            {state.activeSlide} / {pageCounter}
           </p>
           <Styled.ButtonStyled2
             onClick={() => {
-              handleNextSlide();
+              // handleNextSlide();
               next();
             }}
           >

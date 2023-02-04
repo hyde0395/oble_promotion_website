@@ -1,3 +1,6 @@
+// 이제 정답 answer 배열을 객체로 설정해서 active 여부를 정할건지
+// 아니면 그냥 같은 인덱스배열에 true false 로 구분할건지 정해야됨
+
 const Data = [
   {
     id: 1,
@@ -9,6 +12,7 @@ const Data = [
       "유통 판매업",
       "기타",
     ],
+    active: ["false", "false", "false", "false", "false"],
   },
   {
     id: 2,
@@ -22,6 +26,7 @@ const Data = [
       "제품",
       "기타",
     ],
+    active: [false, false, false, false, false, false, false],
   },
   {
     id: 3,
@@ -33,6 +38,7 @@ const Data = [
       "진짜 하나도 모르겠습니다. ",
       "기타",
     ],
+    active: [false, false, false, false, false],
   },
   {
     id: 4,
@@ -42,16 +48,19 @@ const Data = [
       "대면 상담을 통해 직접 얼굴보면서 듣고 싶습니다.",
       "유선 상담을 원합니다.",
     ],
+    active: [false, false, false],
   },
   {
     id: 5,
     question: "매장 / 제품을 어떻게 홍보하고 싶으신가요?",
     answer: ["블로그 마케팅", "각종 SNS 광고", "기타", "알아서 해주세요"],
+    active: [false, false, false, false],
   },
   {
     id: 6,
     question: "광고하고자 하는 성별은 무엇입니까? ",
     answer: ["여성 위주", "남성 위주", "남여 모두 ", "알아서 해주세요"],
+    active: [false, false, false, false],
   },
   {
     id: 7,
@@ -65,6 +74,7 @@ const Data = [
       "60세 이상",
       "알아서 해주세요 ",
     ],
+    active: [false, false, false, false, false, false, false],
   },
   {
     id: 8,
@@ -78,6 +88,7 @@ const Data = [
       "기타",
       "알아서 해주세요",
     ],
+    active: [false, false, false, false, false, false, false],
   },
   {
     id: 9,
@@ -89,6 +100,7 @@ const Data = [
       "일방문자가 많은 인플루언서 ",
       "알아서 해주세요",
     ],
+    active: [false, false, false, false, false],
   },
   {
     id: 10,
@@ -100,23 +112,24 @@ const Data = [
       "모르겠어요 어떻게 하는거죠?",
       "알아서 해주세요 ",
     ],
+    active: [false, false, false, false, false],
   },
   {
     id: 11,
     question: "인플루언서에게 어떤 서비스를 제공하실건가요? ",
     answer: [
-      "제공 서비스 고정",
-      "ex)  짬뽕 + 짜장면 + 탕수육",
-      "인플루언서 자율 선택",
-      "ex) 3만원 이용권",
+      "제공 서비스 고정ex)  짬뽕 + 짜장면 + 탕수육",
+      "인플루언서 자율 선택 ex) 3만원 이용권",
       "모르겠어요..",
       "알아서 해주세요",
     ],
+    active: [false, false, false, false],
   },
   {
     id: 12,
     question: "인플루언서[체험단]이 어떤 시간에 방문하셨으면 좋겠나요? ",
     answer: ["예약시간 방문", "아무때나 방문", "알아서 해주세요"],
+    active: [false, false, false],
   },
   {
     id: 13,
@@ -130,6 +143,7 @@ const Data = [
       "제품",
       "기타",
     ],
+    active: [false, false, false, false, false, false, false],
   },
   {
     id: 14,
@@ -140,28 +154,12 @@ const Data = [
   {
     id: 15,
     question: "콘텐츠에  강조하고 싶은 매장의 강점 & 내용은 무엇인가요? ",
-    answer: [
-      "음식점",
-      "뷰티 / 병원",
-      "숙박",
-      "카페",
-      "액티비티 / 체험",
-      "제품",
-      "기타",
-    ],
+    answer: [],
   },
   {
     id: 16,
     question: "마지막으로 오블에게 원하는 것이 있으면 말씀해주세요!",
-    answer: [
-      "음식점",
-      "뷰티 / 병원",
-      "숙박",
-      "카페",
-      "액티비티 / 체험",
-      "제품",
-      "기타",
-    ],
+    answer: [],
   },
 ];
 

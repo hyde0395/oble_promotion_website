@@ -16,6 +16,7 @@ const Test = () => {
 
   // 페이지 숫자 보여주는 기능
   const pageCounter = 22;
+  //여기 activeSlide 이용해서 원하는 페이지로 워프하게 설정
   const [state, setState] = useState({
     activeSlide: 0,
   });

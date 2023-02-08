@@ -30,7 +30,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="a">상담 받아보기</NavBtnLink>
+            <NavBtnLink to="/Test">상담 받아보기</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

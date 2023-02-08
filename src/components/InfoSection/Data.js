@@ -25,7 +25,7 @@ export const homeObjTwo = {
   description:
     "인플루언서 마켓팅을 하고 싶으신 분들 오블 서비스를 받으면 어쩌구저쩌구 여튼 저튼 매출이 높아져요!",
   buttonLabel: "버튼 누르기",
-  imgStart: true,
+  imgStart: false,
   img: require("../../images/svg-1.svg").default,
   alt: "see result graph",
   dark: true,

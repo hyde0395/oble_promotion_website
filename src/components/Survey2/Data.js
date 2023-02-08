@@ -4,39 +4,65 @@
 const Data = [
   {
     id: 1,
+    isduplicate: false,
     question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
     answer: [
-      "개인사업자",
-      "프렌차이즈 가맹점",
-      "프렌차이즈 본사",
-      "유통 판매업",
-      "기타",
+      {
+        id: 1,
+        content: "개인사업자",
+      },
+      {
+        id: 2,
+        content: "프렌차이즈 가맹점",
+      },
+      {
+        id: 3,
+        content: "프렌차이즈 본사",
+      },
+      {
+        id: 4,
+        content: "유통 판매업",
+      },
+      {
+        id: 5,
+        content: "기타",
+      },
     ],
-    active: ["false", "false", "false", "false", "false"],
   },
   {
     id: 2,
     question: "광고주님이 운영하시는 업종은 무엇인가요? ",
     answer: [
-      "음식점",
-      "뷰티 / 병원",
-      "숙박",
-      "카페",
-      "액티비티 / 체험",
-      "제품",
-      "기타",
+      { id: 1, content: "음식점" },
+      { id: 2, content: "뷰티 / 병원" },
+      { id: 3, content: "숙박" },
+      { id: 4, content: "카페" },
+      { id: 5, content: "액티비티 / 체험" },
+      { id: 6, content: "제품" },
+      { id: 7, content: "기타" },
     ],
-    active: [false, false, false, false, false, false, false],
   },
   {
     id: 3,
     question: "블로그 마케팅에 대해 알고 계시나요? ",
     answer: [
-      "블로그 마케팅에 대해 잘 알고 있고 매장에 적합한 인플루언서만 보내주시면 됩니다!",
-      "인플루언서 마케팅이 어느 방식으로 진행되는지는  알고 있어요! ",
-      "인플루언서.. 체험단... 그게 뭔지는 모르겠는데 매장을 홍보 하고싶어요!",
-      "진짜 하나도 모르겠습니다. ",
-      "기타",
+      {
+        id: 1,
+        content:
+          "블로그 마케팅에 대해 잘 알고 있고 매장에 적합한 인플루언서만 보내주시면 됩니다!",
+      },
+      {
+        id: 2,
+        content:
+          "인플루언서 마케팅이 어느 방식으로 진행되는지는  알고 있어요! ",
+      },
+      {
+        id: 3,
+        content:
+          "인플루언서.. 체험단... 그게 뭔지는 모르겠는데 매장을 홍보 하고싶어요!",
+      },
+      { id: 4, content: "진짜 하나도 모르겠습니다. " },
+      { id: 5, content: "기타" },
     ],
     active: [false, false, false, false, false],
   },

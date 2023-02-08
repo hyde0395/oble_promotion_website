@@ -1,6 +1,14 @@
 import styled from "styled-components";
-
+import Survey from ".";
 // 맨위 제목 스타일
+export const TitleStyled = styled.div`
+  margin-top: 270px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  text-align: center;
+`;
+// 질문 스타일
 export const BoxStyled = styled.div`
   margin-top: 100px;
   font-size: 25px;
@@ -9,10 +17,16 @@ export const BoxStyled = styled.div`
   text-align: center;
 `;
 
+export const Desc = styled.div`
+  margin-top: 150px;
+  margin-bottom: 5px;
+`;
+
 // 설문 문항 스타일
 export const ButtonStyled = styled.button`
   width: 350px;
   height: 50px;
+  /* #d0dfff; */
   background-color: #d0dfff;
   color: black;
   cursor: pointer;
@@ -24,9 +38,9 @@ export const ButtonStyled = styled.button`
   font-weight: 700;
   font-size: 15px;
 
-  :focus {
+  /* :focus {
     background-color: #939ef4;
-  }
+  } */
 `;
 
 // 전체 felx

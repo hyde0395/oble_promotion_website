@@ -10,6 +10,7 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  SurveyLink,
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
@@ -23,7 +24,7 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="aboutd">60초 자동상담</NavLinks>
+              <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
               <NavLinks to="about">오블소개</NavLinks>
               <NavLinks to="aboutd">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>

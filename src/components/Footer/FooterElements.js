@@ -13,6 +13,9 @@ export const FooterWrap = styled.div`
   align-items: center;
 `;
 
-export const FooterTextWrap = styled.div``;
+export const FooterTextWrap = styled.div`
+  margin-top: 100px;
+  color: #ffffff;
+`;
 
 export const FooterText = styled.div``;

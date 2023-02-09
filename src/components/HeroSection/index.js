@@ -13,6 +13,7 @@ import {
   HeroVideo,
   HeroVideoBox,
 } from "./HeroElements";
+import { SurveyLink } from "../Navbar/NavbarElements";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -32,13 +33,14 @@ const HeroSection = () => {
           <HeroP>처음하는 사람도 누구나 쉽게, 오블 마켓팅!</HeroP>
           <HeroBtnWrapper>
             <Button
-              to="dkjad"
               onMouseEnter={onHover}
               onMouseLeave={onHover}
               primary="true"
               dark="true"
             >
-              60초 자동상담 받기 {hover ? <ArrowForward /> : <ArrowRight />}
+              <SurveyLink to="/Test">
+                60초 자동상담 받기 {hover ? <ArrowForward /> : <ArrowRight />}
+              </SurveyLink>
             </Button>
           </HeroBtnWrapper>
         </HeroTextBox>

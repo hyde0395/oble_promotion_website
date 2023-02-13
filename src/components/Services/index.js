@@ -13,7 +13,7 @@ import {
 } from "./ServicesElements";
 const Services = () => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id="service">
       <ServicesH1></ServicesH1>
       <ServicesWrapper>
         <ServicesCard>

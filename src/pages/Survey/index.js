@@ -122,7 +122,7 @@ const Survey = (props) => {
 
   return (
     <>
-      <div>
+      <Styled.SurveyContainer>
         {/* <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} /> */}
         <Styled.BoxStyled>
@@ -130,7 +130,7 @@ const Survey = (props) => {
         </Styled.BoxStyled>
 
         <Styled.Flex>{question_list}</Styled.Flex>
-      </div>
+      </Styled.SurveyContainer>
     </>
   );
 };

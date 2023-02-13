@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link as LinkS } from "react-scroll";
 
-//pirmary와 big, fontBig부분을 좀 더 보강해야 함.
+//pirmary와 big, fontBig부분을 좀 더  보강해야 함.
 
-export const Button = styled(Link)`
+export const Button = styled(LinkS)`
   border-radius: 50px;
   background: ${({ primary }) => (primary ? "#3854e0" : "#ffffff")};
   white-space: nowrap;
@@ -28,7 +28,7 @@ export const Button = styled(Link)`
   }
 `;
 
-export const MobileButton = styled(Link)`
+export const MobileButton = styled(LinkS)`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -53,12 +53,12 @@ export const MobileButton = styled(Link)`
   }
 `;
 
-export const InfoButton = styled(Link)`
+export const InfoButton = styled(LinkS)`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#3854e0" : "#ffffff")};
+  background: ${({ lightBg }) => (lightBg ? "#3854e0" : "#ffffff")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#ffffff" : "#000000")};
+  color: ${({ lightText }) => (lightText ? "#000000" : "#ffffff")};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;

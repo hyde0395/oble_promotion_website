@@ -17,8 +17,8 @@ export const homeObjOne = {
 };
 export const homeObjTwo = {
   id: "servic",
-  lightBg: false,
-  lightText: true,
+  lightBg: true,
+  lightText: false,
   lightTextDesc: true,
   topLine: "누구라도 쉽게!",
   headLine: "오블의 마켓팅은 더 쉽습니다!",
@@ -35,7 +35,7 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
   id: "service",
-  lightBg: true,
+  lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: "누구라도 쉽게!",

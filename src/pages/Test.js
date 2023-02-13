@@ -8,7 +8,19 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import * as Styled from "./Survey/styled";
 import Start from "./Start";
+import Submit from "./Submit";
+import { useSelector, useDispatch } from "react-redux";
+
 const Test = () => {
+  const set = useSelector((state) => state.reducer.selected);
+  console.log(set);
+  const dispatch = useDispatch();
+  const set_true = (index, index2) => dispatch(set_true(index, index2));
+  const setting = () => dispatch(setting());
+  //
+  //
+  //
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -27,8 +39,7 @@ const Test = () => {
     infinite: false,
     speed: 500,
     beforeChange: (current, next) => setState({ activeSlide: next }),
-    // beforeChange: handleBeforeChange,
-    // afterChange: handleAfterChange,
+
     draggable: false,
   };
 
@@ -38,7 +49,10 @@ const Test = () => {
   const slickRef = useRef(null);
   const previous = useCallback(() => slickRef.current.slickPrev(), []);
   const next = useCallback(() => slickRef.current.slickNext(), []);
+  const warp = useCallback(() => slickRef.current.slickGoTo(16), []);
+  const survey = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+  const [disable, setDisable] = useState(true);
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -46,6 +60,7 @@ const Test = () => {
 
       <Slider ref={slickRef} {...settings}>
         <Start></Start>
+
         <Survey num="0"></Survey>
         <Survey num="1"></Survey>
         <Survey num="2"></Survey>
@@ -62,6 +77,7 @@ const Test = () => {
         <Survey num="13"></Survey>
         <Survey num="14"></Survey>
         <Survey num="15"></Survey>
+        <Submit />
       </Slider>
       <Styled.Flex>
         <Styled.ButtonFlex>
@@ -77,9 +93,12 @@ const Test = () => {
             {state.activeSlide} / {pageCounter}
           </p>
           <Styled.ButtonStyled2
+            // disabled={disable}
             onClick={() => {
               // handleNextSlide();
               next();
+              // warp();
+              setting();
             }}
           >
             <div>다음</div>

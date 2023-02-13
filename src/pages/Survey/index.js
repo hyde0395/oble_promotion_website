@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Data from "../../components/Survey2/Data";
 import * as Styled from "./styled";
-import Sidebar from "../../components/Sidebar";
-import Navbar from "../../components/Navbar";
-import Slider from "react-slick";
-import { isCursorAtStart } from "@testing-library/user-event/dist/utils";
+import { useSelector, useDispatch } from "react-redux";
 
+import reducer from "../Redux/Set";
+import setting from "../Redux/Set";
 const Survey = (props) => {
   //  이중 map 으로 Data.answer의 개수만큼 질문개수가 만들어지게 설정
   // map : Data[i]의 개수만큼 map ( porp에서 갯수를 가져올 수 있음)
@@ -25,90 +24,57 @@ const Survey = (props) => {
   //   : setData((data[props.num].active[idx] = false));
   const [data, setData] = useState(Data);
 
-  // 배열의 불변성 문제..
-  // const question_list = data[props.num].answer.map((number, idx) => {
-  //   const onClick = () => {
-  //     const data = [...data];
-  //     setData((data[props.num].active[idx] = !data[props.num].active[idx]));
-  //     console.log(data[props.num].active);
-  //   };
-  //   return (
-  //     <Styled.ButtonStyled>
-  //       <div
-  //         onClick={onClick}
-  //         className={`${data[props.num].active[idx] === true ? "select" : ""}`}
-  //       >
-  //         {data[props.num].answer[idx]}
-  //       </div>
-  //     </Styled.ButtonStyled>
-  //   );
-  // });
+  const set = useSelector((state) => state.reducer.selected);
+  // console.log(set);
+  const dispatch = useDispatch();
 
-  // data[props.num].answer[idx] 랑 value랑 같음
+  const set_true = (index, index2) => dispatch(set_true(index, index2));
+  const setting = () => dispatch(setting());
 
-  let [isActive, setisActive] = useState([
-    NaN,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
   let [Answer, setAnswer] = useState([NaN]);
 
-  const isduplicate = [false];
+  const [x, setX] = useState();
+  const handleClickRadioButton2 = (e) => {
+    setX(e.target.value);
+  };
   const question_list = data[props.num].answer.map((value, idx) => {
-    const onClick = () => {
-      isActive = [...isActive];
-      if (isduplicate[0] === false) {
-        return (
-          (isActive[value.id] = !isActive[value.id]), setisActive(isActive)
-        );
-      } else {
-        const Mapping = isActive.map((value, idx) => {
-          isActive[idx] = false;
-        });
-        return (
-          { Mapping },
-          (isActive[value.id] = !isActive[value.id]),
-          setisActive(isActive)
-        );
-      }
-      console.log(value);
-      console.log(isActive);
-    };
-    return (
-      <Styled.ButtonStyled>
-        <div
-          onClick={() => onClick()}
-          className={`${isActive[value.id] === true ? "select" : ""}`}
-        >
+    return data[props.num].isduplicate === true ? (
+      <>
+        {/* 복수 선택 : 체크박스 */}
+        <Styled.FormCheckLeft
+          type="checkbox"
+          value={`${props.num}${idx}`}
+          id={`${props.num}${idx}`}
+        ></Styled.FormCheckLeft>
+        <Styled.FormCheckText htmlFor={`${props.num}${idx}`}>
           {value.content}
-        </div>
-      </Styled.ButtonStyled>
-    );
+        </Styled.FormCheckText>
+      </>
+    ) : data[props.num].isduplicate === false ? (
+      <>
+        {/* 단일선택 : 라디오버튼 */}
+        <Styled.FormCheckLeft
+          type="radio"
+          value={`${props.num}${idx}`}
+          checked={x === `${props.num}${idx}`}
+          id={`${props.num}${idx}`}
+          onChange={handleClickRadioButton2}
+        ></Styled.FormCheckLeft>
+        <Styled.FormCheckText htmlFor={`${props.num}${idx}`}>
+          {value.content}
+        </Styled.FormCheckText>
+      </>
+    ) : data[props.num].isduplicate === 0 ? (
+      <>
+        {/* 여기는 주관식 답변 */}
+        <Styled.FormInput
+          type="text"
+          id={`${props.num}${idx}`}
+          placeholder={`${value.content}`}
+        ></Styled.FormInput>
+      </>
+    ) : null;
   });
-
-  // const question_list = data[props.num].answer.map((value, idx) => {
-  //   const onClick = () => {
-  //     value.active = !value.active;
-
-  //     setData(data);
-  //     console.log(value);
-  //   };
-  //   return (
-  //     <Styled.ButtonStyled>
-  //       <div
-  //         onClick={() => onClick()}
-  //         className={`${value.active === true ? "select" : ""}`}
-  //       >
-  //         {value.content}
-  //       </div>
-  //     </Styled.ButtonStyled>
-  //   );
-  // });
 
   //  이 값은 단답형 설문조사 하기 위해
 
@@ -123,8 +89,6 @@ const Survey = (props) => {
   return (
     <>
       <div>
-        {/* <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} /> */}
         <Styled.BoxStyled>
           <p>{Data[props.num].question}</p>
         </Styled.BoxStyled>

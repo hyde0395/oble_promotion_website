@@ -14,6 +14,7 @@ const Data = [
       {
         id: 2,
         content: "프렌차이즈 가맹점",
+        // 이버튼을 누르면 id 4로 점프
       },
       {
         id: 3,
@@ -31,6 +32,7 @@ const Data = [
   },
   {
     id: 2,
+    isduplicate: true,
     question: "광고주님이 운영하시는 업종은 무엇인가요? ",
     answer: [
       { id: 1, content: "음식점" },
@@ -44,6 +46,7 @@ const Data = [
   },
   {
     id: 3,
+    isduplicate: false,
     question: "블로그 마케팅에 대해 알고 계시나요? ",
     answer: [
       {
@@ -64,32 +67,51 @@ const Data = [
       { id: 4, content: "진짜 하나도 모르겠습니다. " },
       { id: 5, content: "기타" },
     ],
-    active: [false, false, false, false, false],
   },
   {
     id: 4,
+    isduplicate: false,
     question: "상담을 어떻게 진행하고 싶으신가요? ",
     answer: [
-      "초간단 60초 설문상담",
-      "대면 상담을 통해 직접 얼굴보면서 듣고 싶습니다.",
-      "유선 상담을 원합니다.",
+      {
+        id: 1,
+        content: "초간단 60초 설문상담",
+      },
+      { id: 2, content: "대면 상담을 통해 직접 얼굴보면서 듣고 싶습니다." },
+      { id: 3, content: "유선 상담을 원합니다." },
     ],
-    active: [false, false, false],
   },
   {
     id: 5,
+    isduplicate: false,
     question: "매장 / 제품을 어떻게 홍보하고 싶으신가요?",
-    answer: ["블로그 마케팅", "각종 SNS 광고", "기타", "알아서 해주세요"],
-    active: [false, false, false, false],
+    answer: [
+      {
+        id: 1,
+        content: "블로그 마케팅",
+      },
+      { id: 2, content: "각종 SNS 광고" },
+      { id: 3, content: "기타" },
+      {
+        id: 4,
+        content: "알아서 해주세요",
+      },
+    ],
   },
   {
     id: 6,
+    isduplicate: false,
     question: "광고하고자 하는 성별은 무엇입니까? ",
-    answer: ["여성 위주", "남성 위주", "남여 모두 ", "알아서 해주세요"],
-    active: [false, false, false, false],
+    answer: [
+      { id: 1, content: "여성 위주" },
+      { id: 2, content: "남성 위주" },
+      { id: 3, content: "남여 모두 " },
+      { id: 4, content: "알아서 해주세요" },
+    ],
   },
   {
     id: 7,
+    isduplicate: false,
     question: "광고하고자 하는 특정 연령은 무엇입니까?",
     answer: [
       "10대",
@@ -100,10 +122,10 @@ const Data = [
       "60세 이상",
       "알아서 해주세요 ",
     ],
-    active: [false, false, false, false, false, false, false],
   },
   {
     id: 8,
+    isduplicate: false,
     question: "광고노출을 원하는 고객층은 무엇입니까?",
     answer: [
       "가족 단위 ",
@@ -114,10 +136,10 @@ const Data = [
       "기타",
       "알아서 해주세요",
     ],
-    active: [false, false, false, false, false, false, false],
   },
   {
     id: 9,
+    isduplicate: false,
     question: "어떤 인플루언서[체험단]이 우리 매장을 홍보해주셨으면 좋겠나요? ",
     answer: [
       "상위노출을 잘하는 인플루언서",
@@ -126,10 +148,10 @@ const Data = [
       "일방문자가 많은 인플루언서 ",
       "알아서 해주세요",
     ],
-    active: [false, false, false, false, false],
   },
   {
     id: 10,
+    isduplicate: false,
     question: "인플루언서[체험단]이 한 달에 몇 팀 정도 방문했으면 좋겠나요? ",
     answer: [
       "0~5팀",
@@ -138,10 +160,10 @@ const Data = [
       "모르겠어요 어떻게 하는거죠?",
       "알아서 해주세요 ",
     ],
-    active: [false, false, false, false, false],
   },
   {
     id: 11,
+    isduplicate: false,
     question: "인플루언서에게 어떤 서비스를 제공하실건가요? ",
     answer: [
       "제공 서비스 고정ex)  짬뽕 + 짜장면 + 탕수육",
@@ -149,43 +171,37 @@ const Data = [
       "모르겠어요..",
       "알아서 해주세요",
     ],
-    active: [false, false, false, false],
   },
   {
     id: 12,
+    isduplicate: false,
     question: "인플루언서[체험단]이 어떤 시간에 방문하셨으면 좋겠나요? ",
     answer: ["예약시간 방문", "아무때나 방문", "알아서 해주세요"],
-    active: [false, false, false],
   },
   {
     id: 13,
+    isduplicate: 0,
     question: "광고주님 영업지 주소가 어떻게 되시나요?",
-    answer: [
-      "음식점",
-      "뷰티 / 병원",
-      "숙박",
-      "카페",
-      "액티비티 / 체험",
-      "제품",
-      "기타",
-    ],
-    active: [false, false, false, false, false, false, false],
+    answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 14,
+    isduplicate: 0,
     question:
       "광고주님 성함 & 전화번호를 적어주시면 3일 내 광고 전략 레포트 작성 후 연락드리겠습니다.",
-    answer: [],
+    answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 15,
+    isduplicate: 0,
     question: "콘텐츠에  강조하고 싶은 매장의 강점 & 내용은 무엇인가요? ",
-    answer: [],
+    answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 16,
+    isduplicate: 0,
     question: "마지막으로 오블에게 원하는 것이 있으면 말씀해주세요!",
-    answer: [],
+    answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
 ];
 

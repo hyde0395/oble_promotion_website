@@ -37,10 +37,47 @@ export const ButtonStyled = styled.button`
   color: rgb(49, 61, 154);
   font-weight: 700;
   font-size: 15px;
+`;
 
-  /* :focus {
+//설문 답변 스타일
+export const FormCheckText = styled.label`
+  width: 350px;
+  height: 50px;
+  margin-top: 10px;
+  color: rgb(49, 61, 154);
+  border: 1.5px solid rgb(75, 94, 237);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px;
+  background-color: #d0dfff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const FormCheckLeft = styled.input`
+  &:checked + ${FormCheckText} {
     background-color: #939ef4;
-  } */
+  }
+  display: none;
+`;
+
+export const FormInput = styled.input`
+  width: 400px;
+  height: 100px;
+  color: black;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, 0.06666666666666667);
+  outline: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 `;
 
 // 전체 felx
@@ -66,7 +103,8 @@ export const ButtonFlex = styled.div`
 `;
 
 // 이전 다음 버튼 스타일
-export const ButtonStyled2 = styled.div`
+export const ButtonStyled2 = styled.button`
+  border: 1.5px solid rgb(75, 94, 237);
   width: 4rem;
   height: 3rem;
   background-color: rgb(75, 94, 237);
@@ -75,6 +113,10 @@ export const ButtonStyled2 = styled.div`
   font-size: 1rem;
   cursor: pointer;
   border-radius: 10px;
-  padding-left: 15px;
-  padding-top: 13px;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background: var(--button-bg-color, #025ce2);
+  }
 `;

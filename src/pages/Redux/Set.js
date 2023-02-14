@@ -1,22 +1,12 @@
 /* 초기 상태 선언 */
 const initialState = {
-  selected: false,
-
-  //
-  //   selected: [
-  //     [false, false, false, false, false],
-  //     [false, false, false, false, false, false, false],
-  //     [false, false, false, false, false, false, false],
-  //     [false, false, false, false, false, false, false],
-  //   ],
+  selected: [[], [], [], [], [], [], [], [], []],
 };
+
+// 액션 함수
 
 const SET_TRUE = "SET_TRUE";
 const SET_FALSE = "SET_FALSE";
-
-// 액션 함수
-const SETTING = "SETTING";
-export const setting = () => ({ type: SETTING });
 
 export const set_true = (index, index2) => ({ type: SET_TRUE, index, index2 });
 export const set_false = (num1, num2) => ({ type: SET_FALSE, num1, num2 });
@@ -24,11 +14,9 @@ export const set_false = (num1, num2) => ({ type: SET_FALSE, num1, num2 });
 // 리듀서
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case SETTING:
+    case SET_TRUE:
       return {
-        ...state,
-
-        selected: !state.selected,
+        state: state.selected[action.index].push(action.index2),
       };
 
     // case SET_TRUE:

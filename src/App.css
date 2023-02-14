@@ -5,3 +5,14 @@
   /* font-family: "Encode Sans Expanded", sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+
+.select {
+  background-color: #939ef4;
+  width: 350px;
+  height: 50px;
+  border-radius: 5px;
+  padding-top: 13px;
+  border: 1.5px solid rgb(75, 94, 237);
+  border-radius: 5px;
+}

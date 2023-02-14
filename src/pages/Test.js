@@ -10,13 +10,14 @@ import * as Styled from "./Survey/styled";
 import Start from "./Start";
 import Submit from "./Submit";
 import { useSelector, useDispatch } from "react-redux";
+import Data from "../components/Survey2/Data";
 
 const Test = () => {
-  const set = useSelector((state) => state.reducer.selected);
-  console.log(set);
-  const dispatch = useDispatch();
-  const set_true = (index, index2) => dispatch(set_true(index, index2));
-  const setting = () => dispatch(setting());
+  // const set = useSelector((state) => state.reducer.selected);
+  // console.log(set);
+  // const dispatch = useDispatch();
+  // const set_true = (index, index2) => dispatch(set_true(index, index2));
+  // const setting1 = () => dispatch(setting());
   //
   //
   //
@@ -27,7 +28,7 @@ const Test = () => {
   };
 
   // 페이지 숫자 보여주는 기능
-  const pageCounter = 22;
+  const pageCounter = Data.length;
   //여기 activeSlide 이용해서 원하는 페이지로 워프하게 설정
   const [state, setState] = useState({
     activeSlide: 0,
@@ -98,7 +99,6 @@ const Test = () => {
               // handleNextSlide();
               next();
               // warp();
-              setting();
             }}
           >
             <div>다음</div>

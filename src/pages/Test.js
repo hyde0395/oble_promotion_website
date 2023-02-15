@@ -9,18 +9,12 @@ import Navbar from "../components/Navbar";
 import * as Styled from "./Survey/styled";
 import Start from "./Start";
 import Submit from "./Submit";
-import { useSelector, useDispatch } from "react-redux";
-import Data from "../components/Survey2/Data";
 
+import Data from "../components/Survey2/Data";
+import { useSelector, useDispatch } from "react-redux";
 const Test = () => {
-  // const set = useSelector((state) => state.reducer.selected);
-  // console.log(set);
-  // const dispatch = useDispatch();
-  // const set_true = (index, index2) => dispatch(set_true(index, index2));
-  // const setting1 = () => dispatch(setting());
-  //
-  //
-  //
+  const set = useSelector((state) => state.reducer);
+  const dispatch = useDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -50,10 +44,13 @@ const Test = () => {
   const slickRef = useRef(null);
   const previous = useCallback(() => slickRef.current.slickPrev(), []);
   const next = useCallback(() => slickRef.current.slickNext(), []);
-  const warp = useCallback(() => slickRef.current.slickGoTo(16), []);
+  const warp = useCallback((i) => slickRef.current.slickGoTo(i), []);
   const survey = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-  const [disable, setDisable] = useState(true);
+  // const [disable, setDisable] = useState(true);
+  // const handleDisable = () => {
+  //   setDisable(!disable);
+  // };
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -76,16 +73,22 @@ const Test = () => {
         <Survey num="11"></Survey>
         <Survey num="12"></Survey>
         <Survey num="13"></Survey>
-        <Survey num="14"></Survey>
-        <Survey num="15"></Survey>
         <Submit />
       </Slider>
       <Styled.Flex>
         <Styled.ButtonFlex>
           <Styled.ButtonStyled2
             onClick={() => {
-              // handlePrevSlide();
-              previous();
+              if (
+                state.activeSlide === 4 &&
+                (set[1].answer === "개인사업자" ||
+                  set[1].answer === "B2C제품판매기업" ||
+                  set[1].answer === "광고대행사")
+              ) {
+                warp(1);
+              } else {
+                previous();
+              }
             }}
           >
             <div>이전</div>
@@ -94,10 +97,20 @@ const Test = () => {
             {state.activeSlide} / {pageCounter}
           </p>
           <Styled.ButtonStyled2
-            // disabled={disable}
+            disabled={set[state.activeSlide].answer === "" ? true : false}
+            // disabled = {disable}
             onClick={() => {
-              // handleNextSlide();
-              next();
+              if (
+                state.activeSlide === 1 &&
+                (set[1].answer === "개인사업자" ||
+                  set[1].answer === "B2C제품판매기업" ||
+                  set[1].answer === "광고대행사")
+              ) {
+                warp(4);
+              } else {
+                next();
+              }
+
               // warp();
             }}
           >

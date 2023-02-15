@@ -1,23 +1,72 @@
+import { type } from "@testing-library/user-event/dist/type";
+
 /* 초기 상태 선언 */
-const initialState = {
-  selected: [[], [], [], [], [], [], [], [], []],
-};
+const initialState = [
+  { id: 1, answer: "" },
+  { id: 2, answer: "" },
+  { id: 3, answer: "" },
+  { id: 4, answer: "" },
+  { id: 5, answer: "" },
+];
 
 // 액션 함수
 
-const SET_TRUE = "SET_TRUE";
-const SET_FALSE = "SET_FALSE";
+const MULTIPLE_SELECTIONS = "MULTIPLE_SELECTIONS";
+const DELETE_SELECTIONS = "DELETE_SELECTIONS";
+const SELECT = "SELECT";
+const MANY_SELECT = "MANY_SELECT";
 
-export const set_true = (index, index2) => ({ type: SET_TRUE, index, index2 });
-export const set_false = (num1, num2) => ({ type: SET_FALSE, num1, num2 });
+export const many_select = (id, value) => ({
+  type: MANY_SELECT,
+  id,
+  value,
+});
+export const select = (id, value) => ({
+  type: SELECT,
+  id,
+  value,
+});
+export const Delete_Selections = (a, b) => ({
+  type: DELETE_SELECTIONS,
+  a,
+  b,
+});
+export const Multiple_Selections = (a, b) => ({
+  type: MULTIPLE_SELECTIONS,
+  a,
+  b,
+});
 
 // 리듀서
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case SET_TRUE:
-      return {
-        state: state.selected[action.index].push(action.index2),
-      };
+    case MULTIPLE_SELECTIONS:
+      return [...state, [`"${action.b}" : "${action.a}"`]];
+
+    case DELETE_SELECTIONS:
+      return state.filter((item) => item === action.a);
+
+    case SELECT:
+      return state.map((user) =>
+        user.id === action.id ? { ...user, answer: action.value } : user
+      );
+
+    case MANY_SELECT:
+      return state.map((user) =>
+        user.id === action.id
+          ? {
+              ...user,
+
+              answer: user.answer.concat(
+                state[user.id].answer,
+                "/",
+                action.value
+              ),
+            }
+          : user
+      );
+
+    // state: state.selected[action.index].push(action.index2),
 
     // case SET_TRUE:
     //   return state.map((state2, index) => {
@@ -39,13 +88,6 @@ export default function reducer(state = initialState, action) {
     //       };
     //     });
     //   });
-
-    // case SET_FALSE:
-    //   return {
-    //     ...state,
-    //     trash: selected[num1].splice(num2, 1, false),
-    //     // selected: selected,
-    //   };
 
     default:
       return state;

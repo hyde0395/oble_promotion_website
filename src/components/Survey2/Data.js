@@ -4,6 +4,7 @@
 const Data = [
   {
     id: 1,
+    type: "radio",
     isduplicate: false,
     question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
     answer: [

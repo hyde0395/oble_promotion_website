@@ -23,12 +23,12 @@ export const InfoSection = ({
   buttonLabel,
   img,
   lightBg,
-
+  lightText,
   alt,
 }) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer lightBg={lightBg} id={id} lightText={lightText}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Colmn1>
@@ -38,6 +38,8 @@ export const InfoSection = ({
                 <Subtitle>{description}</Subtitle>
                 <BtnWrap>
                   <InfoButton
+                    lightBg={lightBg}
+                    lightText={lightText}
                     to="home"
                     smooth={true}
                     duration={500}

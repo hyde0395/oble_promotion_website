@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
-  color: #ffffff;
-  background: #3854e0;
+  color: ${({ lightText }) => (lightText ? "#ffffff" : "#3854e0")};
+  background: ${({ lightBg }) => (lightBg ? "#ffffff" : "#3854e0")};
 
   @media screen and (max-width= 768px) {
     padding: 100px 0;
@@ -26,7 +26,7 @@ export const InfoRow = styled.div`
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2' col1` : `'col1 col2'`};
+    imgStart ? `'col2 col1'` : `'col1 col2'`};
 
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>

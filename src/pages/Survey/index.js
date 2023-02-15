@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Data from "../../components/Survey2/Data";
 import * as Styled from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { select, many_select } from "../Redux/Set";
+import {
+  select,
+  many_select,
+  Delete_Selections,
+  description,
+} from "../Redux/Set";
 import reducer from "../Redux/Set";
-import { Multiple_Selections } from "../Redux/Set";
 const Survey = (props) => {
   const [data, setData] = useState(Data);
-
   const set = useSelector((state) => state.reducer);
   console.log(set);
   const dispatch = useDispatch();
@@ -18,22 +21,23 @@ const Survey = (props) => {
   const handleClickRadioButton2 = (e) => {
     setX(e.target.value);
   };
-
+  const [y, setY] = useState("");
+  const handlediscriptrion = (e) => {
+    setY(e.target.value);
+  };
   const question_list = data[props.num].answer.map((value, idx) => {
-    const multiple_selections = () =>
-      dispatch(Multiple_Selections(value.content, data[props.num].question));
+    // 복수선택
     const Many_select = (e) =>
       dispatch(many_select(data[props.num].id, e.target.value));
+    // 단일선택
     const Select = (e) => dispatch(select(data[props.num].id, e.target.value));
-    // const onCheckedElement = (checked, item) => {
-    //   if (checked) {
-    //     Select();
-    //   }
-    //   // else if (!checked) {
-    //   //   setCheckedList(checkedList.filter(el => el !== item));
-    //   // }
-    // };
-    // <form onChange={handleClickRadioButton2}> </form>;
+    //복수선택 삭제시
+    const delete_selections = (e) =>
+      dispatch(Delete_Selections(data[props.num].id, e.target.value));
+
+    // 주관식 답변 ( 마지막 한글자가 입력 안되어서 수정 필요!!!!!!!!!!!!!@!@@!)
+    const Description = (e) => dispatch(description(data[props.num].id, y));
+
     return data[props.num].isduplicate === true ? (
       <>
         {/* 복수 선택 : 체크박스 */}
@@ -41,13 +45,12 @@ const Survey = (props) => {
           type="checkbox"
           value={`${value.content}`}
           id={`${props.num}${idx}`}
-          // onChange={multiple_select`ions}
           onChange={(e) => {
             if (e.target.checked) {
               Many_select(e);
             } else if (!e.target.checked) {
+              delete_selections(e);
             }
-            // onCheckedElement(e.target.checked, e.target.value);
           }}
         ></Styled.FormCheckLeft>
         <Styled.FormCheckText htmlFor={`${props.num}${idx}`}>
@@ -64,7 +67,6 @@ const Survey = (props) => {
           checked={x === `${value.content}`}
           onChange={(e) => {
             handleClickRadioButton2(e);
-            // multiple_selections();
             Select(e);
           }}
         ></Styled.FormCheckLeft>
@@ -78,7 +80,13 @@ const Survey = (props) => {
         <Styled.FormInput
           type="text"
           id={`${props.num}${idx}`}
+          name="id"
           placeholder={`${value.content}`}
+          value={y}
+          onChange={(e) => {
+            Description(e);
+            handlediscriptrion(e);
+          }}
         ></Styled.FormInput>
       </>
     ) : null;

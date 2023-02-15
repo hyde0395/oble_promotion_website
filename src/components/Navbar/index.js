@@ -12,6 +12,8 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
+import Survey from "../../pages/Survey";
+
 const Navbar = ({ toggle }) => {
   return (
     <>
@@ -23,14 +25,14 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="aboutd">60초 자동상담</NavLinks>
+              <NavLinks to="/Survey">60초 자동상담</NavLinks>
               <NavLinks to="about">오블소개</NavLinks>
               <NavLinks to="aboutd">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="a">상담 받아보기</NavBtnLink>
+            <NavBtnLink to="/Test">상담 받아보기</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

@@ -10,6 +10,8 @@ import {
 } from "../components/InfoSection/Data";
 import Services from "../components/Services";
 import KakaoButton from "../components/KakaoButton";
+import Footer from "../components/Footer";
+import Reference from "../components/Reference";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +29,8 @@ const Home = () => {
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
       <Services />
+      <Reference />
+      <Footer />
       <KakaoButton />
     </>
   );

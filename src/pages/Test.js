@@ -7,11 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import * as Styled from "./Survey/styled";
+
 import Start from "./Start";
 import Submit from "./Submit";
 
+
 import Data from "../components/Survey2/Data";
 import { useSelector, useDispatch } from "react-redux";
+
 const Test = () => {
   const set = useSelector((state) => state.reducer);
   const dispatch = useDispatch();

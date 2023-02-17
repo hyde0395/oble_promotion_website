@@ -51,6 +51,112 @@ const Test = () => {
   // const handleDisable = () => {
   //   setDisable(!disable);
   // };
+
+  const page1_previous = () => {
+    if (
+      (state.activeSlide === 4 &&
+        (set[1].answer === Data[0].answer[0].content ||
+          set[1].answer === Data[0].answer[1].content ||
+          set[1].answer === Data[0].answer[3].content)) ||
+      (state.activeSlide === 3 &&
+        (set[1].answer === Data[0].answer[2].content ||
+          set[1].answer === Data[0].answer[4].content))
+    ) {
+      warp(1);
+    } else if (
+      (state.activeSlide === 15 &&
+        set[1].answer === Data[0].answer[2].content) ||
+      set[1].answer === Data[0].answer[4].content
+    ) {
+      warp(3);
+    } else if (
+      state.activeSlide === 4 &&
+      set[1].answer === Data[0].answer[5].content
+    ) {
+      warp(2);
+    } else {
+      previous();
+    }
+  };
+
+  const page1_next = () => {
+    if (
+      state.activeSlide === 1 &&
+      (set[1].answer === Data[0].answer[0].content ||
+        set[1].answer === Data[0].answer[1].content ||
+        set[1].answer === Data[0].answer[3].content)
+    ) {
+      warp(4);
+    } else if (
+      state.activeSlide === 1 &&
+      (set[1].answer === Data[0].answer[2].content ||
+        set[1].answer === Data[0].answer[4].content)
+    ) {
+      warp(3);
+    } else if (state.activeSlide === 2) {
+      warp(4);
+    } else if (state.activeSlide === 3) {
+      warp(15);
+    } else {
+      next();
+    }
+  };
+
+  const page4_next = () => {
+    if (
+      state.activeSlide === 4 &&
+      set[4].answer !== Data[3].answer[6].content
+    ) {
+      warp(6);
+    } else if (
+      state.activeSlide === 4 &&
+      set[4].answer === Data[3].answer[6].content
+    ) {
+      warp(5);
+    }
+  };
+
+  const page4_prev = () => {
+    if (
+      state.activeSlide === 6 &&
+      set[4].answer !== Data[3].answer[6].content
+    ) {
+      warp(4);
+    } else if (
+      state.activeSlide === 6 &&
+      set[4].answer === Data[3].answer[6].content
+    ) {
+      warp(5);
+    }
+  };
+
+  const page11_next = () => {
+    if (
+      state.activeSlide === 11 &&
+      set[11].answer !== Data[10].answer[4].content
+    ) {
+      warp(13);
+    } else if (
+      state.activeSlide === 11 &&
+      set[11].answer === Data[10].answer[4].content
+    ) {
+      warp(12);
+    }
+  };
+
+  const page11_prev = () => {
+    if (
+      state.activeSlide === 13 &&
+      set[11].answer !== Data[10].answer[4].content
+    ) {
+      warp(11);
+    } else if (
+      state.activeSlide === 13 &&
+      set[11].answer === Data[10].answer[4].content
+    ) {
+      warp(12);
+    }
+  };
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -79,16 +185,9 @@ const Test = () => {
         <Styled.ButtonFlex>
           <Styled.ButtonStyled2
             onClick={() => {
-              if (
-                state.activeSlide === 4 &&
-                (set[1].answer === "개인사업자" ||
-                  set[1].answer === "B2C제품판매기업" ||
-                  set[1].answer === "광고대행사")
-              ) {
-                warp(1);
-              } else {
-                previous();
-              }
+              page1_previous();
+              page4_prev();
+              page11_prev();
             }}
           >
             <div>이전</div>
@@ -100,18 +199,9 @@ const Test = () => {
             disabled={set[state.activeSlide].answer === "" ? true : false}
             // disabled = {disable}
             onClick={() => {
-              if (
-                state.activeSlide === 1 &&
-                (set[1].answer === "개인사업자" ||
-                  set[1].answer === "B2C제품판매기업" ||
-                  set[1].answer === "광고대행사")
-              ) {
-                warp(4);
-              } else {
-                next();
-              }
-
-              // warp();
+              page1_next();
+              page4_next();
+              page11_next();
             }}
           >
             <div>다음</div>

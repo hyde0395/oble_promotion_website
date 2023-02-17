@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Home from "../../pages";
 const KakaoButton = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -12,7 +13,7 @@ const KakaoButton = () => {
       }
       window.Kakao.Channel.createChatButton({
         container: "#kakao-talk-channel-chat-button",
-        channelPublicId: "_xjivGK",
+        channelPublicId: "_xkAERxj",
         title: "consult",
         size: "small",
         color: "yellow",
@@ -22,6 +23,7 @@ const KakaoButton = () => {
       document.body.removeChild(script);
     } catch (err) {}
   }, []);
+
   return (
     <>
       <div

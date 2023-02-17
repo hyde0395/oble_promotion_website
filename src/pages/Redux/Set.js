@@ -62,11 +62,11 @@ export default function reducer(state = initialState, action) {
         user.id === action.id
           ? {
               ...user,
-
+              answer: "",
               answer: user.answer.concat(
-                state[user.id].answer,
                 "/",
                 action.value
+                // state[user.id].answer,
               ),
             }
           : user

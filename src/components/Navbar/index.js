@@ -13,6 +13,8 @@ import {
   SurveyLink,
 } from "./NavbarElements";
 
+import Survey from "../../pages/Survey";
+
 const Navbar = ({ toggle }) => {
   return (
     <>
@@ -24,7 +26,9 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
+
               <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
+
               <NavLinks to="about">오블소개</NavLinks>
               <NavLinks to="service">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>

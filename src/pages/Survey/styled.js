@@ -119,8 +119,8 @@ export const ButtonStyled2 = styled.button`
   border-radius: 10px;
 
   &:disabled {
-    cursor: default;
-    opacity: 0.5;
-    background: var(--button-bg-color, #025ce2);
+    opacity: 1;
+    background: rgb(176, 176, 176);
+    border: none;
   }
 `;

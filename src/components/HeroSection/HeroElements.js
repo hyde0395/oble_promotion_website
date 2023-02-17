@@ -114,7 +114,7 @@ export const HeroVideo = styled.video`
   transition: all 0.2s ease-in-out;
   border-radius: 15px;
   margin-left: 100px;
-
+  margin-left: auto;
   @media screen and (max-width: 960px) {
     width: 300px;
     height: 200px;

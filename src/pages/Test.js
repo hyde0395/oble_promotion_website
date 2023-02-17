@@ -166,9 +166,7 @@ const Test = () => {
       <Navbar toggle={toggle} />
 
       <Slider ref={slickRef} {...settings}>
-
         <Start></Start>
-
 
         <Survey num="0"></Survey>
         <Survey num="1"></Survey>

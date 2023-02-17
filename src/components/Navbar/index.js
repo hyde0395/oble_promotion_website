@@ -30,7 +30,7 @@ const Navbar = ({ toggle }) => {
               <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
 
               <NavLinks to="about">오블소개</NavLinks>
-              <NavLinks to="aboutd">진행과정</NavLinks>
+              <NavLinks to="service">진행과정</NavLinks>
               <NavLinks to="aboutd">제안서받기</NavLinks>
             </NavItem>
           </NavMenu>

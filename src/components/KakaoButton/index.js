@@ -7,12 +7,12 @@ const KakaoButton = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) {
-          kakao.init("c271a26ef129b946fd580bb08f9f0112");
+          kakao.init("7ba41323a4f975863e9dd72743145664");
         }
       }
       window.Kakao.Channel.createChatButton({
         container: "#kakao-talk-channel-chat-button",
-        channelPublicId: "_xjivGK",
+        channelPublicId: "_xkAERxj",
         title: "consult",
         size: "small",
         color: "yellow",
@@ -23,17 +23,15 @@ const KakaoButton = () => {
     } catch (err) {}
   }, []);
   return (
-    <>
-      <div
-        style={{
-          position: "fixed",
-          zIndex: "999",
-          bottom: "5px",
-          right: "10px",
-        }}
-        id="kakao-talk-channel-chat-button"
-      ></div>
-    </>
+    <div
+      style={{
+        position: "fixed",
+        zIndex: "999",
+        bottom: "5px",
+        right: "10px",
+      }}
+      id="kakao-talk-channel-chat-button"
+    ></div>
   );
 };
 

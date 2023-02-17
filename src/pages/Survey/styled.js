@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import Survey from ".";
+
+// 설문 문항 감싸는 컨테이너
+export const SurveyContainer = styled.div``;
+
 // 맨위 제목 스타일
 export const TitleStyled = styled.div`
   margin-top: 270px;

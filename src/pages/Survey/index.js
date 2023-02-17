@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Data from "../../components/Survey2/Data";
 import * as Styled from "./styled";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,6 +21,12 @@ const Survey = (props) => {
   const handleClickRadioButton2 = (e) => {
     setX(e.target.value);
   };
+
+  // const z = useRef("");
+  // const handlediscriptrion = (e) => {
+  //   z.current = e.target.value;
+  // };
+
   const [y, setY] = useState("");
   const handlediscriptrion = (e) => {
     setY(e.target.value);
@@ -36,6 +42,8 @@ const Survey = (props) => {
       dispatch(Delete_Selections(data[props.num].id, e.target.value));
 
     // 주관식 답변 ( 마지막 한글자가 입력 안되어서 수정 필요!!!!!!!!!!!!!@!@@!)
+    //usetate 대신 ref로 받는다
+
     const Description = (e) => dispatch(description(data[props.num].id, y));
 
     return data[props.num].isduplicate === true ? (

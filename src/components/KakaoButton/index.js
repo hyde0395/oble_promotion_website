@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Home from "../../pages";
 const KakaoButton = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -22,6 +23,7 @@ const KakaoButton = () => {
       document.body.removeChild(script);
     } catch (err) {}
   }, []);
+
   return (
     <div
       style={{

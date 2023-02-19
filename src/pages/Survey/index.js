@@ -28,6 +28,7 @@ const Survey = (props) => {
   //   z.current = e.target.value;
   // };
 
+
   const question_list = data[props.num].answer.map((value, idx) => {
     // 복수선택
     const Many_select = (e) =>
@@ -41,8 +42,10 @@ const Survey = (props) => {
     // 주관식 답변 ( 마지막 한글자가 입력 안되어서 수정 필요!!!!!!!!!!!!!@!@@!)
     //usetate 대신 ref로 받는다
 
+
     const Description = (e) =>
       dispatch(description(data[props.num].id, e.target.value));
+
 
     return data[props.num].isduplicate === true ? (
       <>

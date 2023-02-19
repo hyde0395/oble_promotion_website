@@ -21,6 +21,18 @@ export const BoxStyled = styled.div`
   text-align: center;
 `;
 
+// 중복시 서브 타이틀
+export const Subtitle = styled.div`
+  display: flex;
+  color: rgb(75, 94, 237);
+  font-size: 1rem;
+  justify-content: center;
+  padding-right: 180px;
+  font-weight: 600;
+  font-style: oblique;
+  margin-bottom: 6px;
+`;
+
 export const Desc = styled.div`
   margin-top: 150px;
   margin-bottom: 5px;

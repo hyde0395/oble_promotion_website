@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 
 import Slider from "react-slick";
 import Survey from "./Survey";
@@ -7,15 +7,67 @@ import "slick-carousel/slick/slick-theme.css";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import * as Styled from "./Survey/styled";
-
 import Start from "./Start";
 import Submit from "./Submit";
-
-
 import Data from "../components/Survey2/Data";
 import { useSelector, useDispatch } from "react-redux";
 
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const Test = () => {
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate("/");
+    alert("설문조사가 제출되었습니다!");
+
+    // 새로고침 모든거 제출후 나중에
+    // window.location.reload();
+  };
+
+  const set1 = useSelector((state) => state.reducer);
+  // console.log(set1);
+  const [A_Data, setA_Data] = useState([]);
+  let obj = {};
+  const A_Datahandler = () => {
+    set1.map((value, idx) => {
+      setA_Data(A_Data.push(`${value.question}:${value.answer}`));
+
+      // console.log(`${value.question} : ${value.answer}`);
+    });
+    // A_Data.forEach((element, index) => {
+    //   obj["key"] = element;
+    // });
+    console.log(A_Data);
+    // console.log(obj);
+  };
+
+  const [B_Data, setB_Data] = useState({});
+
+  const fetchUsers = async () => {
+    try {
+      const response = await axios.get("v2/api-docs");
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const SubmitUser = async () => {
+    try {
+      const response = await axios.post("v1/survey-result");
+
+      setB_Data(response.data);
+      console.log(B_Data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
   const set = useSelector((state) => state.reducer);
   const dispatch = useDispatch();
 
@@ -25,7 +77,7 @@ const Test = () => {
   };
 
   // 페이지 숫자 보여주는 기능
-  const pageCounter = Data.length;
+  const pageCounter = Data.length + 1;
   //여기 activeSlide 이용해서 원하는 페이지로 워프하게 설정
   const [state, setState] = useState({
     activeSlide: 0,
@@ -48,12 +100,12 @@ const Test = () => {
   const previous = useCallback(() => slickRef.current.slickPrev(), []);
   const next = useCallback(() => slickRef.current.slickNext(), []);
   const warp = useCallback((i) => slickRef.current.slickGoTo(i), []);
-  const survey = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-  // const [disable, setDisable] = useState(true);
-  // const handleDisable = () => {
-  //   setDisable(!disable);
-  // };
+  const Previous_Button = () => {
+    return <></>;
+  };
+
+  const Next_Button = () => {};
 
   const page1_previous = () => {
     if (
@@ -160,6 +212,7 @@ const Test = () => {
       warp(12);
     }
   };
+
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -185,31 +238,63 @@ const Test = () => {
         <Submit />
       </Slider>
       <Styled.Flex>
-        <Styled.ButtonFlex>
-          <Styled.ButtonStyled2
-            onClick={() => {
-              page1_previous();
-              page4_prev();
-              page11_prev();
-            }}
-          >
-            <div>이전</div>
-          </Styled.ButtonStyled2>
-          <p>
-            {state.activeSlide} / {pageCounter}
-          </p>
-          <Styled.ButtonStyled2
-            disabled={set[state.activeSlide].answer === "" ? true : false}
-            // disabled = {disable}
-            onClick={() => {
-              page1_next();
-              page4_next();
-              page11_next();
-            }}
-          >
-            <div>다음</div>
-          </Styled.ButtonStyled2>
-        </Styled.ButtonFlex>
+        {state.activeSlide === 0 ? (
+          <Styled.StartButtonFlex>
+            <Styled.ButtonStyled3
+              disabled={set[state.activeSlide].answer === "" ? true : false}
+              onClick={() => {
+                page1_next();
+                page4_next();
+                page11_next();
+                // fetchUsers();
+              }}
+            >
+              <div onClick={fetchUsers}>시작</div>
+            </Styled.ButtonStyled3>
+          </Styled.StartButtonFlex>
+        ) : (
+          <Styled.ButtonFlex>
+            <Styled.ButtonStyled2
+              onClick={() => {
+                page1_previous();
+                page4_prev();
+                page11_prev();
+              }}
+            >
+              <div>이전</div>
+            </Styled.ButtonStyled2>
+            <p>
+              {state.activeSlide} / {pageCounter}
+            </p>
+            <Styled.ButtonStyled2
+              disabled={set[state.activeSlide].answer === "" ? true : false}
+              onClick={() => {
+                page1_next();
+                page4_next();
+                page11_next();
+                // fetchUsers();
+              }}
+            >
+              {
+                // state.activeSlide === 0 ? (
+                //   <div onClick={fetchUsers}>시작</div>
+                // ) :
+                state.activeSlide === 15 ? (
+                  <div
+                    onClick={() => {
+                      navigateToHome();
+                      A_Datahandler();
+                    }}
+                  >
+                    제출
+                  </div>
+                ) : (
+                  <div>다음</div>
+                )
+              }
+            </Styled.ButtonStyled2>
+          </Styled.ButtonFlex>
+        )}
       </Styled.Flex>
     </>
   );

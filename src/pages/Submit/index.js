@@ -14,7 +14,7 @@ const Submit = () => {
         </p>
       </Styled.BoxStyled>
       <Styled.Flex>
-        <Styled.Desc>설문지를 제출하시려면 다음버튼을 눌러주세요!</Styled.Desc>
+        <Styled.Desc></Styled.Desc>
       </Styled.Flex>
     </>
   );

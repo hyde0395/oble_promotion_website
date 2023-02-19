@@ -69,6 +69,7 @@ const Data = [
   {
     id: 6,
     isduplicate: true,
+    subtitle: "원하는 만큼 선택하세요!",
     question: "어떤 인플루언서[체험단]이 우리 매장을 홍보해주셨으면 좋겠나요? ",
     answer: [
       { id: 1, content: "상위노출을 잘하는 인플루언서" },
@@ -80,6 +81,7 @@ const Data = [
   {
     id: 7,
     isduplicate: true,
+    subtitle: "원하는 만큼 선택하세요!",
     question: "어떤 방식을 통해 매체에 노출시키고 싶나요?",
     answer: [
       { id: 1, content: "체험단 방식" },
@@ -101,7 +103,7 @@ const Data = [
   {
     id: 9,
     isduplicate: false,
-    question: "자사의 핵심 타겟 성별은 무엇입니까?  ",
+    question: "자사의 핵심 타겟 성별은 무엇입니까?",
     answer: [
       { id: 1, content: "여성 위주" },
       { id: 2, content: "남성 위주" },
@@ -112,6 +114,7 @@ const Data = [
   {
     id: 10,
     isduplicate: true,
+    subtitle: "원하는 만큼 선택하세요!",
     question: "광고하고자 하는 특정 연령은 무엇입니까?",
     answer: [
       { id: 1, content: "10대" },
@@ -145,13 +148,13 @@ const Data = [
   {
     id: 13,
     isduplicate: 0,
-    question: "자사의 오프라인 매장 주소 혹은 제품 온라인 구매처를 남겨주세요 ",
+    question: "자사의 오프라인 매장 주소 혹은 제품 온라인 구매처를 남겨주세요",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 14,
     isduplicate: 0,
-    question: "광고주님의 연락처는 무엇입니까? ",
+    question: "광고주님의 연락처는 무엇입니까?",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
 ];

@@ -12,7 +12,7 @@ import reducer from "../Redux/Set";
 const Survey = (props) => {
   const [data, setData] = useState(Data);
   const set = useSelector((state) => state.reducer);
-  console.log(set);
+  // console.log(set);
   const dispatch = useDispatch();
 
   // const set_true = (index, index2) => dispatch(set_true(index, index2));
@@ -22,11 +22,6 @@ const Survey = (props) => {
   const handleClickRadioButton2 = (e) => {
     setX(e.target.value);
   };
-
-  // const z = useRef("");
-  // const handlediscriptrion = (e) => {
-  //   z.current = e.target.value;
-  // };
 
 
   const question_list = data[props.num].answer.map((value, idx) => {
@@ -38,9 +33,6 @@ const Survey = (props) => {
     //복수선택 삭제시
     const delete_selections = (e) =>
       dispatch(Delete_Selections(data[props.num].id, e.target.value));
-
-    // 주관식 답변 ( 마지막 한글자가 입력 안되어서 수정 필요!!!!!!!!!!!!!@!@@!)
-    //usetate 대신 ref로 받는다
 
 
     const Description = (e) =>
@@ -101,21 +93,6 @@ const Survey = (props) => {
       </>
     ) : null;
   });
-
-  // const question_list = data.map(({ id, type, isduplicate, answer }) => (
-  //   <form key={id} id="content" onChange={handleClickRadioButton2}>
-  //     {answer.map(({ id: level, content }) => (
-  //       <>
-  //         <Styled.FormCheckLeft
-  //           type={type}
-  //           name={id}
-  //           id={level}
-  //         ></Styled.FormCheckLeft>
-  //         <Styled.FormCheckText htmlFor={level}>{content}</Styled.FormCheckText>
-  //       </>
-  //     ))}
-  //   </form>
-  // ));
 
   return (
     <>

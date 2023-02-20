@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeroContainer = styled.div`
   height: 700px;
 `;
+
 export const TextWrapper = styled.div`
   height: 590px;
   padding-top: 170px;

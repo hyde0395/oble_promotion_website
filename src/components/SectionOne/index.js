@@ -9,6 +9,7 @@ import {
   BtnBox,
   BtnText,
 } from "./SectionOneElements";
+import { Link } from "react-scroll";
 
 const SectionOne = () => {
   return (
@@ -19,9 +20,12 @@ const SectionOne = () => {
           <HeadLine>성공한다!</HeadLine>
         </HeroTextBox>
       </TextWrapper>
-      <BtnBox>
-        <ScrollButton></ScrollButton>
-      </BtnBox>
+      <Link to="HeroSection" spy={true} smooth={true}>
+        <BtnBox>
+          <ScrollButton></ScrollButton>
+        </BtnBox>
+      </Link>
+
       <BtnText></BtnText>
     </HeroContainer>
   );

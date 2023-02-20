@@ -21,8 +21,9 @@ const HeroSection = () => {
   const onHover = () => {
     setHover(!hover);
   };
+
   return (
-    <HeroContainer>
+    <HeroContainer id="HeroSection">
       <HeroContent>
         <HeroTextBox>
           <HeroH1>

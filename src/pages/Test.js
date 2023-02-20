@@ -15,6 +15,9 @@ import { insert } from "./Redux/Set";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const Test = () => {
   const navigate = useNavigate();
   const navigateToHome = () => {
@@ -26,13 +29,16 @@ const Test = () => {
   };
 
   const set1 = useSelector((state) => state.reducer);
+
   const dispatch1 = useDispatch();
   // const Insert = () => dispatch1(insert());
   console.log(set1);
+
   const [A_Data, setA_Data] = useState([]);
   let obj = {};
   const A_Datahandler = () => {
     set1.map((value, idx) => {
+
       if (idx < 15) {
         // 데이터가 아이디값 순서가 아닌 가나다라 순서로 진행되는오류
         setA_Data(A_Data.push(value.answer));
@@ -49,6 +55,7 @@ const Test = () => {
   };
 
   const [B_Data, setB_Data] = useState({});
+
   const fetchUsers = async () => {
     try {
       const response = await axios.get("v2/api-docs");
@@ -57,6 +64,7 @@ const Test = () => {
       console.log(e);
     }
   };
+
 
   // const GetUserId = async () => {
   //   try {
@@ -86,6 +94,7 @@ const Test = () => {
       .catch((e) => {
         console.log(e);
       });
+
   };
 
   useEffect(() => {
@@ -273,6 +282,7 @@ const Test = () => {
                 // fetchUsers();
               }}
             >
+
               <div
                 onClick={() => {
                   // fetchUsers();
@@ -281,6 +291,7 @@ const Test = () => {
               >
                 시작
               </div>
+
             </Styled.ButtonStyled3>
           </Styled.StartButtonFlex>
         ) : (
@@ -315,7 +326,9 @@ const Test = () => {
                     onClick={() => {
                       navigateToHome();
                       A_Datahandler();
+
                       SubmitUser();
+
                     }}
                   >
                     제출

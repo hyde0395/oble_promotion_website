@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import KakaoButton from "../components/KakaoButton";
 import Footer from "../components/Footer";
 import Reference from "../components/Reference";
+import SectionOne from "../components/SectionOne";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
+      <SectionOne />
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />

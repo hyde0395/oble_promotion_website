@@ -33,7 +33,6 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroTextBox = styled.div`
-  right: auto;
   position: relative;
   justify-content: center;
   justify-items: center;

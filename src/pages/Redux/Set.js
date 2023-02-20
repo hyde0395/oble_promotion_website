@@ -2,10 +2,12 @@ import { type } from "@testing-library/user-event/dist/type";
 
 /* 초기 상태 선언 */
 const initialState = [
+
   { id: 0, question: "participantId", answer: "1" },
   {
     id: 1,
     question: " 광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
+
     answer: "",
   },
   {
@@ -20,11 +22,13 @@ const initialState = [
     answer: "",
   },
   { id: 4, question: "광고주님이 운영하시는 업종은 무엇인가요? ", answer: "" },
+
   {
     id: 5,
     question: " 광고주님이 운영하시는 업종은 무엇인가요?",
     answer: "",
   },
+
   {
     id: 6,
     question: "어떤 인플루언서[체험단]이 우리 매장을 홍보해주셨으면 좋겠나요? ",
@@ -34,7 +38,9 @@ const initialState = [
   { id: 8, question: "어떤 방식의 홍보 전략을 원하시나요?", answer: "" },
   { id: 9, question: "자사의 핵심 타겟 성별은 무엇입니까?", answer: "" },
   { id: 10, question: "광고하고자 하는 특정 연령은 무엇입니까?", answer: "" },
+
   { id: 11, question: " 자사의 핵심 타겟의 직업군은 무엇입니까?", answer: "" },
+
   { id: 12, question: "자사의 핵심 타겟의 직업군은 무엇입니까?", answer: "" },
   {
     id: 13,

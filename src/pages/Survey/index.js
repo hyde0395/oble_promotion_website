@@ -23,7 +23,6 @@ const Survey = (props) => {
     setX(e.target.value);
   };
 
-
   const question_list = data[props.num].answer.map((value, idx) => {
     // 복수선택
     const Many_select = (e) =>
@@ -37,7 +36,6 @@ const Survey = (props) => {
 
     const Description = (e) =>
       dispatch(description(data[props.num].id, e.target.value));
-
 
     return data[props.num].isduplicate === true ? (
       <>

@@ -11,6 +11,9 @@ import Start from "./Start";
 import Submit from "./Submit";
 import Data from "../components/Survey2/Data";
 import { useSelector, useDispatch } from "react-redux";
+import { insert } from "./Redux/Set";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -26,20 +29,29 @@ const Test = () => {
   };
 
   const set1 = useSelector((state) => state.reducer);
-  // console.log(set1);
+
+  const dispatch1 = useDispatch();
+  // const Insert = () => dispatch1(insert());
+  console.log(set1);
+
   const [A_Data, setA_Data] = useState([]);
   let obj = {};
   const A_Datahandler = () => {
     set1.map((value, idx) => {
-      setA_Data(A_Data.push(`${value.question}:${value.answer}`));
+
+      if (idx < 15) {
+        // 데이터가 아이디값 순서가 아닌 가나다라 순서로 진행되는오류
+        setA_Data(A_Data.push(value.answer));
+        A_Data.forEach((element, index) => {
+          obj[value.question] = element;
+        });
+      }
 
       // console.log(`${value.question} : ${value.answer}`);
     });
-    // A_Data.forEach((element, index) => {
-    //   obj["key"] = element;
-    // });
-    console.log(A_Data);
-    // console.log(obj);
+
+    // console.log(A_Data);
+    console.log(obj);
   };
 
   const [B_Data, setB_Data] = useState({});
@@ -53,15 +65,36 @@ const Test = () => {
     }
   };
 
-  const SubmitUser = async () => {
-    try {
-      const response = await axios.post("v1/survey-result");
 
-      setB_Data(response.data);
-      console.log(B_Data);
-    } catch (e) {
-      console.log(e);
-    }
+  // const GetUserId = async () => {
+  //   try {
+  //     const response = await axios.post("v1/participant");
+  //     console.log(response.data);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
+  const GetUserId = () => {
+    axios
+      .post("v1/participant")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  const SubmitUser = () => {
+    axios
+      .post("/v1/survey-result", A_Data)
+      .then((response) => {
+        console.log(JSON.parse(response));
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
   };
 
   useEffect(() => {
@@ -249,7 +282,16 @@ const Test = () => {
                 // fetchUsers();
               }}
             >
-              <div onClick={fetchUsers}>시작</div>
+
+              <div
+                onClick={() => {
+                  // fetchUsers();
+                  GetUserId();
+                }}
+              >
+                시작
+              </div>
+
             </Styled.ButtonStyled3>
           </Styled.StartButtonFlex>
         ) : (
@@ -284,6 +326,9 @@ const Test = () => {
                     onClick={() => {
                       navigateToHome();
                       A_Datahandler();
+
+                      SubmitUser();
+
                     }}
                   >
                     제출

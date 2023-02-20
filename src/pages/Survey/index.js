@@ -12,25 +12,18 @@ import reducer from "../Redux/Set";
 const Survey = (props) => {
   const [data, setData] = useState(Data);
   const set = useSelector((state) => state.reducer);
-  console.log(set);
+  // console.log(set);
   const dispatch = useDispatch();
 
   // const set_true = (index, index2) => dispatch(set_true(index, index2));
 
   const [x, setX] = useState();
+  const [Nullvalue, setNullvalue] = useState();
   const handleClickRadioButton2 = (e) => {
     setX(e.target.value);
   };
 
-  // const z = useRef("");
-  // const handlediscriptrion = (e) => {
-  //   z.current = e.target.value;
-  // };
 
-  const [y, setY] = useState("");
-  const handlediscriptrion = (e) => {
-    setY(e.target.value);
-  };
   const question_list = data[props.num].answer.map((value, idx) => {
     // 복수선택
     const Many_select = (e) =>
@@ -41,10 +34,10 @@ const Survey = (props) => {
     const delete_selections = (e) =>
       dispatch(Delete_Selections(data[props.num].id, e.target.value));
 
-    // 주관식 답변 ( 마지막 한글자가 입력 안되어서 수정 필요!!!!!!!!!!!!!@!@@!)
-    //usetate 대신 ref로 받는다
 
-    const Description = (e) => dispatch(description(data[props.num].id, y));
+    const Description = (e) =>
+      dispatch(description(data[props.num].id, e.target.value));
+
 
     return data[props.num].isduplicate === true ? (
       <>
@@ -90,30 +83,16 @@ const Survey = (props) => {
           id={`${props.num}${idx}`}
           name="id"
           placeholder={`${value.content}`}
-          value={y}
           onChange={(e) => {
+            // handlediscriptrion(e);
             Description(e);
-            handlediscriptrion(e);
+
+            value = e.target.value;
           }}
         ></Styled.FormInput>
       </>
     ) : null;
   });
-
-  // const question_list = data.map(({ id, type, isduplicate, answer }) => (
-  //   <form key={id} id="content" onChange={handleClickRadioButton2}>
-  //     {answer.map(({ id: level, content }) => (
-  //       <>
-  //         <Styled.FormCheckLeft
-  //           type={type}
-  //           name={id}
-  //           id={level}
-  //         ></Styled.FormCheckLeft>
-  //         <Styled.FormCheckText htmlFor={level}>{content}</Styled.FormCheckText>
-  //       </>
-  //     ))}
-  //   </form>
-  // ));
 
   return (
     <>
@@ -121,7 +100,9 @@ const Survey = (props) => {
         <Styled.BoxStyled>
           <p>{Data[props.num].question}</p>
         </Styled.BoxStyled>
-
+        {Data[props.num].isduplicate === true ? (
+          <Styled.Subtitle>{Data[props.num].subtitle}</Styled.Subtitle>
+        ) : null}
         <Styled.Flex>{question_list}</Styled.Flex>
       </div>
     </>

@@ -2,22 +2,43 @@ import { type } from "@testing-library/user-event/dist/type";
 
 /* 초기 상태 선언 */
 const initialState = [
-  { id: 0, answer: "1" },
-  { id: 1, answer: "" },
-  { id: 2, answer: "" },
-  { id: 3, answer: "" },
-  { id: 4, answer: "" },
-  { id: 5, answer: "" },
-  { id: 6, answer: "" },
-  { id: 7, answer: "" },
-  { id: 8, answer: "" },
-  { id: 9, answer: "" },
-  { id: 10, answer: "" },
-  { id: 11, answer: "" },
-  { id: 12, answer: "" },
-  { id: 13, answer: "" },
-  { id: 14, answer: "" },
-  { id: 14, answer: "1" },
+  { id: 0, question: "", answer: "1" },
+  {
+    id: 1,
+    question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
+    answer: "",
+  },
+  {
+    id: 2,
+    question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
+    answer: "",
+  },
+  {
+    id: 3,
+    question:
+      "공공기관 및 프렌차이즈 본사의 문의는 연락처를 남겨주시면 유선연락 드리겠습니다 ",
+    answer: "",
+  },
+  { id: 4, question: "광고주님이 운영하시는 업종은 무엇인가요? ", answer: "" },
+  { id: 5, question: "광고주님이 운영하시는 업종은 무엇인가요? ", answer: "" },
+  {
+    id: 6,
+    question: "어떤 인플루언서[체험단]이 우리 매장을 홍보해주셨으면 좋겠나요? ",
+    answer: "",
+  },
+  { id: 7, question: "어떤 방식을 통해 매체에 노출시키고 싶나요?", answer: "" },
+  { id: 8, question: "어떤 방식의 홍보 전략을 원하시나요?", answer: "" },
+  { id: 9, question: "자사의 핵심 타겟 성별은 무엇입니까?", answer: "" },
+  { id: 10, question: "광고하고자 하는 특정 연령은 무엇입니까?", answer: "" },
+  { id: 11, question: "자사의 핵심 타겟의 직업군은 무엇입니까?", answer: "" },
+  { id: 12, question: "자사의 핵심 타겟의 직업군은 무엇입니까?", answer: "" },
+  {
+    id: 13,
+    question: "자사의 오프라인 매장 주소 혹은 제품 온라인 구매처를 남겨주세요",
+    answer: "",
+  },
+  { id: 14, question: "광고주님의 연락처는 무엇입니까?", answer: "" },
+  { id: 15, question: "", answer: "1" },
 ];
 
 // 액션 함수

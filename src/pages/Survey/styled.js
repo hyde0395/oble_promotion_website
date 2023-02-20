@@ -17,8 +17,20 @@ export const BoxStyled = styled.div`
   margin-top: 100px;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   text-align: center;
+`;
+
+// 중복시 서브 타이틀
+export const Subtitle = styled.div`
+  display: flex;
+  color: rgb(75, 94, 237);
+  font-size: 1rem;
+  justify-content: center;
+  padding-right: 180px;
+  font-weight: 600;
+  font-style: oblique;
+  margin-bottom: 6px;
 `;
 
 export const Desc = styled.div`
@@ -123,4 +135,28 @@ export const ButtonStyled2 = styled.button`
     background: rgb(176, 176, 176);
     border: none;
   }
+`;
+
+//시작 버튼 flex
+export const StartButtonFlex = styled.div`
+  margin-top: 40px;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+`;
+
+// 시작 버튼
+export const ButtonStyled3 = styled.button`
+  border: 1.5px solid rgb(75, 94, 237);
+  background-color: rgb(75, 94, 237);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 6rem;
+  height: 3rem;
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  height: 800px;
+  height: 100vw;
 `;
 
 export const TextWrapper = styled.div`

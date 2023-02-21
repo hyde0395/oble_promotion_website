@@ -12,8 +12,10 @@ import {
   ArrowRight,
   HeroVideo,
   HeroVideoBox,
+  IconBox,
 } from "./HeroElements";
 import { SurveyLink } from "../Navbar/NavbarElements";
+import { FacebookIcon } from "react-share";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -26,12 +28,18 @@ const HeroSection = () => {
     <HeroContainer id="HeroSection">
       <HeroContent>
         <HeroTextBox>
+          <IconBox>
+            <FacebookIcon size={35} round={true}></FacebookIcon>
+            <FacebookIcon size={35} round={true}></FacebookIcon>
+            <FacebookIcon size={35} round={true}></FacebookIcon>
+            <FacebookIcon size={35} round={true}></FacebookIcon>
+          </IconBox>
           <HeroH1>
-            인플루언서 마케팅,
+            내 매장에 적합한
             <p />
-            정직하게 해야 성공합니다.
+            맞춤 인플루언서 찾고 계시나요?
           </HeroH1>
-          <HeroP>처음하는 사람도 누구나 쉽게, 오블 마켓팅!</HeroP>
+          {/* <HeroP>처음하는 사람도 누구나 쉽게, 오블 마켓팅!</HeroP> */}
           <HeroBtnWrapper>
             <Button
               onMouseEnter={onHover}

@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 700px;
+  height: 1000px;
   position: relative;
   z-index: 1;
 
@@ -18,12 +18,12 @@ export const HeroContainer = styled.div`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  max-width: 1400px;
+  max-width: 1500px;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 700px;
   margin-bottom: 100px;
   /* margin-bottom 부분은 나중에 컨텐츠 추가시 삭제 할 수도 있음 */
 
@@ -37,6 +37,7 @@ export const HeroTextBox = styled.div`
   justify-content: center;
   justify-items: center;
   margin: auto;
+  padding-right: 80px;
   @media screen and (max-width: 960px) {
     margin-right: 0;
     width: 100%;
@@ -129,4 +130,13 @@ export const HeroVideo = styled.video`
     width: 100%;
     height: 300px;
   }
+`;
+
+export const IconBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  grid-column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 `;

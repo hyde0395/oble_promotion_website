@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Home from "../../pages";
 const KakaoButton = () => {
   useEffect(() => {
     const script = document.createElement("script");

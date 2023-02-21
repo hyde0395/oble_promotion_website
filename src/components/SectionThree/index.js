@@ -4,6 +4,7 @@ import {
   ThreeHeadBox,
   TreeTextBox,
   ThreeH1,
+  ThreeSideBox,
 } from "./SectionThreeElements";
 
 const SectionThree = () => {
@@ -17,6 +18,7 @@ const SectionThree = () => {
           </ThreeH1>
         </TreeTextBox>
       </ThreeHeadBox>
+      <ThreeSideBox></ThreeSideBox>
     </ThreeContainer>
   );
 };

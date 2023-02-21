@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BgImg from "../../images/part.jpg";
+import BgImg from "../../images/part.png";
 
 export const ThreeContainer = styled.div`
   height: 900px;
@@ -14,13 +14,26 @@ export const TreeTextBox = styled.div`
 
 export const ThreeHeadBox = styled.div`
   display: flex;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     URL(${BgImg});
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   margin: 0;
   height: 200px;
   text-align: center;
 `;
 
-export const ThreeH1 = styled.h1``;
+export const ThreeH1 = styled.h1`
+  font: 74px;
+`;
+
+export const ThreeSideBox = styled.div`
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    URL(${BgImg});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: 70%;
+  height: 150px;
+  margin-top: 200px;
+`;

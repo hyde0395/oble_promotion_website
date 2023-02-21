@@ -32,29 +32,34 @@ const Test = () => {
   console.log(set1);
 
   const [A_Data, setA_Data] = useState([]);
+  const [B_Data, setB_Data] = useState([]);
+
   let obj = {};
+  const [opj, setOpj] = useState();
   const A_Datahandler = () => {
+    obj["participantId"] = opj;
     set1.map((value, idx) => {
-      if (idx < 15) {
+      if (0 < value.id < 15) {
         // 데이터가 아이디값 순서가 아닌 가나다라 순서로 진행되는오류
         setA_Data(A_Data.push(value.answer));
-        A_Data.forEach((element, index) => {
-          obj[value.question] = element;
-        });
+        setB_Data(B_Data.push(value.question));
       }
-
-      // console.log(`${value.question} : ${value.answer}`);
+      A_Data.forEach((element, index) => {
+        obj[`answer${index}`] = element;
+      });
+      B_Data.forEach((element, index) => {
+        obj[`question${index}`] = element;
+      });
     });
 
     // console.log(A_Data);
     console.log(obj);
   };
 
-  const [B_Data, setB_Data] = useState({});
-
   const fetchUsers = async () => {
     try {
       const response = await axios.get("v2/api-docs");
+
       console.log(response.data);
     } catch (e) {
       console.log(e);
@@ -69,11 +74,14 @@ const Test = () => {
   //     console.log(e);
   //   }
   // };
+
   const GetUserId = () => {
     axios
       .post("/v1/participant")
       .then((response) => {
-        console.log(response);
+        console.log(response.data.participantId);
+        setOpj(response.data.participantId);
+        console.log(opj);
       })
       .catch((e) => {
         console.log(e);
@@ -82,9 +90,9 @@ const Test = () => {
 
   const SubmitUser = () => {
     axios
-      .post("/v1/survey-result", A_Data)
+      .post("/v1/survey-result", obj)
       .then((response) => {
-        console.log(JSON.parse(response));
+        console.log(response);
       })
       .catch((e) => {
         console.log(e);
@@ -306,6 +314,7 @@ const Test = () => {
                 page1_next();
                 page4_next();
                 page11_next();
+
                 // fetchUsers();
               }}
             >
@@ -318,7 +327,6 @@ const Test = () => {
                     onClick={() => {
                       navigateToHome();
                       A_Datahandler();
-
                       SubmitUser();
                     }}
                   >

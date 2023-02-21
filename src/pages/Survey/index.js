@@ -33,7 +33,6 @@ const Survey = (props) => {
     const delete_selections = (e) =>
       dispatch(Delete_Selections(data[props.num].id, e.target.value));
 
-
     const Description = (e) =>
       dispatch(description(data[props.num].id, e.target.value));
 

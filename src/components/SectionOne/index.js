@@ -5,9 +5,10 @@ import {
   HeroTextBox,
   HeadLine,
   Subtitle,
-  ScrollButton,
   BtnBox,
   BtnText,
+  ArrowBox,
+  ArrowDown,
 } from "./SectionOneElements";
 import { Link } from "react-scroll";
 
@@ -22,11 +23,13 @@ const SectionOne = () => {
       </TextWrapper>
       <Link to="HeroSection" spy={true} smooth={true}>
         <BtnBox>
-          <ScrollButton></ScrollButton>
+          <ArrowBox>
+            <ArrowDown></ArrowDown>
+          </ArrowBox>
         </BtnBox>
       </Link>
 
-      <BtnText></BtnText>
+      <BtnText>scroll</BtnText>
     </HeroContainer>
   );
 };

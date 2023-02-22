@@ -51,14 +51,20 @@ export const RefP = styled.p`
   text-align: center;
 `;
 export const RefBox = styled.div`
-  display: inline-block;
   width: 100%;
   height: 400px;
-  background: #343434;
+  background: #ffb9b9;
   z-index: 999px;
-  justify-content: center;
 `;
 
-export const SildeBox = styled.div``;
+export const SildeBox = styled.div`
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
-export const RefImgs = styled.img``;
+export const RefImgs = styled.img`
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+`;

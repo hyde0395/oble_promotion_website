@@ -11,6 +11,7 @@ import {
   FourList,
   FourListBox,
 } from "./SectionFourElements";
+import img from "../../images/part.png";
 
 const SectionFour = () => {
   return (
@@ -24,7 +25,7 @@ const SectionFour = () => {
       </FourTextBox>
       <FourContent>
         <FourImgBox>
-          <FourImg></FourImg>
+          <FourImg src={img}></FourImg>
         </FourImgBox>
         <FourListBox>
           <FourUl>

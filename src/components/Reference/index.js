@@ -11,6 +11,7 @@ import {
   RefP,
   SildeBox,
 } from "./ReferenceElements.js";
+import img from "../../images/part.png";
 
 const Reference = () => {
   return (
@@ -24,7 +25,11 @@ const Reference = () => {
 
       <RefBox>
         <SildeBox>
-          <RefImgs />
+          <RefImgs src={img} />
+          <RefImgs src={img} />
+          <RefImgs src={img} />
+          <RefImgs src={img} />
+          <RefImgs src={img} />
         </SildeBox>
       </RefBox>
     </RefContainer>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 function Manager() {
-  const [B_Data, setB_Data] = useState(null);
+  const [B_Data, setB_Data] = useState({});
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
@@ -15,7 +15,10 @@ function Manager() {
         // }
       );
       setB_Data((await response).data);
-      //   console.log(typeof B_Data);
+      for (const key in Object.keys(B_Data)) {
+        setB_Data(B_Data[key]);
+        console.log(B_Data);
+      }
     } catch (e) {
       console.log(e);
     }
@@ -25,6 +28,7 @@ function Manager() {
   }, []);
 
   const string = () => {};
+
   return (
     <>
       <p>{JSON.stringify(B_Data)}</p>

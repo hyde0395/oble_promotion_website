@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RefContainer = styled.div`
+export const FiveContainer = styled.div`
   height: 700px;
   z-index: 1;
   background-color: #ffffff;
@@ -10,7 +10,7 @@ export const RefContainer = styled.div`
   justify-content: center;
 `;
 
-export const RefWrapper = styled.div`
+export const FiveWrapper = styled.div`
   display: flex;
   z-index: 1;
   height: 300px;
@@ -23,7 +23,7 @@ export const RefWrapper = styled.div`
   background-color: #ffffff;
 `;
 
-export const RefTextWrapper = styled.div`
+export const FiveTextWrapper = styled.div`
   max-width: 1200px;
   padding-top: 0;
   padding-bottom: 60px;
@@ -33,14 +33,14 @@ export const RefTextWrapper = styled.div`
   max-height: 200px;
 `;
 
-export const RefH1 = styled.h1`
+export const FiveH1 = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
   line-height: 1.1;
   display: inline;
   font-weight: 600;
 `;
-export const RefPH1 = styled.h1`
+export const FivePH1 = styled.h1`
   display: inline;
   margin-bottom: 24px;
   font-size: 48px;
@@ -51,7 +51,7 @@ export const RefPH1 = styled.h1`
   -webkit-background-clip: text;
   color: transparent;
 `;
-export const RefBox = styled.div`
+export const FiveBox = styled.div`
   width: 100%;
   height: 600px;
   padding-bottom: 150px;
@@ -61,13 +61,14 @@ export const RefBox = styled.div`
   margin-left: auto;
 `;
 
-export const SildeBox = styled.div`
+export const FiveSildeBox = styled.div`
   background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
 `;
 
-export const RefImgs = styled.img`
+export const FiveImgs = styled.img`
   width: 400px;
-  height: 400px;
+  height: 300px;
+  border-radius: 24px;
 `;

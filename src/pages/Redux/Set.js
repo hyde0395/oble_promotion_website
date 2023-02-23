@@ -2,7 +2,6 @@ import { type } from "@testing-library/user-event/dist/type";
 
 /* 초기 상태 선언 */
 const initialState = [
-
   { id: 0, question: "participantId", answer: "1" },
   {
     id: 1,

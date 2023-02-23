@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   RefContainer,
@@ -8,25 +8,55 @@ import {
   RefImgs,
   RefBox,
   RefH1,
-  RefP,
+  RefPH1,
   SildeBox,
 } from "./ReferenceElements.js";
+import img from "../../images/part.png";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Reference = () => {
+  const items = [
+    { src: img },
+    { src: img },
+    { src: img },
+    { src: img },
+    { src: img },
+    { src: img },
+    { src: img },
+    { src: "../../images/2.svg" },
+  ];
   return (
     <RefContainer>
       <RefWrapper>
         <RefTextWrapper>
-          <RefH1>오블은 최고의 마케팅입니다.</RefH1>
-          <RefP>ajdflkajdlkfajl</RefP>
+          <RefH1>전문성 100%</RefH1>
+          <RefPH1> 인플루언서 리뷰 컨텐츠</RefPH1>
         </RefTextWrapper>
       </RefWrapper>
-
-      <RefBox>
-        <SildeBox>
-          <RefImgs />
-        </SildeBox>
-      </RefBox>
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        loop={true}
+        spaceBetween={10}
+        slidesPerView={4}
+        navigation={true} // 네비게이션 버튼
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+      >
+        <RefBox>
+          <SildeBox>
+            {items.map((item, idx) => {
+              return (
+                <SwiperSlide key={idx}>
+                  <RefImgs src={item.src} />
+                  ㅇ라ㅣㅁㄴ어리ㅏㅁ너림나어리ㅏㅁ럼ㄴ이ㅓ리만ㅇ러ㅏㅣ;ㅁㄴ어리;ㅁ나럼니;라ㅓㅁ니;ㅇ라ㅓㅁ니;라ㅓㅁㄴ;ㅣ러ㅏㅁ니;ㅏ럼니;라ㅓㅁㄴ이;러ㅏㅁ;아ㅣㅓㄹ;미나ㅓ리;ㅁ나ㅓ
+                </SwiperSlide>
+              );
+            })}
+          </SildeBox>
+        </RefBox>
+      </Swiper>
     </RefContainer>
   );
 };

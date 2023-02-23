@@ -15,6 +15,7 @@ import Reference from "../components/Reference";
 import SectionOne from "../components/SectionOne";
 import SectionThree from "../components/SectionThree";
 import SectionFour from "../components/SectionFour";
+import SectionFive from "../components/SectionFive";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +32,14 @@ const Home = () => {
       <HeroSection />
       <SectionThree />
       <SectionFour />
+      <Reference />
+      <SectionFive />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
 
       <Services />
-      <Reference />
+
       <Footer />
       <KakaoButton />
     </>

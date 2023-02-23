@@ -18,7 +18,7 @@ export const HeroContainer = styled.div`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  max-width: 1500px;
+  max-width: 1500px; //가로 최대 크기
   position: absolute;
   display: flex;
   align-items: center;
@@ -30,6 +30,11 @@ export const HeroContent = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+`;
+
+export const SnsLogo = styled.img`
+  width: 40px;
+  height: 40px;
 `;
 
 export const HeroTextBox = styled.div`

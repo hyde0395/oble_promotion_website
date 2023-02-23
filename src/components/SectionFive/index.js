@@ -9,6 +9,7 @@ import {
   FiveBox,
   FiveH1,
   FivePH1,
+  FiveSlideText,
   //   FiveSildeBox,
 } from "./SectionFiveElements";
 import img from "../../images/part.png";
@@ -19,13 +20,14 @@ import "swiper/css/pagination";
 
 const SectionFive = () => {
   const items = [
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
+    { src: img, text: "fkladflakl" },
     { src: "../../images/2.svg" },
   ];
   return (
@@ -49,6 +51,8 @@ const SectionFive = () => {
             return (
               <SwiperSlide key={idx}>
                 <FiveImgs src={item.src} />
+                {/* <FiveSlideText>fadfkladjfklajdflaksdjlasf</FiveSlideText> */}
+                sfgsdgklsfdkjglsfkjgklkgjslkfgjlskgjsl
               </SwiperSlide>
             );
           })}

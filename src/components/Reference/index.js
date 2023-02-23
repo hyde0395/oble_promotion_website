@@ -50,7 +50,6 @@ const Reference = () => {
               return (
                 <SwiperSlide key={idx}>
                   <RefImgs src={item.src} />
-                  ㅇ라ㅣㅁㄴ어리ㅏㅁ너림나어리ㅏㅁ럼ㄴ이ㅓ리만ㅇ러ㅏㅣ;ㅁㄴ어리;ㅁ나럼니;라ㅓㅁ니;ㅇ라ㅓㅁ니;라ㅓㅁㄴ;ㅣ러ㅏㅁ니;ㅏ럼니;라ㅓㅁㄴ이;러ㅏㅁ;아ㅣㅓㄹ;미나ㅓ리;ㅁ나ㅓ
                 </SwiperSlide>
               );
             })}

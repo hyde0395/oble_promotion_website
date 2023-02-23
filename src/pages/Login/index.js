@@ -38,7 +38,7 @@ function Login() {
         password: Password,
       })
       .then((response) => {
-        console.log(response);
+        console.log(response.headers.authorization);
         navigateToSurvey();
       })
       .catch((e) => {
@@ -47,9 +47,9 @@ function Login() {
       });
   };
 
-  useEffect(() => {
-    LoginUsers();
-  }, []);
+  // useEffect(() => {
+  //   LoginUsers();
+  // }, []);
 
   const onSubmitHandler = (event) => {
     // 버튼만 누르면 리프레시 되는것을 막아줌

@@ -75,8 +75,8 @@ const Test = () => {
   //   }
   // };
 
-  const GetUserId = () => {
-    axios
+  const GetUserId = async () => {
+    await axios
       .post("/v1/participant")
       .then((response) => {
         console.log(response.data.participantId);

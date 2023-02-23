@@ -13,9 +13,13 @@ import {
   HeroVideo,
   HeroVideoBox,
   IconBox,
+  SnsLogo,
 } from "./HeroElements";
 import { SurveyLink } from "../Navbar/NavbarElements";
-import { FacebookIcon } from "react-share";
+import BlogIcon from "../../images/SnsLogo/BlogLogo.png";
+import YoutubeIcon from "../../images/SnsLogo/YoutubeLogo.png";
+import InstaIcon from "../../images/SnsLogo/InstaLogo.png";
+import TictokIcon from "../../images/SnsLogo/TictokLogo.png";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -29,10 +33,10 @@ const HeroSection = () => {
       <HeroContent>
         <HeroTextBox>
           <IconBox>
-            <FacebookIcon size={35} round={true}></FacebookIcon>
-            <FacebookIcon size={35} round={true}></FacebookIcon>
-            <FacebookIcon size={35} round={true}></FacebookIcon>
-            <FacebookIcon size={35} round={true}></FacebookIcon>
+            <SnsLogo src={BlogIcon} />
+            <SnsLogo src={InstaIcon} />
+            <SnsLogo src={YoutubeIcon} />
+            <SnsLogo src={TictokIcon} />
           </IconBox>
           <HeroH1>
             내 매장에 적합한

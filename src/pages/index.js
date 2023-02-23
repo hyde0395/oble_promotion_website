@@ -32,13 +32,14 @@ const Home = () => {
       <HeroSection />
       <SectionThree />
       <SectionFour />
+      <Reference />
       <SectionFive />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
 
       <Services />
-      <Reference />
+
       <Footer />
       <KakaoButton />
     </>

@@ -40,39 +40,24 @@ const Reference = () => {
         modules={[Navigation, Pagination, Autoplay]}
         loop={true}
         spaceBetween={10}
-        slidesPerView={6}
+        slidesPerView={4}
         navigation={true} // 네비게이션 버튼
-        autoplay={{ delay: 200, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
       >
         <RefBox>
-          {items.map((item, idx) => {
-            return (
-              <SwiperSlide key={idx}>
-                <RefImgs src={item.src} />
-              </SwiperSlide>
-            );
-          })}
+          <SildeBox>
+            {items.map((item, idx) => {
+              return (
+                <SwiperSlide key={idx}>
+                  <RefImgs src={item.src} />
+                  ㅇ라ㅣㅁㄴ어리ㅏㅁ너림나어리ㅏㅁ럼ㄴ이ㅓ리만ㅇ러ㅏㅣ;ㅁㄴ어리;ㅁ나럼니;라ㅓㅁ니;ㅇ라ㅓㅁ니;라ㅓㅁㄴ;ㅣ러ㅏㅁ니;ㅏ럼니;라ㅓㅁㄴ이;러ㅏㅁ;아ㅣㅓㄹ;미나ㅓ리;ㅁ나ㅓ
+                </SwiperSlide>
+              );
+            })}
+          </SildeBox>
         </RefBox>
       </Swiper>
     </RefContainer>
-
-    // <RefContainer>
-    //   <Swiper
-    //     pagination={{
-    //       clickable: true,
-    //     }}
-    //     modules={[Navigation, Pagination]}
-    //     loop={true}
-    //   >
-    //     {items.map((item, idx) => {
-    //       return (
-    //         <SwiperSlide key={idx}>
-    //           <RefImgs src={item.src} />
-    //         </SwiperSlide>
-    //       );
-    //     })}
-    //   </Swiper>
-    // </RefContainer>
   );
 };
 

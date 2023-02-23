@@ -5,7 +5,6 @@ export const FourContainer = styled.div`
 
 export const FourContent = styled.div`
   z-index: 3;
-  max-width: 1500px; //가로 최대 크기
   position: absolute;
   display: flex;
   align-items: center;
@@ -58,12 +57,13 @@ export const FourImgBox = styled.div`
   @media screen and (max-width: 960px) {
     margin-right: 0;
     width: 100%;
+    padding-left: 0px;
   }
   @media screen and (max-width: 768px) {
-    right: auto;
     margin-top: 200px;
     margin-bottom: 30px;
-    margin-right: 0;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 `;
 

@@ -33,6 +33,15 @@ export const Subtitle = styled.div`
   margin-bottom: 6px;
 `;
 
+export const Subquestion = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-right: 180px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: oblique;
+  margin-bottom: 6px;
+`;
 export const Desc = styled.div`
   margin-top: 150px;
   margin-bottom: 5px;

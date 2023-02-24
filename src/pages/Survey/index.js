@@ -97,6 +97,10 @@ const Survey = (props) => {
         <Styled.BoxStyled>
           <p>{Data[props.num].question}</p>
         </Styled.BoxStyled>
+        {typeof Data[props.num].subquestion !== "undefined" ? (
+          <Styled.Subquestion>{Data[props.num].subquestion}</Styled.Subquestion>
+        ) : null}
+
         {Data[props.num].isduplicate === true ? (
           <Styled.Subtitle>{Data[props.num].subtitle}</Styled.Subtitle>
         ) : null}

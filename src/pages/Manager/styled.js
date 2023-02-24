@@ -11,4 +11,10 @@ export const Box = styled.div`
   height: 500px;
   background-color: #c0c0c0;
   margin-top: 40px;
+  font-size: 18px;
+  line-height: 1.8;
+`;
+
+export const Word = styled.div`
+  color: white;
 `;

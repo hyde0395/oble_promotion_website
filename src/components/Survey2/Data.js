@@ -83,6 +83,8 @@ const Data = [
     isduplicate: true,
     subtitle: "원하는 만큼 선택하세요!",
     question: "어떤 방식을 통해 매체에 노출시키고 싶나요?",
+    subquestion:
+      "체험단 : 인플루언서가 직접 서비스를 이용한 후 콘텐츠 제작 \n기자단 : 인플루언서가 서비스를 체험하지 않고 ,\n 콘텐츠 소스 및  원고료를 제공받은 뒤 콘텐츠 제작",
     answer: [
       { id: 1, content: "체험단 방식" },
       { id: 2, content: "기자단 방식 (유튜브 해당X)" },
@@ -93,6 +95,8 @@ const Data = [
     id: 8,
     isduplicate: false,
     question: "어떤 방식의 홍보 전략을 원하시나요?",
+    subquestion:
+      "질적 : 상위 5%이내 인플루언서 기반\n양질 : 상위 40%이내 일반 인플루언서 기반\n양적 : 인플루언서의 질과 관계없이 저렴한 가격으로 양적인 홍보 진행",
     answer: [
       { id: 1, content: "질적 퀄리티 기반" },
       { id: 2, content: "양질의 퀄리티 기반" },
@@ -104,6 +108,8 @@ const Data = [
     id: 9,
     isduplicate: false,
     question: "자사의 핵심 타겟 성별은 무엇입니까?",
+    subquestion:
+      "* 자사의 서비스를 주로 이용/구매하는 고객층을 선택하는 것이 효과적입니다",
     answer: [
       { id: 1, content: "여성 위주" },
       { id: 2, content: "남성 위주" },
@@ -115,7 +121,9 @@ const Data = [
     id: 10,
     isduplicate: true,
     subtitle: "원하는 만큼 선택하세요!",
-    question: "광고하고자 하는 특정 연령은 무엇입니까?",
+    question: "자사의 핵심 타겟 연령은 무엇입니까?",
+    subquestion:
+      "* 자사의 서비스를 주로 이용/구매하는 연령층을 선택하는 것이 효과적입니다.",
     answer: [
       { id: 1, content: "10대" },
       { id: 2, content: "20대" },
@@ -130,6 +138,7 @@ const Data = [
     id: 11,
     isduplicate: false,
     question: "자사의 핵심 타겟의 직업군은 무엇입니까?",
+    subquestion: "*선택에 따라 유사한 인플루언서가 매칭됩니다.",
     answer: [
       { id: 1, content: "초, 중, 고등학생" },
       { id: 2, content: "대학생" },
@@ -143,18 +152,23 @@ const Data = [
     id: 12,
     isduplicate: 0,
     question: "자사의 핵심 타겟의 직업군은 무엇입니까?",
+    subquestion: "*선택에 따라 유사한 인플루언서가 매칭됩니다.",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 13,
     isduplicate: 0,
     question: "자사의 오프라인 매장 주소 혹은 제품 온라인 구매처를 남겨주세요",
+    subquestion:
+      "EX) \n주소 :  경기도 화성시 와우안길 17 수원대학교 고운첨단과학기술원 905호 오블 \n온라인 판매처 : blog.naver.com/ohmarket22",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 14,
     isduplicate: 0,
     question: "광고주님의 연락처는 무엇입니까?",
+    subquestion:
+      "EX)\n1. 기업이름 : 오블\n2. 직책 : 대표\n3. 이름 : 박예준\n4. 연락처 : 010-5361-1431",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
 ];

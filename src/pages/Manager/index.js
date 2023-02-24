@@ -45,48 +45,62 @@ function Manager() {
           // </p>
           <>
             <Styled.Box>
-              <p>{value.id}번</p>
+              <p style={{ color: "red" }}>{value.id}번</p>
               <p>
-                {value.question1} {value.answer1}
+                {value.question1}{" "}
+                <span style={{ color: "blue" }}>{value.answer1}</span>
               </p>
               <p>
-                {value.question2} {value.answer2}
+                {value.question2}{" "}
+                <span style={{ color: "blue" }}>{value.answer2}</span>
               </p>
               <p>
-                {value.question3} {value.answer3}
+                {value.question3}{" "}
+                <span style={{ color: "blue" }}>{value.answer3}</span>
               </p>
               <p>
-                {value.question4} {value.answer4}
+                {value.question4}{" "}
+                <span style={{ color: "blue" }}>{value.answer4}</span>
               </p>
               <p>
-                {value.question5} {value.answer5}
+                {value.question5}{" "}
+                <span style={{ color: "blue" }}>{value.answer5}</span>
               </p>
               <p>
-                {value.question6} {value.answer6}
+                {value.question6}{" "}
+                <span style={{ color: "blue" }}>{value.answer6}</span>
               </p>
               <p>
-                {value.question7} {value.answer7}
+                {value.question7}{" "}
+                <span style={{ color: "blue" }}>{value.answer7}</span>
               </p>
               <p>
-                {value.question8} {value.answer8}
+                {value.question8}{" "}
+                <span style={{ color: "blue" }}>{value.answer8}</span>
               </p>
               <p>
-                {value.question9} {value.answer9}
+                {value.question9}{" "}
+                <span style={{ color: "blue" }}>{value.answer9}</span>
               </p>
               <p>
-                {value.question10} {value.answer10}
+                {value.question10}{" "}
+                <span style={{ color: "blue" }}>{value.answer10}</span>
               </p>
               <p>
-                {value.question11} {value.answer11}
+                {value.question11}{" "}
+                <span style={{ color: "blue" }}>{value.answer11}</span>
               </p>
               <p>
-                {value.question12} {value.answer12}
+                {value.question12}{" "}
+                <span style={{ color: "blue" }}>{value.answer12}</span>
               </p>
               <p>
-                {value.question13} {value.answer13}
+                {value.question13}{" "}
+                <span style={{ color: "blue" }}>{value.answer13}</span>
               </p>
               <p>
-                {value.question14} {value.answer14}
+                {value.question14}{" "}
+                <span style={{ color: "blue" }}>{value.answer14}</span>
               </p>
             </Styled.Box>
           </>

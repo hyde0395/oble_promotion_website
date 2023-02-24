@@ -11,22 +11,19 @@ import {
   RefPH1,
   SildeBox,
 } from "./ReferenceElements.js";
-import img from "../../images/part.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Reference = () => {
   const items = [
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: "../../images/2.svg" },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png` },
   ];
   return (
     <RefContainer>
@@ -50,7 +47,6 @@ const Reference = () => {
               return (
                 <SwiperSlide key={idx}>
                   <RefImgs src={item.src} />
-                  ㅇ라ㅣㅁㄴ어리ㅏㅁ너림나어리ㅏㅁ럼ㄴ이ㅓ리만ㅇ러ㅏㅣ;ㅁㄴ어리;ㅁ나럼니;라ㅓㅁ니;ㅇ라ㅓㅁ니;라ㅓㅁㄴ;ㅣ러ㅏㅁ니;ㅏ럼니;라ㅓㅁㄴ이;러ㅏㅁ;아ㅣㅓㄹ;미나ㅓ리;ㅁ나ㅓ
                 </SwiperSlide>
               );
             })}

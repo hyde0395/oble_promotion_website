@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FiveContainer = styled.div`
-  height: 700px;
+  height: 900px;
   z-index: 1;
   background-color: #ffffff;
   width: 100%;
@@ -71,4 +71,12 @@ export const FiveImgs = styled.img`
   width: 400px;
   height: 300px;
   border-radius: 24px;
+`;
+
+export const FiveSlideText = styled.span``;
+
+export const BlogBox = styled.div`
+  background-color: #5f5f5f;
+  height: 400px;
+  width: 400px;
 `;

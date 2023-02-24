@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RefContainer = styled.div`
-  height: 700px;
+  height: 900px;
   z-index: 1;
   background-color: #ffffff;
   width: 100%;

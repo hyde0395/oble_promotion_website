@@ -4,12 +4,10 @@ import {
   SixContent,
   SixTextBox,
   SixH1,
+  SixH1Two,
   SixP,
   SixImg,
   SixImgBox,
-  SixUl,
-  SixList,
-  SixListBox,
 } from "./SectionSixElements";
 import img from "../../images/part.png";
 
@@ -25,8 +23,7 @@ const SectionSix = () => {
             실시간 매칭 가능한
             <p />
             진짜
-            <p />
-            우리동네 인플루언서
+            <SixH1Two> 우리동네 인플루언서</SixH1Two>
           </SixH1>
         </SixTextBox>
       </SixContent>

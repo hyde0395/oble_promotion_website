@@ -17,6 +17,7 @@ import SectionThree from "../components/SectionThree";
 import SectionFour from "../components/SectionFour";
 import SectionFive from "../components/SectionFive";
 import SectionSix from "../components/SectionSix";
+import SectionSeven from "../components/SectionSeven";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,7 @@ const Home = () => {
       <Reference />
       <SectionFive />
       <SectionSix />
+      <SectionSeven />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />

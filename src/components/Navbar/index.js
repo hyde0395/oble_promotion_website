@@ -26,7 +26,6 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-
               <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
 
               <NavLinks to="about">오블소개</NavLinks>

@@ -4,16 +4,18 @@ export const SixContainer = styled.div`
   height: 900px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     URL(${BgImg});
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const SixContent = styled.div`
   z-index: 3;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  margin-bottom: 100px;
+  height: 900px;
+  background-color: #ff3232;
 
   @media screen and (max-width: 960px) {
     flex-direction: column;
@@ -25,31 +27,35 @@ export const SixContent = styled.div`
 `;
 
 export const SixImg = styled.img`
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 700px;
+  margin: 0 auto;
 `;
 
 export const SixTextBox = styled.div`
   margin: 0;
   height: 300px;
+  color: #ffffff;
+  background-color: #444444;
+  margin-bottom: 200px; // 텍스트 아래 여백 설정
 `;
 export const SixH1 = styled.h1`
   margin-bottom: 10px;
-  background-image: linear-gradient(135deg, #00b09b, #96c93d);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 81px;
+  font-size: 60px;
+`;
+export const SixH1Two = styled.h1`
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-underline-offset: 14px;
+  font-size: 60px;
 `;
 
 export const SixImgBox = styled.div`
-  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  justify-items: center;
-  margin: auto;
-  padding-right: 100px;
-  padding-bottom: 200px;
-  padding-left: 400px;
+  height: 800px;
+  width: 700px;
   background-color: #808080;
 
   @media screen and (max-width: 960px) {
@@ -68,11 +74,4 @@ export const SixImgBox = styled.div`
 export const SixListBox = styled.div`
   margin-right: 10px;
   margin-bottom: 100px;
-`;
-
-export const SixUl = styled.ul``;
-
-export const SixList = styled.li`
-  font-size: 25px;
-  color: #000;
 `;

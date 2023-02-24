@@ -8,15 +8,18 @@ import {
   SixP,
   SixImg,
   SixImgBox,
+  SixCard,
+  SixCardText,
 } from "./SectionSixElements";
-import img from "../../images/part.png";
+
+import ListImg from "../../images/Influencer_List.jpg";
 
 const SectionSix = () => {
   return (
     <SixContainer>
       <SixContent>
         <SixImgBox>
-          <SixImg src={img}></SixImg>
+          <SixImg src={ListImg}></SixImg>
         </SixImgBox>
         <SixTextBox>
           <SixH1>
@@ -25,6 +28,9 @@ const SectionSix = () => {
             진짜
             <SixH1Two> 우리동네 인플루언서</SixH1Two>
           </SixH1>
+          <SixCard>
+            <SixCardText>1,000명⁺</SixCardText>
+          </SixCard>
         </SixTextBox>
       </SixContent>
     </SixContainer>

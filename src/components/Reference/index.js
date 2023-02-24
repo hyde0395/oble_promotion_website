@@ -11,22 +11,19 @@ import {
   RefPH1,
   SildeBox,
 } from "./ReferenceElements.js";
-import img from "../../images/part.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Reference = () => {
   const items = [
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: "../../images/2.svg" },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png` },
+    { src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png` },
   ];
   return (
     <RefContainer>

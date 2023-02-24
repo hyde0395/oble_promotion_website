@@ -74,3 +74,9 @@ export const FiveImgs = styled.img`
 `;
 
 export const FiveSlideText = styled.span``;
+
+export const BlogBox = styled.div`
+  background-color: #5f5f5f;
+  height: 400px;
+  width: 400px;
+`;

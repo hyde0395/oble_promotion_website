@@ -17,14 +17,45 @@ import "swiper/css/pagination";
 
 const Reference = () => {
   const items = [
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png` },
-    { src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png` },
+    {
+      id: "0",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`,
+      text: "1ㄹㅇㄹㅇㄹㅇ",
+    },
+    {
+      id: "1",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
+      text: "2ㄹㄴㅇㄹㄴㅇㄹ",
+    },
+    {
+      id: "2",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
+      text: "3fgfgfgffg",
+    },
+    {
+      id: "3",
+
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
+      text: "3",
+    },
+    {
+      id: "4",
+
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
+      text: "3",
+    },
+    {
+      id: "5",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
+      text: "3",
+    },
+    {
+      id: "6",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
+      text: "3",
+    },
   ];
+
   return (
     <RefContainer>
       <RefWrapper>
@@ -43,9 +74,9 @@ const Reference = () => {
       >
         <RefBox>
           <SildeBox>
-            {items.map((item, idx) => {
+            {items.map((item) => {
               return (
-                <SwiperSlide key={idx}>
+                <SwiperSlide key={item.id}>
                   <RefImgs src={item.src} />
                 </SwiperSlide>
               );

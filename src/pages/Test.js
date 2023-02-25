@@ -253,7 +253,11 @@ const Test = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
 
-      <Slider ref={slickRef} {...settings}>
+      <Slider
+        style={{ "white-space": "pre-wrap" }}
+        ref={slickRef}
+        {...settings}
+      >
         <Start></Start>
 
         <Survey num="0"></Survey>

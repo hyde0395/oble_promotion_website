@@ -11,23 +11,51 @@ import {
   RefPH1,
   SildeBox,
 } from "./ReferenceElements.js";
-import img from "../../images/part.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Reference = () => {
   const items = [
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: img },
-    { src: "../../images/2.svg" },
+    {
+      id: "0",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`,
+      text: "1ㄹㅇㄹㅇㄹㅇ",
+    },
+    {
+      id: "1",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
+      text: "2ㄹㄴㅇㄹㄴㅇㄹ",
+    },
+    {
+      id: "2",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
+      text: "3fgfgfgffg",
+    },
+    {
+      id: "3",
+
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
+      text: "3",
+    },
+    {
+      id: "4",
+
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
+      text: "3",
+    },
+    {
+      id: "5",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
+      text: "3",
+    },
+    {
+      id: "6",
+      src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
+      text: "3",
+    },
   ];
+
   return (
     <RefContainer>
       <RefWrapper>
@@ -46,11 +74,10 @@ const Reference = () => {
       >
         <RefBox>
           <SildeBox>
-            {items.map((item, idx) => {
+            {items.map((item) => {
               return (
-                <SwiperSlide key={idx}>
+                <SwiperSlide key={item.id}>
                   <RefImgs src={item.src} />
-                  ㅇ라ㅣㅁㄴ어리ㅏㅁ너림나어리ㅏㅁ럼ㄴ이ㅓ리만ㅇ러ㅏㅣ;ㅁㄴ어리;ㅁ나럼니;라ㅓㅁ니;ㅇ라ㅓㅁ니;라ㅓㅁㄴ;ㅣ러ㅏㅁ니;ㅏ럼니;라ㅓㅁㄴ이;러ㅏㅁ;아ㅣㅓㄹ;미나ㅓ리;ㅁ나ㅓ
                 </SwiperSlide>
               );
             })}

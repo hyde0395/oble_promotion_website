@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FiveContainer = styled.div`
-  height: 700px;
+  height: 900px;
   z-index: 1;
   background-color: #ffffff;
   width: 100%;
@@ -61,14 +61,24 @@ export const FiveBox = styled.div`
   margin-left: auto;
 `;
 
-export const FiveSildeBox = styled.div`
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
+export const FiveImgs = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
 `;
 
-export const FiveImgs = styled.img`
-  width: 400px;
+export const BlogBox = styled.div`
+  background-color: #5f5f5f;
   height: 300px;
-  border-radius: 24px;
+  width: 300px;
+`;
+export const BlogTextBox = styled.div`
+  text-align: center;
+  background-color: #3a3a3a;
+`;
+
+export const BlogText = styled.p`
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
 `;

@@ -7,8 +7,7 @@ import Survey from "./pages/Survey";
 import Test from "./pages/Test";
 import Manager from "./pages/Manager";
 import Login from "./pages/Login";
-// import Manager from "./pages/Manager";
-// import Login from "./pages/Login";
+
 function App() {
   return (
     <Router>

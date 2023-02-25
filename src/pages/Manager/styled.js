@@ -17,4 +17,5 @@ export const Box = styled.div`
 
 export const Word = styled.div`
   color: white;
+  
 `;

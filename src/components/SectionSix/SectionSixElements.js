@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import BgImg from "../../images/BgImg.png";
+
 export const SixContainer = styled.div`
   height: 900px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -70,14 +71,11 @@ export const SixImgBox = styled.div`
 
   @media screen and (max-width: 960px) {
     margin-right: 0;
-    width: 100%;
-    padding-left: 0px;
+    margin-bottom: 100px;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 200px;
     margin-bottom: 30px;
-    padding-right: 0px;
-    padding-left: 0px;
+    margin-right: 0;
   }
 `;
 

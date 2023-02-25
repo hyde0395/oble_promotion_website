@@ -8,7 +8,6 @@ import Test from "./pages/Test";
 import Manager from "./pages/Manager";
 import Login from "./pages/Login";
 
-
 function App() {
   return (
     <Router>

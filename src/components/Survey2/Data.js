@@ -6,6 +6,7 @@ const Data = [
     id: 1,
     isduplicate: false,
     question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
+    subquestion: "",
     answer: [
       {
         id: 1,
@@ -37,6 +38,7 @@ const Data = [
     id: 2,
     isduplicate: 0,
     question: "광고주님! 반갑습니다!  어떤 사업을 하고 계시나요? ",
+    subquestion: "",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
@@ -44,12 +46,14 @@ const Data = [
     isduplicate: 0,
     question:
       "공공기관 및 프렌차이즈 본사의 문의는 연락처를 남겨주시면 유선연락 드리겠습니다 ",
+    subquestion: "",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
     id: 4,
     isduplicate: false,
     question: "광고주님이 운영하시는 업종은 무엇인가요? ",
+    subquestion: "",
     answer: [
       { id: 1, content: "음식점" },
       { id: 2, content: "카페" },
@@ -64,6 +68,7 @@ const Data = [
     id: 5,
     isduplicate: 0,
     question: "광고주님이 운영하시는 업종은 무엇인가요? ",
+    subquestion: "",
     answer: [{ id: 1, content: "답변을 입력해 주세요" }],
   },
   {
@@ -71,6 +76,7 @@ const Data = [
     isduplicate: true,
     subtitle: "원하는 만큼 선택하세요!",
     question: "어떤 인플루언서[체험단]이 우리 매장을 홍보해주셨으면 좋겠나요? ",
+    subquestion: "",
     answer: [
       { id: 1, content: "상위노출을 잘하는 인플루언서" },
       { id: 2, content: "인스타그램 인플루언서" },

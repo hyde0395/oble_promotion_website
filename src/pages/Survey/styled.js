@@ -17,7 +17,7 @@ export const BoxStyled = styled.div`
   margin-top: 100px;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   text-align: center;
 `;
 
@@ -36,11 +36,12 @@ export const Subtitle = styled.div`
 export const Subquestion = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   padding-right: 180px;
   font-size: 1rem;
   font-weight: 600;
   font-style: oblique;
-  margin-bottom: 6px;
+  margin-left: 200px;
 `;
 export const Desc = styled.div`
   margin-top: 150px;

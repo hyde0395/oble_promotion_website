@@ -71,3 +71,9 @@ export const RefImgs = styled.img`
   width: 400px;
   height: 400px;
 `;
+
+export const RefImgsBox = styled.div`
+  text-align: center;
+  width: 10px;
+  padding: auto 0 10px;
+`;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   RefContainer,
@@ -13,46 +13,45 @@ import {
 } from "./ReferenceElements.js";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const Reference = () => {
+  // map함수를 통해 가져올 슬라이드 리스트
   const items = [
     {
-      id: "0",
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`,
-      text: "1ㄹㅇㄹㅇㄹㅇ",
+      id: "0", //map함수 key로 쓰일 id
+      blogSrc: "https://blog.naver.com/ehowlgksk/222875313110", // a태그에 들어갈 블로그 포스트 URL
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`, // 메인 그림 path
+      text: "1", // 블로그 포스트 텍스트
     },
     {
       id: "1",
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
       text: "2ㄹㄴㅇㄹㄴㅇㄹ",
     },
     {
       id: "2",
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
-      text: "3fgfgfgffg",
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
+      text: "3",
     },
     {
       id: "3",
-
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
-      text: "3",
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
+      text: "4",
     },
     {
       id: "4",
-
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
-      text: "3",
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
+      text: "5",
     },
     {
       id: "5",
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
-      text: "3",
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
+      text: "6",
     },
     {
       id: "6",
-      src: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
-      text: "3",
+      path: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
+      text: "7",
     },
   ];
 
@@ -65,7 +64,7 @@ const Reference = () => {
         </RefTextWrapper>
       </RefWrapper>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Autoplay]}
         loop={true}
         spaceBetween={10}
         slidesPerView={4}
@@ -76,9 +75,11 @@ const Reference = () => {
           <SildeBox>
             {items.map((item) => {
               return (
-                <SwiperSlide key={item.id}>
-                  <RefImgs src={item.src} />
-                </SwiperSlide>
+                <a href={item.blogSrc}>
+                  <SwiperSlide key={item.id}>
+                    <RefImgs src={item.path} />
+                  </SwiperSlide>
+                </a>
               );
             })}
           </SildeBox>

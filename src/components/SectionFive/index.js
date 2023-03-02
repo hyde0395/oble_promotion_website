@@ -65,7 +65,7 @@ const SectionFive = () => {
     <FiveContainer>
       <FiveWrapper>
         <FiveTextWrapper>
-          <FiveH1>만족도 100%</FiveH1>
+          <FiveH1>만족도 100% </FiveH1>
           <FivePH1>오블 체험단 리뷰 컨텐츠</FivePH1>
         </FiveTextWrapper>
       </FiveWrapper>

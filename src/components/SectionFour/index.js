@@ -11,7 +11,7 @@ import {
   FourList,
   FourListBox,
 } from "./SectionFourElements";
-import img from "../../images/part.png";
+import img from "../../images/AppScreen.png";
 
 const SectionFour = () => {
   return (

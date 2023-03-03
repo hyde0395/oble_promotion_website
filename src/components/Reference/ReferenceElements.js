@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// 전체 컨테이너 부분
 export const RefContainer = styled.div`
   height: 900px;
   z-index: 1;
@@ -66,8 +67,34 @@ export const SildeBox = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
-
+// 슬라이드 이미지 부분
 export const RefImgs = styled.img`
-  width: 400px;
+  width: 300px;
+  height: 300px;
+`;
+
+export const RefImgsBox = styled.div`
+  text-align: center;
+  width: 10px;
+  padding: auto 0 10px;
+`;
+
+// 각 슬라이드의 전체 부분
+export const RefSlideBox = styled.div`
+  background-color: #5f5f5f;
   height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+`;
+// 슬라이드의 텍스트 박스
+export const RefTextBox = styled.div`
+  text-align: center;
+  background-color: #3a3a3a;
+`;
+// 슬라이드의 텍스트 부분
+export const RefText = styled.p`
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
 `;

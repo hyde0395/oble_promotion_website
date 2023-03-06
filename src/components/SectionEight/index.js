@@ -1,14 +1,33 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper";
-import { EightContainer } from "./SectionEightElements";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  EightContainer,
+  EightH1,
+  EightH1Two,
+  EightTextWrap,
+  SlideImg,
+} from "./SectionEightElements";
 import { Navigation, Autoplay } from "swiper";
+import img from "../../images/2.svg";
 
 const SectionEight = () => {
-  const headItems = [];
+  const headItems = [
+    { id: 1, src: { img } },
+    { id: 2, src: { img } },
+    { id: 3, src: { img } },
+    { id: 4, src: { img } },
+    { id: 5, src: { img } },
+    { id: 6, src: { img } },
+  ];
 
   const subItems = [];
   return (
     <EightContainer>
+      <EightTextWrap>
+        <EightH1>Hello world</EightH1>
+        <EightH1Two>dfdsfsd</EightH1Two>
+      </EightTextWrap>
+
       <Swiper
         modules={[Navigation, Autoplay]}
         loop={true}
@@ -35,7 +54,9 @@ const SectionEight = () => {
         {headItems.map((headItems) => {
           return (
             <SwiperSlide key={headItems.id}>
-              <a href={headItems.blogSrc}></a>
+              <a href={headItems.src}>
+                <SlideImg src={headItems.img} />
+              </a>
             </SwiperSlide>
           );
         })}

@@ -12,10 +12,11 @@ import {
   NavBtnLink,
   SurveyLink,
 } from "./NavbarElements";
-
+import { useLocation } from "react-router-dom";
 import Survey from "../../pages/Survey";
 
 const Navbar = ({ toggle }) => {
+  const location = useLocation();
   return (
     <>
       <Nav>
@@ -26,11 +27,21 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
-
-              <NavLinks to="about">오블소개</NavLinks>
-              <NavLinks to="service">진행과정</NavLinks>
-              <NavLinks to="aboutd">제안서받기</NavLinks>
+              {location.pathname == "/" ? (
+                <>
+                  <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
+                  <NavLinks to="about">오블소개</NavLinks>
+                  <NavLinks to="service">진행과정</NavLinks>
+                  <NavLinks to="aboutd">제안서받기</NavLinks>
+                </>
+              ) : (
+                <>
+                  <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
+                  <SurveyLink to="/">오블소개</SurveyLink>
+                  <SurveyLink to="/">진행과정</SurveyLink>
+                  <SurveyLink to="/">제안서받기</SurveyLink>
+                </>
+              )}
             </NavItem>
           </NavMenu>
           <NavBtn>

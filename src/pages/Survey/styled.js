@@ -2,7 +2,10 @@ import styled from "styled-components";
 import Survey from ".";
 
 // 설문 문항 감싸는 컨테이너
-export const SurveyContainer = styled.div``;
+export const SurveyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 // 맨위 제목 스타일
 export const TitleStyled = styled.div`
@@ -14,34 +17,50 @@ export const TitleStyled = styled.div`
 `;
 // 질문 스타일
 export const BoxStyled = styled.div`
+  display: flex;
+  justify-content: center;
+
   margin-top: 100px;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1600px) {
+    width: 750px;
+    justify-content: flex-start;
+    padding-right: 260px;
+    margin-left: 750px;
+  }
 `;
 
 // 중복시 서브 타이틀
 export const Subtitle = styled.div`
   display: flex;
+  justify-content: center;
+  padding-right: 260px;
   color: rgb(75, 94, 237);
   font-size: 1rem;
-  justify-content: center;
-  padding-right: 180px;
   font-weight: 600;
   font-style: oblique;
   margin-bottom: 6px;
+  @media screen and (min-width: 1600px) {
+    justify-content: flex-start;
+    padding-right: 260px;
+    margin-left: 750px;
+  }
 `;
 
+//  소제목
 export const Subquestion = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  padding-right: 180px;
   font-size: 1rem;
   font-weight: 600;
-  font-style: oblique;
-  margin-left: 200px;
+  @media screen and (min-width: 1600px) {
+    justify-content: flex-start;
+    padding-right: 260px;
+    margin-left: 750px;
+  }
 `;
 export const Desc = styled.div`
   margin-top: 150px;
@@ -67,8 +86,12 @@ export const ButtonStyled = styled.button`
 
 //설문 답변 스타일
 export const FormCheckText = styled.label`
-  width: 350px;
-  height: 50px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-right: 200px;
+  width: 220px;
+  height: 40px;
   margin-top: 10px;
   color: rgb(49, 61, 154);
   border: 1.5px solid rgb(75, 94, 237);
@@ -77,9 +100,7 @@ export const FormCheckText = styled.label`
   padding: 8px;
   background-color: #d0dfff;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   cursor: pointer;
 `;
 
@@ -127,6 +148,9 @@ export const ButtonFlex = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  @media screen and (max-width: 1024px) {
+    width: 40%;
+  }
 `;
 
 // 이전 다음 버튼 스타일

@@ -1,10 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+
 import userEvent from "@testing-library/user-event";
 import { useNavigate } from "react-router-dom";
+import Manager from "../Manager";
+import { useSelector, useDispatch } from "react-redux";
+import { insert } from "../Redux/Header";
 function Login() {
+  const get = useSelector((state) => state.header);
+  const dispatch = useDispatch();
+  const Insert = (value) => dispatch(insert(value));
+
   const [Email, setEmail] = useState("");
+
   const [Password, setPassword] = useState("");
 
   const onEmailHandler = (event) => {
@@ -13,19 +21,6 @@ function Login() {
   const onPasswordHandler = (event) => {
     setPassword(event.currentTarget.value);
   };
-
-  // const option = {
-  //   url: "v1/user/login",
-  //   method: "POST",
-  //   header: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   data: {
-  //     email: Email,
-  //     password: Password,
-  //   },
-  // };
   const navigate = useNavigate();
   const navigateToSurvey = () => {
     navigate("/Manager");
@@ -38,7 +33,11 @@ function Login() {
         password: Password,
       })
       .then((response) => {
-        console.log(response.headers.authorization);
+        console.log(
+          response.headers.authorization.split("=")[2].replace("}", "")
+        );
+        Insert(response.headers.authorization.split("=")[2].replace("}", ""));
+        // console.log(get);
         navigateToSurvey();
       })
       .catch((e) => {

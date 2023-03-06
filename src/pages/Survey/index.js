@@ -12,10 +12,8 @@ import reducer from "../Redux/Set";
 const Survey = (props) => {
   const [data, setData] = useState(Data);
   const set = useSelector((state) => state.reducer);
-  // console.log(set);
-  const dispatch = useDispatch();
 
-  // const set_true = (index, index2) => dispatch(set_true(index, index2));
+  const dispatch = useDispatch();
 
   const [x, setX] = useState();
   const [Nullvalue, setNullvalue] = useState();
@@ -94,17 +92,19 @@ const Survey = (props) => {
   return (
     <>
       <div>
-        <Styled.BoxStyled>
-          <p>{Data[props.num].question}</p>
-        </Styled.BoxStyled>
-        {typeof Data[props.num].subquestion !== "undefined" ? (
-          <Styled.Subquestion>{Data[props.num].subquestion}</Styled.Subquestion>
-        ) : null}
+        <Styled.SurveyContainer>
+          <Styled.BoxStyled>{Data[props.num].question}</Styled.BoxStyled>
+          {typeof Data[props.num].subquestion !== "undefined" ? (
+            <Styled.Subquestion>
+              {Data[props.num].subquestion}
+            </Styled.Subquestion>
+          ) : null}
 
-        {Data[props.num].isduplicate === true ? (
-          <Styled.Subtitle>{Data[props.num].subtitle}</Styled.Subtitle>
-        ) : null}
-        <Styled.Flex>{question_list}</Styled.Flex>
+          {Data[props.num].isduplicate === true ? (
+            <Styled.Subtitle>{Data[props.num].subtitle}</Styled.Subtitle>
+          ) : null}
+          <Styled.Flex>{question_list}</Styled.Flex>
+        </Styled.SurveyContainer>
       </div>
     </>
   );

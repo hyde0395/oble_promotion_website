@@ -1,24 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import * as Styled from "./styled";
+import { useSelector, useDispatch } from "react-redux";
+
 function Manager() {
+  const get1 = useSelector((state) => state.header);
+
   const [B_Data, setB_Data] = useState([]);
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "/v1/survey-result"
+        "/v1/survey-result/",
 
-        // {
-        //   headers: {
-        //     Authorization:
-        //       "Bearer eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJzdWIiOiJVU1ctU1VHTy1CWS1LREgiLCJleHAiOjE2Nzc2NTM3ODF9.hyqLiDYKFClOnFrxi8HKGJ8MoIJj_y_izMJiuqicOizpUGIEBDps1ZYkdZyupo21ur8ErBNAXOjeIBaPEQxTOw, AccessToken=Bearer eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJzdWIiOiJPSEJMRS1CWS1LREgiLCJpZCI6MSwibG9naW5JZCI6InRlc3QiLCJzdGF0dXMiOiJBVVRIIiwiZXhwIjoxNjc4MTc2MzI0fQ.VYq1dXy53AcRSDnRQU3iVtla4Q7L3hO--pwp-4ePexU2_o79ALDRFNIAFT2bb7vWI_LhWSK-MSXj-xotefmwxg",
-        //   },
-        // }
+        {
+          headers: {
+            //props로 전달받아야됨
+            Authorization: get1,
+          },
+        }
       );
 
       setB_Data(response?.data);
-      console.log(response.data);
-      console.log(B_Data);
+      console.log(get1);
+      // console.log(response.data);
+      // console.log(B_Data);
     } catch (e) {
       console.log(e);
     }

@@ -40,7 +40,7 @@ const Home = () => {
       <SectionSix />
       <SectionSeven />
       <Services />
-      {/* <SectionEight /> */}
+      <SectionEight />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />

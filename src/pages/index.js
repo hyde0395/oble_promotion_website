@@ -39,12 +39,11 @@ const Home = () => {
       <SectionFive />
       <SectionSix />
       <SectionSeven />
-      <SectionEight />
+      <Services />
+      {/* <SectionEight /> */}
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
-
-      <Services />
 
       <Footer />
       <KakaoButton />

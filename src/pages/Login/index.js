@@ -39,6 +39,7 @@ function Login() {
         console.log(
           response.headers.authorization.split("=")[2].replace("}", "")
         );
+        console.loge(response);
         Insert(response.headers.authorization.split("=")[2].replace("}", ""));
         // console.log(get);
         navigateToSurvey();

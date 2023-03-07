@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, useEffect } from "react";
+import React, { useState, useRef, useCallback } from "react";
 
 import Slider from "react-slick";
 import Survey from "./Survey";
@@ -62,15 +62,15 @@ const Test = () => {
     console.log(obj);
   };
 
-  const fetchUsers = async () => {
-    try {
-      const response = await axios.get(`${PROXY}v2/api-docs`);
+  // const fetchUsers = async () => {
+  //   try {
+  //     const response = await axios.get(`${PROXY}v2/api-docs`);
 
-      console.log(response.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  //     console.log(response.data);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
 
   // const GetUserId = async () => {
   //   try {
@@ -105,9 +105,9 @@ const Test = () => {
       });
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, []);
 
   const set = useSelector((state) => state.reducer);
   // const dispatch = useDispatch();

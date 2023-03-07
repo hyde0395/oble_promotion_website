@@ -13,6 +13,9 @@ import {
   RefTextBox,
   RefText,
   RefSlideBox,
+  RefNav,
+  RefNavIcon,
+  RefNavName,
 } from "./ReferenceElements.js";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -23,38 +26,56 @@ const Reference = () => {
     {
       id: "0", //map함수 key로 쓰일 id
       blogSrc: "https://blog.naver.com/ehowlgksk/222875313110", // a태그에 들어갈 블로그 포스트 URL
+      blogName: "수레", // 블로그 인플루언서 이름
+      blogIconSrc: {}, // 블로그 인플루언서 아이콘 경로
       path: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`, // 메인 그림 path
       text: "시흥 배곧 맛집 : 배곧 함박스테이크가 맛있는 정씨함박", // 블로그 포스트 텍스트
     },
     {
       id: "1",
       blogSrc: "https://m.blog.naver.com/yjhjehh003/223017824861",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
       text: "[평택 카페] 직접 유기농 아이스크림 만드는 팽택북카페 카페, 정스 리뷰",
     },
     {
       id: "2",
       blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
       text: "평택 맛집 :: 불맛이 강한 간짜장과 국물이 진한 짬뽕이 일품인 소사벌 중국집 달토끼짬뽕 평택본점",
     },
     {
       id: "3",
+      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
       text: "4",
     },
     {
       id: "4",
+      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
       text: "5",
     },
     {
       id: "5",
+      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
       text: "6",
     },
     {
       id: "6",
+      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogName: "수레",
+      blogIconSrc: {},
       path: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
       text: "7",
     },
@@ -99,6 +120,10 @@ const Reference = () => {
                     <RefSlideBox>
                       <RefImgs src={items.path} />
                       <RefTextBox>
+                        <RefNav>
+                          <RefNavIcon />
+                          <RefNavName>수레</RefNavName>
+                        </RefNav>
                         <RefText>{items.text}</RefText>
                       </RefTextBox>
                     </RefSlideBox>

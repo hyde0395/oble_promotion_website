@@ -41,9 +41,9 @@ const Home = () => {
       <SectionSeven />
       <Services />
       <SectionEight />
-      <InfoSection {...homeObjOne} />
+      {/* <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjThree} /> */}
 
       <Footer />
       <KakaoButton />

@@ -69,8 +69,8 @@ export const SildeBox = styled.div`
 `;
 // 슬라이드 이미지 부분
 export const RefImgs = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 330px;
+  height: 330px;
 `;
 
 export const RefImgsBox = styled.div`
@@ -82,8 +82,8 @@ export const RefImgsBox = styled.div`
 // 각 슬라이드의 전체 부분
 export const RefSlideBox = styled.div`
   background-color: #5f5f5f;
-  height: 400px;
-  width: 300px;
+  height: 450px;
+  width: 330px;
   display: flex;
   flex-direction: column;
 `;
@@ -97,4 +97,20 @@ export const RefText = styled.p`
   text-align: center;
   font-size: 12px;
   color: #ffffff;
+`;
+
+export const RefNav = styled.div`
+  display: flex;
+  top: 0;
+  height: 30px;
+  background-color: #ffa1a1;
+`;
+
+export const RefNavIcon = styled.img`
+  height: 10px;
+  width: 10px;
+`;
+
+export const RefNavName = styled.p`
+  font-size: 15px;
 `;

@@ -18,7 +18,6 @@ const SectionThree = () => {
           </ThreeH1>
         </TreeTextBox>
       </ThreeHeadBox>
-      <ThreeSideBox></ThreeSideBox>
     </ThreeContainer>
   );
 };

@@ -1,5 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
-
 /* 초기 상태 선언 */
 const initialState = [
   { id: 0, question: "participantId", answer: "1" },
@@ -97,7 +95,7 @@ export default function reducer(state = initialState, action) {
         user.id === action.id
           ? {
               ...user,
-              answer: "",
+              // answer: "",
               answer: user.answer.concat(
                 "/",
                 action.value

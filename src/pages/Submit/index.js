@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React from "react";
 
 import * as Styled from "../Survey/styled";
 

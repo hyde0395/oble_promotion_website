@@ -5,7 +5,7 @@ import {
   SixTextBox,
   SixH1,
   SixH1Two,
-  SixP,
+  // SixP,
   SixImg,
   SixImgBox,
   SixCard,

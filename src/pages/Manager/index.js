@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as Styled from "./styled";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Manager() {
   const get1 = useSelector((state) => state.header);
@@ -30,7 +30,7 @@ function Manager() {
   };
   useEffect(() => {
     fetchUsers();
-  }, []);
+  });
 
   // const string = () => {
   //   for (const key in Object.keys(B_Data)) {

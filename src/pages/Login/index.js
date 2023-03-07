@@ -1,13 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-import userEvent from "@testing-library/user-event";
 import { useNavigate } from "react-router-dom";
-import Manager from "../Manager";
-import { useSelector, useDispatch } from "react-redux";
+
+import { useDispatch } from "react-redux";
 import { insert } from "../Redux/Header";
 function Login() {
-  const get = useSelector((state) => state.header);
+  // const get = useSelector((state) => state.header);
   const dispatch = useDispatch();
   const Insert = (value) => dispatch(insert(value));
 
@@ -57,10 +56,10 @@ function Login() {
     console.log("Id", Email);
     console.log("Password", Password);
 
-    let body = {
-      email: Email,
-      password: Password,
-    };
+    // let body = {
+    //   email: Email,
+    //   password: Password,
+    // };
   };
 
   return (

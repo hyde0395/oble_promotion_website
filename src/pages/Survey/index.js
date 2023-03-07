@@ -1,22 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Data from "../../components/Survey2/Data";
 import * as Styled from "./styled";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   select,
   many_select,
   Delete_Selections,
   description,
 } from "../Redux/Set";
-import reducer from "../Redux/Set";
+
 const Survey = (props) => {
-  const [data, setData] = useState(Data);
-  const set = useSelector((state) => state.reducer);
+  const [data] = useState(Data);
+  // const set = useSelector((state) => state.reducer);
 
   const dispatch = useDispatch();
 
   const [x, setX] = useState();
-  const [Nullvalue, setNullvalue] = useState();
+
   const handleClickRadioButton2 = (e) => {
     setX(e.target.value);
   };

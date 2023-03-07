@@ -10,8 +10,8 @@ import * as Styled from "./Survey/styled";
 import Start from "./Start";
 import Submit from "./Submit";
 import Data from "../components/Survey2/Data";
-import { useSelector, useDispatch } from "react-redux";
-import { insert } from "./Redux/Set";
+import { useSelector } from "react-redux";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const Test = () => {
 
   const set1 = useSelector((state) => state.reducer);
 
-  const dispatch1 = useDispatch();
+  // const dispatch1 = useDispatch();
   // const Insert = () => dispatch1(insert());
   console.log(set1);
 
@@ -36,6 +36,8 @@ const Test = () => {
 
   let obj = {};
   const [opj, setOpj] = useState();
+
+  /////////////////////////////////여기 혹시 오류가 날 수도 있음
   const A_Datahandler = () => {
     obj["participantId"] = opj;
     set1.map((value, idx) => {
@@ -44,14 +46,16 @@ const Test = () => {
         setA_Data(A_Data.push(value.answer));
         setB_Data(B_Data.push(value.question));
       }
-      A_Data.forEach((element, index) => {
-        obj[`answer${index}`] = element;
-      });
-      B_Data.forEach((element, index) => {
-        obj[`question${index}`] = element;
-      });
+      return (
+        A_Data.forEach((element, index) => {
+          obj[`answer${index}`] = element;
+        }),
+        B_Data.forEach((element, index) => {
+          obj[`question${index}`] = element;
+        })
+      );
     });
-
+    //////////////////////////////////////////////////////////
     // console.log(A_Data);
     console.log(obj);
   };
@@ -104,7 +108,7 @@ const Test = () => {
   }, []);
 
   const set = useSelector((state) => state.reducer);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -128,7 +132,7 @@ const Test = () => {
     draggable: false,
   };
 
-  const slider = useRef(null);
+  // const slider = useRef(null);
 
   // 옆으로 넘어가는 슬라이더 기능
   const slickRef = useRef(null);
@@ -136,11 +140,11 @@ const Test = () => {
   const next = useCallback(() => slickRef.current.slickNext(), []);
   const warp = useCallback((i) => slickRef.current.slickGoTo(i), []);
 
-  const Previous_Button = () => {
-    return <></>;
-  };
+  // const Previous_Button = () => {
+  //   return <></>;
+  // };
 
-  const Next_Button = () => {};
+  // const Next_Button = () => {};
 
   const page1_previous = () => {
     if (

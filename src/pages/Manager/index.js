@@ -31,7 +31,8 @@ function Manager() {
   };
   useEffect(() => {
     fetchUsers();
-  }, [Manager]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // const string = () => {
   //   for (const key in Object.keys(B_Data)) {

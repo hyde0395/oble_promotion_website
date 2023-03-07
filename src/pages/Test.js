@@ -16,8 +16,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Test = () => {
-  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
   const navigate = useNavigate();
   const navigateToHome = () => {
     navigate("/");
@@ -80,10 +78,10 @@ const Test = () => {
   //     console.log(e);
   //   }
   // };
-
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
   const GetUserId = async () => {
     await axios
-      .post(`${PROXY}/v1/participant`)
+      .post(`${PROXY}/v1/participant/`)
       .then((response) => {
         console.log(response.data.participantId);
         setOpj(response.data.participantId);

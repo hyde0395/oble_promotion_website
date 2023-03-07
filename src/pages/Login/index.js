@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { insert } from "../Redux/Header";
 function Login() {
+  // const instance = axios.create({
+  //   baseURL: "https://api.ohble.net/",
+  // });
   // const get = useSelector((state) => state.header);
   const dispatch = useDispatch();
   const Insert = (value) => dispatch(insert(value));

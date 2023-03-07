@@ -11,11 +11,6 @@ from = "/proxy/*"
   status = 200
 
 
-[[redirects]]
-from = "/prox/*"
-  to = "https://api.ohble.net/v1/:splat"  
-  status = 200
-  force = true
 
 
 

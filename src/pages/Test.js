@@ -79,9 +79,10 @@ const Test = () => {
   //   }
   // };
   const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+  const PROX = window.location.hostname === "localhost" ? "" : "/prox";
   const GetUserId = async () => {
     await axios
-      .post(`${PROXY}/v1/participant`)
+      .post(`${PROX}/v1/participant`)
       .then((response) => {
         console.log(response.data.participantId);
         setOpj(response.data.participantId);

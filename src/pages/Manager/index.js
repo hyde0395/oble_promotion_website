@@ -31,7 +31,7 @@ function Manager() {
   };
   useEffect(() => {
     fetchUsers();
-  });
+  }, [Manager]);
 
   // const string = () => {
   //   for (const key in Object.keys(B_Data)) {

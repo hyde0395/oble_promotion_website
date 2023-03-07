@@ -17,13 +17,14 @@ import { useNavigate } from "react-router-dom";
 
 const Test = () => {
   const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
   const navigate = useNavigate();
   const navigateToHome = () => {
     navigate("/");
     alert("설문조사가 제출되었습니다!");
 
     // 새로고침 모든거 제출후 나중에
-    window.location.reload();
+    // window.location.reload();
   };
 
   const set1 = useSelector((state) => state.reducer);
@@ -63,7 +64,7 @@ const Test = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("v2/api-docs");
+      const response = await axios.get(`${PROXY}v2/api-docs`);
 
       console.log(response.data);
     } catch (e) {

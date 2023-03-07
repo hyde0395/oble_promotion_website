@@ -6,7 +6,7 @@ import {
   HeroContent,
   HeroTextBox,
   HeroH1,
-  HeroP,
+  // HeroP,
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,

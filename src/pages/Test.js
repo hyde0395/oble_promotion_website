@@ -14,7 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { insert } from "./Redux/Set";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+// 테스트
 const Test = () => {
   const navigate = useNavigate();
   const navigateToHome = () => {

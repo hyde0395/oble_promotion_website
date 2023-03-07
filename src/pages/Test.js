@@ -16,13 +16,14 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Test = () => {
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
   const navigate = useNavigate();
   const navigateToHome = () => {
     navigate("/");
     alert("설문조사가 제출되었습니다!");
 
     // 새로고침 모든거 제출후 나중에
-    // window.location.reload();
+    window.location.reload();
   };
 
   const set1 = useSelector((state) => state.reducer);
@@ -81,7 +82,7 @@ const Test = () => {
 
   const GetUserId = async () => {
     await axios
-      .post("/v1/participant")
+      .post(`${PROXY}/v1/participant`)
       .then((response) => {
         console.log(response.data.participantId);
         setOpj(response.data.participantId);
@@ -94,7 +95,7 @@ const Test = () => {
 
   const SubmitUser = () => {
     axios
-      .post("/v1/survey-result", obj)
+      .post(`${PROXY}/v1/survey-result`, obj)
       .then((response) => {
         console.log(response);
       })

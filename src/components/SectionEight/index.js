@@ -114,7 +114,8 @@ const SectionEight = () => {
     <EightContainer>
       <EightTextWrap>
         <EightH1>오블은, 경기남부대학 </EightH1>
-        <EightH1Line>최우수</EightH1Line> <EightH1>스타트업 기업이며</EightH1>
+        <EightH1Line>최우수 스타트업 기업</EightH1Line>
+        <EightH1>이며</EightH1>
         <p />
         <EightH2>수 많은 기업들이 </EightH2>
         <EightH2Line>직접</EightH2Line>
@@ -167,7 +168,6 @@ const SectionEight = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
-          slidesOffsetBefore={50}
           spaceBetween={10}
           slidesPerView={2}
           autoplay={{ delay: 2000, disableOnInteraction: false }}

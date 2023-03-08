@@ -4,13 +4,14 @@ import * as Styled from "./styled";
 import { useSelector } from "react-redux";
 
 function Manager() {
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
   const get1 = useSelector((state) => state.header);
 
   const [B_Data, setB_Data] = useState([]);
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "/v1/survey-result/",
+        `${PROXY}/v1/survey-result/`,
 
         {
           headers: {
@@ -30,7 +31,8 @@ function Manager() {
   };
   useEffect(() => {
     fetchUsers();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // const string = () => {
   //   for (const key in Object.keys(B_Data)) {

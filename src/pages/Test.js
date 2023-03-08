@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, useEffect } from "react";
+import React, { useState, useRef, useCallback } from "react";
 
 import Slider from "react-slick";
 import Survey from "./Survey";
@@ -60,15 +60,15 @@ const Test = () => {
     console.log(obj);
   };
 
-  const fetchUsers = async () => {
-    try {
-      const response = await axios.get("v2/api-docs");
+  // const fetchUsers = async () => {
+  //   try {
+  //     const response = await axios.get(`${PROXY}v2/api-docs`);
 
-      console.log(response.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  //     console.log(response.data);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
 
   // const GetUserId = async () => {
   //   try {
@@ -78,10 +78,11 @@ const Test = () => {
   //     console.log(e);
   //   }
   // };
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
 
   const GetUserId = async () => {
     await axios
-      .post("/v1/participant")
+      .post(`${PROXY}/v1/participant`)
       .then((response) => {
         console.log(response.data.participantId);
         setOpj(response.data.participantId);
@@ -92,9 +93,10 @@ const Test = () => {
       });
   };
 
+  ////
   const SubmitUser = () => {
     axios
-      .post("/v1/survey-result", obj)
+      .post(`${PROXY}/v1/survey-result`, obj)
       .then((response) => {
         console.log(response);
       })
@@ -103,9 +105,9 @@ const Test = () => {
       });
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, []);
 
   const set = useSelector((state) => state.reducer);
   // const dispatch = useDispatch();

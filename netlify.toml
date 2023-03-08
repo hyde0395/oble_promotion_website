@@ -1,0 +1,20 @@
+[[redirects]]
+from = "/proxy/*"
+  to = "https://api.ohble.net/:splat"  
+  status = 200
+  force = true
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
+
+
+
+
+
+
+

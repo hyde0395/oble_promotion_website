@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { insert } from "../Redux/Header";
 function Login() {
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+  // const instance = axios.create({
+  //   baseURL: "https://api.ohble.net/",
+  // });
   // const get = useSelector((state) => state.header);
   const dispatch = useDispatch();
   const Insert = (value) => dispatch(insert(value));
@@ -27,7 +31,7 @@ function Login() {
 
   const LoginUsers = async () => {
     axios
-      .post("v1/user/login", {
+      .post(`${PROXY}/v1/user/login`, {
         loginId: Email,
         password: Password,
       })
@@ -35,6 +39,7 @@ function Login() {
         console.log(
           response.headers.authorization.split("=")[2].replace("}", "")
         );
+        console.log(response);
         Insert(response.headers.authorization.split("=")[2].replace("}", ""));
         // console.log(get);
         navigateToSurvey();

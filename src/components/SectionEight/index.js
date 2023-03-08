@@ -168,7 +168,6 @@ const SectionEight = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
-          slidesOffsetBefore={50}
           spaceBetween={10}
           slidesPerView={2}
           autoplay={{ delay: 2000, disableOnInteraction: false }}

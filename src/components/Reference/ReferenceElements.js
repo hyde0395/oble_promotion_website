@@ -89,6 +89,7 @@ export const RefSlideBox = styled.div`
 `;
 // 슬라이드의 텍스트 박스
 export const RefTextBox = styled.div`
+  display: flex;
   text-align: center;
   background-color: #3a3a3a;
 `;
@@ -102,13 +103,13 @@ export const RefText = styled.p`
 export const RefNav = styled.div`
   display: flex;
   top: 0;
-  height: 30px;
+  height: 45px;
   background-color: #ffa1a1;
 `;
 
 export const RefNavIcon = styled.img`
-  height: 10px;
-  width: 10px;
+  height: 40px;
+  width: 40px;
 `;
 
 export const RefNavName = styled.p`

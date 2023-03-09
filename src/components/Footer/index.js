@@ -5,12 +5,14 @@ import {
   FooterTextWrap,
   FooterText,
   FooterLogo,
+  LoginA,
 } from "./FooterElements";
 import Logo from "../../images/ohbleLogo.png";
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
+        <LoginA href="/login"> ddd</LoginA>
         <FooterLogo src={Logo} />
         <FooterTextWrap>
           <FooterText>오블</FooterText>

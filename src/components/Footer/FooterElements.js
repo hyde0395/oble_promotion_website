@@ -23,3 +23,8 @@ export const FooterTextWrap = styled.div`
 `;
 // Footer 부분의 텍스트
 export const FooterText = styled.p``;
+
+export const LoginA = styled.a`
+  text-decoration: none;
+  opacity: 0;
+`;

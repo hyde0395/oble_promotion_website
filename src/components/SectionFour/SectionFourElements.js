@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const FourContainer = styled.div`
   height: 900px;
+  padding-top: 100px;
 `;
 
 export const FourContent = styled.div`
@@ -9,8 +10,7 @@ export const FourContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  margin-bottom: 100px;
+  height: 600px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -24,7 +24,6 @@ export const FourImg = styled.img`
 
 export const FourTextBox = styled.div`
   margin: 0;
-  height: 300px;
 `;
 export const FourH1 = styled.h1`
   text-align: center;
@@ -51,7 +50,6 @@ export const FourImgBox = styled.div`
   justify-items: center;
   margin: auto;
   padding-right: 100px;
-  padding-bottom: 200px;
   padding-left: 400px;
 
   @media screen and (max-width: 960px) {

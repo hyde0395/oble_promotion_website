@@ -6,11 +6,12 @@ import {
   FooterText,
   FooterLogo,
 } from "./FooterElements";
+import Logo from "../../images/ohbleLogo.png";
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLogo />
+        <FooterLogo src={Logo} />
         <FooterTextWrap>
           <FooterText>오블</FooterText>
           <FooterText>문의 사항 및 실시간 상담 9:00 ~ 22:00</FooterText>

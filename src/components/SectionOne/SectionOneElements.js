@@ -7,6 +7,13 @@ export const HeroContainer = styled.div`
 export const TextWrapper = styled.div`
   height: 600px;
   padding-top: 170px;
+  @media screen and (max-width: 768px) {
+    height: 500px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 500px;
+  }
 `;
 
 export const HeroTextBox = styled.div`
@@ -18,6 +25,14 @@ export const HeroTextBox = styled.div`
 export const Subtitle = styled.h2`
   font-size: 100px;
   font-weight: 900;
+
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 60px;
+  }
 `;
 
 export const HeadLine = styled.h1`
@@ -27,6 +42,14 @@ export const HeadLine = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 60px;
+  }
 `;
 
 export const BtnBox = styled.div`

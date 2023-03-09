@@ -33,7 +33,7 @@ const Navbar = ({ toggle }) => {
 
                   <NavLinks to="about">오블소개</NavLinks>
                   <NavLinks to="service">진행과정</NavLinks>
-                  <NavLinks to="aboutd">제안서받기</NavLinks>
+                  <NavLinks to="section7">제안서받기</NavLinks>
                 </>
               ) : (
                 <>

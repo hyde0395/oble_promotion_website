@@ -81,7 +81,7 @@ export const RefImgsBox = styled.div`
 
 // 각 슬라이드의 전체 부분
 export const RefSlideBox = styled.div`
-  background-color: #5f5f5f;
+  /* background-color: #5f5f5f; */
   height: 450px;
   width: 330px;
   display: flex;
@@ -89,29 +89,38 @@ export const RefSlideBox = styled.div`
 `;
 // 슬라이드의 텍스트 박스
 export const RefTextBox = styled.div`
-  display: flex;
-  text-align: center;
-  background-color: #3a3a3a;
+  /* background-color: #3a3a3a; */
+  height: 150px;
+  align-items: center;
 `;
-// 슬라이드의 텍스트 부분
+// 슬라이드의 가게 소개 텍스트 부분
 export const RefText = styled.p`
-  text-align: center;
-  font-size: 12px;
-  color: #ffffff;
+  font-size: 15px;
+  color: #000000;
+  margin-left: 10px;
+  margin-top: 10px;
 `;
 
 export const RefNav = styled.div`
   display: flex;
   top: 0;
   height: 45px;
-  background-color: #ffa1a1;
+  /* background-color: #ffa1a1; */
+  align-items: center;
 `;
-
+// 슬라이드내의 블로거 아이콘
 export const RefNavIcon = styled.img`
   height: 40px;
   width: 40px;
+  margin-left: 5px;
 `;
-
+// 슬라이드 블로거 이름 텍스트
 export const RefNavName = styled.p`
   font-size: 15px;
+  margin-left: 15px;
+`;
+// 슬라이드와 블로그의 링크태그
+export const BlogLink = styled.a`
+  text-decoration: none;
+  color: black;
 `;

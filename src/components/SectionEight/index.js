@@ -19,8 +19,6 @@ import {
   EightH1Line,
   MaintextWrapper,
 } from "./SectionEightElements";
-
-import img from "../../images/2.svg";
 import subImg1 from "../../images/CompanyLogo/logo1.png";
 import subImg2 from "../../images/CompanyLogo/logo2.png";
 import subImg3 from "../../images/CompanyLogo/logo3.png";
@@ -44,7 +42,7 @@ const SectionEight = () => {
     },
     {
       id: 2,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "내가 원하는 고객들이 실제로 방문하고 있어요",
       mainText:
@@ -52,7 +50,7 @@ const SectionEight = () => {
     },
     {
       id: 3,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "인플루언서의 특성을 알려줘서 마음에 쏙 들어요",
       mainText:
@@ -60,7 +58,7 @@ const SectionEight = () => {
     },
     {
       id: 4,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "소통이 너무 빠르고 1:1매칭이 만족스럽습니다",
       mainText:
@@ -68,7 +66,7 @@ const SectionEight = () => {
     },
     {
       id: 5,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "컨설팅의 퀼리티가 압도적이예요",
       mainText:
@@ -76,7 +74,7 @@ const SectionEight = () => {
     },
     {
       id: 6,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "무엇보다 솔직하게 말해주셔서 마음에 들었어요!",
       mainText:
@@ -84,7 +82,7 @@ const SectionEight = () => {
     },
     {
       id: 6,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "20대 여성 손님이 진짜 늘었어요",
       mainText:
@@ -92,7 +90,7 @@ const SectionEight = () => {
     },
     {
       id: 6,
-      src: { img },
+      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "광고비를 150만원 넘게 절약했어요",
       mainText:

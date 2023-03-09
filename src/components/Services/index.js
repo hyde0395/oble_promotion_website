@@ -52,7 +52,7 @@ const Services = () => {
           <ServicesDay>3 DAY</ServicesDay>
           <ServicesH2>콘텐츠 제작</ServicesH2>
           <ServicesP>
-            매칭된 인플루언서는 서비스를 제공받고 콘텐츠를 제작합니다.
+            매칭된 인플루언서는 가이드표를 기반으로 콘텐츠를 제작합니다.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>

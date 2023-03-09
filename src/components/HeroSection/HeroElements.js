@@ -25,7 +25,6 @@ export const HeroContent = styled.div`
   justify-content: center;
   height: 700px;
   margin-bottom: 100px;
-  /* margin-bottom 부분은 나중에 컨텐츠 추가시 삭제 할 수도 있음 */
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -51,7 +50,7 @@ export const HeroTextBox = styled.div`
     right: auto;
     margin-top: 200px;
     margin-bottom: 30px;
-    margin-right: 0;
+    padding-right: 0;
   }
 `;
 

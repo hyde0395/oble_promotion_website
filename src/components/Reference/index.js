@@ -16,6 +16,7 @@ import {
   RefNav,
   RefNavIcon,
   RefNavName,
+  BlogLink,
 } from "./ReferenceElements.js";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,13 +27,13 @@ import BlogIcon4 from "../../images/InfluencerIcon/icon4.png"; // 냠냠젤리�
 import BlogIcon5 from "../../images/InfluencerIcon/icon5.png"; // 집오리
 import BlogIcon6 from "../../images/InfluencerIcon/icon6.png"; // 수레
 import BlogIcon7 from "../../images/InfluencerIcon/icon7.png"; // 임다다다
-// import BlogPost1 from "../../images/";
-// import BlogPost2 from "../../images/";
-// import BlogPost3 from "../../images/";
-// import BlogPost4 from "../../images/";
-// import BlogPost5 from "../../images/";
-// import BlogPost6 from "../../images/";
-// import BlogPost7 from "../../images/";
+import BlogPost1 from "../../images/BlogPost/Post1.png"; // 시흥 배곧 정씨 함박
+import BlogPost2 from "../../images/BlogPost/Post2.png"; // 팔오반점평택중앙점
+import BlogPost3 from "../../images/BlogPost/Post3.png"; // 달토끼 짬뽕
+import BlogPost4 from "../../images/BlogPost/Post4.png"; // 카페정스
+import BlogPost5 from "../../images/BlogPost/Post5.png"; // 곱창전골 우성회관
+import BlogPost6 from "../../images/BlogPost/Post6.png"; // 달토끼 짬뻥
+import BlogPost7 from "../../images/BlogPost/Post7.png"; // 산타모니카
 
 const Reference = () => {
   // map함수를 통해 가져올 슬라이드 리스트
@@ -42,7 +43,7 @@ const Reference = () => {
       blogSrc: "https://blog.naver.com/ehowlgksk/222875313110", // a태그에 들어갈 블로그 포스트 URL
       blogName: "냠냠젤리비", // 블로그 인플루언서 이름
       blogIconSrc: BlogIcon4, // 블로그 인플루언서 아이콘 경로
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post1.png`, // 메인 그림 path
+      path: BlogPost1, // 메인 그림 path
       text: "시흥 배곧 맛집 : 배곧 함박스테이크가 맛있는 정씨함박", // 블로그 포스트 텍스트
     },
     {
@@ -50,7 +51,7 @@ const Reference = () => {
       blogSrc: "https://m.blog.naver.com/yjhjehh003/223017824861",
       blogName: "은저리",
       blogIconSrc: BlogIcon3,
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post2.png`,
+      path: BlogPost4,
       text: "[평택 카페] 직접 유기농 아이스크림 만드는 팽택북카페 카페, 정스 리뷰",
     },
     {
@@ -58,40 +59,40 @@ const Reference = () => {
       blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
       blogName: "안온",
       blogIconSrc: BlogIcon2,
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post3.png`,
+      path: BlogPost6,
       text: "평택 맛집 :: 불맛이 강한 간짜장과 국물이 진한 짬뽕이 일품인 소사벌 중국집 달토끼짬뽕 평택본점",
     },
     {
       id: "3",
-      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
+      blogSrc: "https://m.blog.naver.com/dbtnfk0103/222988558542",
       blogName: "수레",
-      blogIconSrc: {},
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post4.png`,
-      text: "4",
+      blogIconSrc: BlogIcon6,
+      path: BlogPost5,
+      text: "(230118) 평택 곱창전골 <우성회관> 칠원동 깔끔한 해장국맛집",
     },
     {
       id: "4",
-      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
-      blogName: "수레",
-      blogIconSrc: {},
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post5.png`,
-      text: "5",
+      blogSrc: "https://blog.naver.com/cmwmzl012/222864559950",
+      blogName: "집오리",
+      blogIconSrc: BlogIcon5,
+      path: BlogPost2,
+      text: "팽택역 짬뽕 끝판왕! 교통짬뽕 스타일의 팔오반점 평택중앙점",
     },
     {
       id: "5",
-      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
-      blogName: "수레",
-      blogIconSrc: {},
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post6.png`,
-      text: "6",
+      blogSrc: "https://m.blog.naver.com/check113/223000000025",
+      blogName: "은저리",
+      blogIconSrc: BlogIcon1,
+      path: BlogPost3,
+      text: "평택대맛집, 용이동 짬봉 달토끼짬뽕 꼭 가보세요!!!",
     },
     {
       id: "6",
-      blogSrc: "https://m.blog.naver.com/wldyd7240/222865508872",
-      blogName: "수레",
-      blogIconSrc: {},
-      path: `${process.env.PUBLIC_URL}/BlogPost/Post7.png`,
-      text: "7",
+      blogSrc: "https://blog.naver.com/dahye5023/223020684969",
+      blogName: "임다다다",
+      blogIconSrc: BlogIcon7,
+      path: BlogPost7,
+      text: "소래포구맛집 < 산타모니카 인천논현점 > 무한샤브와 뷔페까지 완벽",
     },
   ];
 
@@ -130,7 +131,7 @@ const Reference = () => {
             {items.map((items) => {
               return (
                 <SwiperSlide key={items.id}>
-                  <a href={items.blogSrc}>
+                  <BlogLink href={items.blogSrc}>
                     <RefSlideBox>
                       <RefImgs src={items.path} />
                       <RefTextBox>
@@ -141,7 +142,7 @@ const Reference = () => {
                         <RefText>{items.text}</RefText>
                       </RefTextBox>
                     </RefSlideBox>
-                  </a>
+                  </BlogLink>
                 </SwiperSlide>
               );
             })}

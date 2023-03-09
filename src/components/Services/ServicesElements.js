@@ -20,7 +20,7 @@ export const ServicesContainer = styled.div`
 `;
 
 export const ServicesWrapper = styled.div`
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -40,18 +40,18 @@ export const ServicesWrapper = styled.div`
 // 각 카드 부분
 export const ServicesCard = styled.div`
   display: flex;
-  width: 250px;
+  width: 280px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
-  max-height: 360px;
+  max-height: 380px;
   padding: 30px;
   border: solid 1px #949494;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2 ease-in-out;
   overflow: hidden;
-
+  margin-bottom: 10px;
   box-shadow: 10px 5px 5px #949494;
 
   &hover {
@@ -65,6 +65,7 @@ export const ServicesIcon = styled.img`
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 // 매우 간편한 마케팅 프로세스! 부분
@@ -92,11 +93,12 @@ export const ServicesH1Two = styled.h1`
 
 export const ServicesH2 = styled.h2`
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 `;
 export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: center;
+  padding-bottom: 10px;
 `;
 export const ServicesDay = styled.h2`
   font-size: 1.2rem;

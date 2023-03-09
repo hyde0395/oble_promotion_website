@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
-import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
-} from "../components/InfoSection/Data";
 import Services from "../components/Services";
 import KakaoButton from "../components/KakaoButton";
 import Footer from "../components/Footer";
@@ -36,15 +30,11 @@ const Home = () => {
       <SectionThree />
       <SectionFour />
       <Reference />
-      <SectionFive />
+      {/* <SectionFive /> */}
       <SectionSix />
       <SectionSeven />
       <Services />
       <SectionEight />
-      {/* <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjThree} /> */}
-
       <Footer />
       <KakaoButton />
     </>

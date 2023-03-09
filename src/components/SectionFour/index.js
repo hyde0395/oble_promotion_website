@@ -15,7 +15,7 @@ import img from "../../images/AppScreen.png";
 
 const SectionFour = () => {
   return (
-    <FourContainer>
+    <FourContainer id="intro">
       <FourTextBox>
         <FourH1>정답은 오블의 우리동네 인플루언서입니다</FourH1>
         <FourP>

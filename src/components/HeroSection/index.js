@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer id="HeroSection">
+    <HeroContainer>
       <HeroContent>
         <HeroTextBox>
           <IconBox>

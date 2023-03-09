@@ -2,9 +2,7 @@ import styled from "styled-components";
 import BgImg from "../../images/part.png";
 
 export const ThreeContainer = styled.div`
-  height: 500px;
-  margin-top: 0;
-  overflow: hidden;
+  height: 400px;
 `;
 
 export const TreeTextBox = styled.div`

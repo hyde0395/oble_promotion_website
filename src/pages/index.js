@@ -15,14 +15,21 @@ import SectionEight from "../components/SectionEight";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  // const [isVisible, setIsVisible] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-
+  // const buttonHandler = () => {
+  //   setIsVisible(!isVisible);
+  // };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Sidebar
+        isOpen={isOpen}
+        toggle={toggle}
+        // isVisible={isVisible}
+        // buttonHandler={buttonHandler}
+      />
       <Navbar toggle={toggle} />
       <SectionOne />
       <HeroSection />

@@ -22,7 +22,7 @@ const Test = () => {
     alert("설문조사가 제출되었습니다!");
 
     // 새로고침 모든거 제출후 나중에
-    // window.location.reload();
+    window.location.reload();
   };
 
   const set1 = useSelector((state) => state.reducer);

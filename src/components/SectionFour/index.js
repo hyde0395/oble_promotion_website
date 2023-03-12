@@ -29,12 +29,12 @@ const SectionFour = () => {
         </FourImgBox>
         <FourListBox>
           <FourUl>
-            <FourList>모집 인원 대비 평균 200% 이상 모집</FourList>
-            <FourList>업계 최다 인플루언서 수 보유</FourList>
-            <FourList>13년 업계의 업계 최다 캠페인 성공사례</FourList>
-            <FourList>블로그 체험단 진행시 플레이스 광고 관리 무료</FourList>
-            <FourList>네이버 우수 인플루언서 100% 보장형 체험단</FourList>
-            <FourList>인플루언서 직접 선정 시스템</FourList>
+            <FourList>실제 지역기반 전문 인플루언서 보유</FourList>
+            <FourList>지역/카테고리 별 인플루언서 마케팅</FourList>
+            <FourList>업종별 맞춤 솔루션 제공</FourList>
+            <FourList>신뢰할 수 밖에 없는 후불결제 시스템</FourList>
+            <FourList>인플루언서 등급 별 칭호 부여</FourList>
+            <FourList>데이터 기반 결과 보고서 제공</FourList>
           </FourUl>
         </FourListBox>
       </FourContent>

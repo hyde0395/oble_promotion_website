@@ -31,7 +31,6 @@ const SectionSix = () => {
           <SixCard>
             <SixCardText>1,000명⁺</SixCardText>
           </SixCard>
-          럴아
         </SixTextBox>
       </SixContent>
     </SixContainer>

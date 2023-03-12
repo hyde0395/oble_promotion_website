@@ -16,14 +16,10 @@ export const SixContent = styled.div`
   align-items: center;
   justify-content: center;
   height: 900px;
-  /* background-color: #ff3232; */
-
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-  }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 120px;
   }
 `;
 // Influencer 리스트 사진
@@ -32,32 +28,43 @@ export const SixImg = styled.img`
   height: 700px;
   margin: 0 auto;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 960px) {
     width: 384px;
     height: 430px;
   }
   @media screen and (max-width: 768px) {
-    width: 384px;
+    width: 360px;
     height: 430px;
   }
 `;
 
 export const SixTextBox = styled.div`
-  margin: 0;
   height: 300px;
   color: #ffffff;
-  /* background-color: #444444; */
   margin-bottom: 200px; // 텍스트 아래 여백 설정
 `;
 export const SixH1 = styled.h1`
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 3.5rem;
+
+  @media screen and (max-width: 960px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 2.8rem;
+  }
 `;
 export const SixH1Two = styled.h1`
   margin-bottom: 10px;
   text-decoration: underline;
   text-underline-offset: 14px;
   font-size: 60px;
+  @media screen and (max-width: 960px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 2.8rem;
+  }
 `;
 
 export const SixImgBox = styled.div`
@@ -65,7 +72,7 @@ export const SixImgBox = styled.div`
   align-items: center;
   justify-content: center;
   height: 800px;
-  width: 700px;
+  width: 100%;
   /* background-color: #808080; */
   margin-right: 20px; // 통계 이미지 오른쪽 여백
 

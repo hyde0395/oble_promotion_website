@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const FourContainer = styled.div`
-  height: 900px;
+  height: 1000px;
   padding-top: 100px;
 `;
 
@@ -20,10 +20,22 @@ export const FourContent = styled.div`
 export const FourImg = styled.img`
   width: 500px;
   height: 650px;
+
+  @media screen and (max-width: 960px) {
+    width: 100px;
+    height: 190px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 300px;
+    width: 200px;
+  }
 `;
 
 export const FourTextBox = styled.div`
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
 `;
 export const FourH1 = styled.h1`
   text-align: center;
@@ -33,6 +45,13 @@ export const FourH1 = styled.h1`
   -webkit-background-clip: text;
   color: transparent;
   font-size: 81px;
+
+  @media screen and (max-width: 960px) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const FourP = styled.p`
@@ -40,14 +59,13 @@ export const FourP = styled.p`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 30px;
-  padding-left: 14%;
+  font-size: 2rem;
+  padding-left: 14px;
 `;
 
 export const FourImgBox = styled.div`
-  position: relative;
-  justify-content: center;
-  justify-items: center;
+  display: flex;
+
   margin: auto;
   padding-right: 100px;
   padding-left: 400px;
@@ -58,7 +76,8 @@ export const FourImgBox = styled.div`
     padding-left: 0px;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 200px;
+    justify-content: center;
+    margin-top: 100px;
     margin-bottom: 30px;
     padding-right: 0px;
     padding-left: 0px;
@@ -74,5 +93,4 @@ export const FourUl = styled.ul``;
 
 export const FourList = styled.li`
   font-size: 25px;
-  color: #000;
 `;

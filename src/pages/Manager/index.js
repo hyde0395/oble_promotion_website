@@ -22,7 +22,7 @@ function Manager() {
       );
 
       setB_Data(response?.data);
-      console.log(get1);
+      // console.log(get1);
       // console.log(response.data);
       // console.log(B_Data);
     } catch (e) {

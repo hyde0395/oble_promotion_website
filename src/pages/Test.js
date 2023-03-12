@@ -27,8 +27,6 @@ const Test = () => {
 
   const set1 = useSelector((state) => state.reducer);
 
-  // const dispatch1 = useDispatch();
-  // const Insert = () => dispatch1(insert());
   console.log(set1);
 
   const [A_Data, setA_Data] = useState([]);
@@ -104,10 +102,6 @@ const Test = () => {
         console.log(e);
       });
   };
-
-  // useEffect(() => {
-  //   fetchUsers();
-  // }, []);
 
   const set = useSelector((state) => state.reducer);
   // const dispatch = useDispatch();

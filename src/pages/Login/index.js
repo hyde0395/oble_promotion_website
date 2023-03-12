@@ -7,10 +7,7 @@ import { useDispatch } from "react-redux";
 import { insert } from "../Redux/Header";
 function Login() {
   const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-  // const instance = axios.create({
-  //   baseURL: "https://api.ohble.net/",
-  // });
-  // const get = useSelector((state) => state.header);
+
   const dispatch = useDispatch();
   const Insert = (value) => dispatch(insert(value));
 
@@ -49,10 +46,6 @@ function Login() {
         console.log(e);
       });
   };
-
-  // useEffect(() => {
-  //   LoginUsers();
-  // }, []);
 
   const onSubmitHandler = (event) => {
     // 버튼만 누르면 리프레시 되는것을 막아줌

@@ -11,7 +11,6 @@ import {
 
 const Survey = (props) => {
   const [data] = useState(Data);
-  // const set = useSelector((state) => state.reducer);
 
   const dispatch = useDispatch();
 

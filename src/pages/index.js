@@ -19,17 +19,10 @@ const Home = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-  // const buttonHandler = () => {
-  //   setIsVisible(!isVisible);
-  // };
+
   return (
     <>
-      <Sidebar
-        isOpen={isOpen}
-        toggle={toggle}
-        // isVisible={isVisible}
-        // buttonHandler={buttonHandler}
-      />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <SectionOne />
       <HeroSection />

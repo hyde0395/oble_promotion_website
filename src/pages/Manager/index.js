@@ -34,22 +34,10 @@ function Manager() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const string = () => {
-  //   for (const key in Object.keys(B_Data)) {
-  //     return JSON.stringify(B_Data[key]);
-  //   }
-  // };
-
   return (
     <>
-      {/* {B_Data.map((value, idx) => {})} */}
       {B_Data.map((value, idx) => {
-        // let question = value.question[value.id];
-        // let answer = value.answer[value.id];
         return (
-          // <p>
-          //   {question} {answer}
-          // </p>
           <>
             <Styled.Box>
               <p style={{ color: "red" }}>{value.id}번</p>
@@ -113,63 +101,6 @@ function Manager() {
           </>
         );
       })}
-
-      {/* <Styled.Box>
-        <p>{JSON.stringify(B_Data[6].id)}</p>
-        <p>
-          {JSON.stringify(B_Data[6].question1)}{" "}
-          {JSON.stringify(B_Data[6].answer1)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question2)}{" "}
-          {JSON.stringify(B_Data[6].answer2)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question3)}{" "}
-          {JSON.stringify(B_Data[6].answer3)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question4)}{" "}
-          {JSON.stringify(B_Data[6].answer4)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question5)}{" "}
-          {JSON.stringify(B_Data[6].answer5)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question6)}{" "}
-          {JSON.stringify(B_Data[6].answer6)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question7)}{" "}
-          {JSON.stringify(B_Data[6].answer7)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question8)}{" "}
-          {JSON.stringify(B_Data[6].answer8)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question9)}{" "}
-          {JSON.stringify(B_Data[6].answer9)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question10)}{" "}
-          {JSON.stringify(B_Data[6].answer10)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question11)}{" "}
-          {JSON.stringify(B_Data[6].answer11)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question12)}{" "}
-          {JSON.stringify(B_Data[6].answer12)}
-        </p>
-        <p>
-          {JSON.stringify(B_Data[6].question13)}{" "}
-          {JSON.stringify(B_Data[6].answer13)}
-        </p>
-        <p></p>
-      </Styled.Box> */}
     </>
   );
 }

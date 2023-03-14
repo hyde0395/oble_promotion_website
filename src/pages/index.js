@@ -41,7 +41,7 @@ const Home = () => {
       <Services />
       <SectionEight />
       <Footer />
-      <KakaoButton />
+      <KakaoButton isOpen={isOpen} toggle={toggle} />
     </>
   );
 };

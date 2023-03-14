@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-const KakaoButton = () => {
+const KakaoButton = ({ isOpen, toggle }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
@@ -25,7 +25,10 @@ const KakaoButton = () => {
 
   return (
     <div
+      isOpen={isOpen}
+      onClick={toggle}
       style={{
+        opacity: `{({ isOpen }) => (isOpen ? "0" : "100")}`,
         position: "fixed",
         zIndex: "999",
         bottom: "5px",

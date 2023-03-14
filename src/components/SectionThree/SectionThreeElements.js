@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BgImg from "../../images/part.png";
 
 export const ThreeContainer = styled.div`
-  height: 400px;
+  height: 300px;
 `;
 
 export const TreeTextBox = styled.div`
@@ -19,8 +19,22 @@ export const ThreeHeadBox = styled.div`
   margin: 0;
   height: 250px;
   text-align: center;
+
+  @media screen and (max-width: 960px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 180px;
+  }
 `;
 
 export const ThreeH1 = styled.h1`
   font-size: 3.5rem;
+
+  @media screen and (max-width: 960px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;

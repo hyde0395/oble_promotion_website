@@ -9,13 +9,16 @@ export const ServicesContainer = styled.div`
   align-items: center;
   /* background: #565656; */
   margin: auto;
-
-  @media screen and (max-width: 768px) {
-    height: 1100px;
+  @media screen and (max-width: 1000px) {
+    height: 1400px;
   }
 
-  @media screen and (max-width: 480px) {
-    height: 1300px;
+  @media screen and (max-width: 768px) {
+    height: 2300px;
+  }
+
+  @media scr3een and (max-width: 480px) {
+    height: 2400px;
   }
 `;
 

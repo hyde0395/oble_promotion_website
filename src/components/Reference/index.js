@@ -76,7 +76,7 @@ const Reference = () => {
       blogName: "집오리",
       blogIconSrc: BlogIcon5,
       path: BlogPost2,
-      text: "팽택역 짬뽕 끝판왕! 교통짬뽕 스타일의 팔오반점 평택중앙점",
+      text: "평택역 짬뽕 끝판왕! 교통짬뽕 스타일의 팔오반점 평택중앙점",
     },
     {
       id: "5",
@@ -106,25 +106,27 @@ const Reference = () => {
       </RefWrapper>
       <Swiper
         modules={[Navigation, Autoplay]}
-        loop={true}
-        slidesOffsetBefore={50}
+        slidesOffsetBefore={30}
         spaceBetween={10}
-        slidesPerView={2} // 한번에 보여지는 슬라이드 요소 개수 (처음 모바일 기준으로 셋팅한다.)
-        navigation={true} // 네비게이션 버튼
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        slidesPerView={1} // 한번에 보여지는 슬라이드 요소 개수 (처음 모바일 기준으로 셋팅한다.)\
         breakpoints={{
           // 반응형을 위한 옵션: 초기 default값을 모바일 기준으로 잡아야 된다.
           768: {
             // 브라우저가 768px 보다 클때
             slidesPerView: 3,
             spaceBetween: 10,
+            slidesOffsetBefore: 50,
           },
           1024: {
             // 브라우저가 1024px 보다 클때
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 3,
+            spaceBetween: 4,
+            slidesOffsetBefore: 50,
           },
         }}
+        loop={true} //
+        navigation={true} // 네비게이션 버튼
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
       >
         <RefBox>
           <SildeBox>

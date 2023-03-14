@@ -40,6 +40,10 @@ export const SevenCard = styled.div`
     width: 440px;
     height: 180px;
   }
+  @media screen and (max-width: 768px) {
+    height: 160px;
+    width: 380px;
+  }
 `;
 
 export const SevenCardText = styled.h1`

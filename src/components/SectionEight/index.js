@@ -90,7 +90,6 @@ const SectionEight = () => {
     },
     {
       id: 6,
-      src: {},
       topText: "평택 'ㄷ'사장님 후기",
       titleText: "광고비를 150만원 넘게 절약했어요",
       mainText:

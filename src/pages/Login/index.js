@@ -36,7 +36,7 @@ function Login() {
         console.log(
           response.headers.authorization.split("=")[2].replace("}", "")
         );
-        console.log(response);
+        // console.log(response);
         Insert(response.headers.authorization.split("=")[2].replace("}", ""));
         // console.log(get);
         navigateToSurvey();
@@ -51,13 +51,8 @@ function Login() {
     // 버튼만 누르면 리프레시 되는것을 막아줌
     event.preventDefault();
     LoginUsers();
-    console.log("Id", Email);
-    console.log("Password", Password);
-
-    // let body = {
-    //   email: Email,
-    //   password: Password,
-    // };
+    // console.log("Id", Email);
+    // console.log("Password", Password);
   };
 
   return (

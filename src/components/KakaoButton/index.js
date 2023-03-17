@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Kakaobutton } from "./button.js";
+
 const KakaoButton = ({ isOpen }) => {
   useEffect(() => {
     const script = document.createElement("script");

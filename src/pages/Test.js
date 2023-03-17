@@ -136,12 +136,6 @@ const Test = () => {
   const next = useCallback(() => slickRef.current.slickNext(), []);
   const warp = useCallback((i) => slickRef.current.slickGoTo(i), []);
 
-  // const Previous_Button = () => {
-  //   return <></>;
-  // };
-
-  // const Next_Button = () => {};
-
   const page1_previous = () => {
     if (
       (state.activeSlide === 4 &&

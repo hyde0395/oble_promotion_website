@@ -15,7 +15,7 @@ import SectionEight from "../components/SectionEight";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isVisible, setIsVisible] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -34,7 +34,7 @@ const Home = () => {
       <Services />
       <SectionEight />
       <Footer />
-      <KakaoButton isOpen={isOpen} toggle={toggle} />
+      {isOpen || <KakaoButton />}
     </>
   );
 };

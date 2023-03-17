@@ -1,14 +1,17 @@
 import styled from "styled-components";
-
+import ArrowBg from "../../images/ArrowBg.png";
 // 전체 섹션 컨테이너
 export const ServicesContainer = styled.div`
   height: 900px;
   display: flex;
+  background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: #565656; */
+  background-image: URL(${ArrowBg});
+  background-repeat: no-repeat;
   margin: auto;
+
   @media screen and (max-width: 1000px) {
     height: 1400px;
   }
@@ -23,16 +26,20 @@ export const ServicesContainer = styled.div`
 `;
 
 export const ServicesWrapper = styled.div`
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 25px;
   padding: 0 40px;
+  flex-wrap: wrap;
 
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media screen and (max-width: 768px) {
@@ -43,19 +50,32 @@ export const ServicesWrapper = styled.div`
 // 각 카드 부분
 export const ServicesCard = styled.div`
   display: flex;
-  width: 280px;
+  width: 260px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   max-height: 380px;
   padding: 30px;
+  background: #ffffff;
   border: solid 1px #949494;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2 ease-in-out;
   overflow: hidden;
   margin-bottom: 10px;
   box-shadow: 10px 5px 5px #949494;
+
+  /* @media screen and (max-width: 1250px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 280px;
+  }
+
+  @media scr3een and (max-width: 480px) {
+    width: 280px;
+  } */
 
   &hover {
     transform: scale(1.02);

@@ -6,7 +6,6 @@ export const FourContainer = styled.div`
 
 export const FourContent = styled.div`
   z-index: 3;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +18,7 @@ export const FourContent = styled.div`
 // 이미지 크기
 export const FourImg = styled.img`
   width: 500px;
-  height: 650px;
+  height: 700px;
 
   @media screen and (max-width: 960px) {
     width: 100px;
@@ -32,13 +31,14 @@ export const FourImg = styled.img`
 `;
 
 export const FourTextBox = styled.div`
-  margin: 0;
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
+  justify-content: center;
+  /* align-items: center; */
+  max-width: 1600px;
+  padding-left: 5%;
 `;
 export const FourH1 = styled.h1`
-  text-align: center;
   margin-bottom: 10px;
   background-image: linear-gradient(135deg, #00b09b, #96c93d);
   background-clip: text;
@@ -60,15 +60,12 @@ export const FourP = styled.p`
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2rem;
-  padding-left: 14px;
+  font: bold;
+  /* text-align: center; */
 `;
 
 export const FourImgBox = styled.div`
   display: flex;
-
-  margin: auto;
-  padding-right: 100px;
-  padding-left: 400px;
 
   @media screen and (max-width: 960px) {
     margin-right: 0;

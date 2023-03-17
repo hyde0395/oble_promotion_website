@@ -18,10 +18,8 @@ const SectionFour = () => {
     <FourContainer id="intro">
       <FourTextBox>
         <FourH1>정답은 오블의 우리동네 인플루언서입니다</FourH1>
-        <FourP>
-          100% 개인화 마케팅 시대, <p /> 전문성을 갖춘 지역기반 인플루언서를
-          배정해드립니다
-        </FourP>
+        <FourP>100% 개인화 마케팅 시대,</FourP>
+        <FourP>전문성을 갖춘 지역기반 인플루언서를 배정해드립니다</FourP>
       </FourTextBox>
       <FourContent>
         <FourImgBox>

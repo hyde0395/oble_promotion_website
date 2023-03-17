@@ -55,6 +55,7 @@ export const SidebarLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
+  cursor: pointer;
 `;
 export const SideBtnWrap = styled.div`
   display: flex;
@@ -79,4 +80,15 @@ export const SidebarRoute = styled(LinkR)`
     background: #fff;
     color: #010606;
   }
+`;
+export const SurveyRoute = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  color: #ffffff;
 `;

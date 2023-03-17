@@ -51,14 +51,12 @@ const Services = () => {
           <ServicesIcon src={Icon4} />
           <ServicesDay>3 DAY</ServicesDay>
           <ServicesH2>콘텐츠 제작</ServicesH2>
-          <ServicesP>
-            매칭된 인플루언서는 가이드표를 기반으로 콘텐츠를 제작합니다.
-          </ServicesP>
+          <ServicesP>매칭된 인플루언서는 맞춤 콘텐츠를 제작합니다.</ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon5} />
           <ServicesDay>매월 첫 째주 월요일</ServicesDay>
-          <ServicesH2>결과보고서 제공 및 후불결제</ServicesH2>
+          <ServicesH2>결과보고서 제공, 후불결제</ServicesH2>
           <ServicesP>결과보고서 수령 후 후불결제를 진행합니다.</ServicesP>
         </ServicesCard>
       </ServicesWrapper>

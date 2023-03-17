@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  height: 900px;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
 `;
 
 export const TextWrapper = styled.div`
   height: 600px;
-  padding-top: 170px;
+  padding-top: 100px;
   @media screen and (max-width: 768px) {
     height: 500px;
   }
@@ -20,6 +22,8 @@ export const HeroTextBox = styled.div`
   text-align: center;
   margin-bottom: 200px;
   margin-top: 50px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Subtitle = styled.h2`
@@ -58,12 +62,10 @@ export const BtnBox = styled.div`
   height: 50px;
   border: 2px solid #3d85c1;
   border-radius: 50%;
-  margin-top: 100px;
+  margin-top: 30px;
   cursor: pointer;
 `;
-export const ArrowBox = styled.div`
-  display: flex;
-`;
+// 화살표 css
 export const ArrowDown = styled.div`
   left: 0;
   top: 0;

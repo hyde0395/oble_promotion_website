@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   SidebarContainer,
   Icon,
@@ -8,6 +9,7 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
+  SurveyRoute,
 } from "./SidebarElements";
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -18,7 +20,7 @@ const Sidebar = ({ isOpen, toggle }) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarRoute to="/Test">60초 자동 상담</SidebarRoute>
+            <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
             <SidebarLink to="/about">오블 소개</SidebarLink>
             <SidebarLink to="/about">진행과정</SidebarLink>
             <SidebarLink to="/about">제안서받기</SidebarLink>

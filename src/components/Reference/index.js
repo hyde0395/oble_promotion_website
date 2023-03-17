@@ -101,6 +101,7 @@ const Reference = () => {
       <RefWrapper>
         <RefTextWrapper>
           <RefH1>전문성 100%</RefH1>
+          <p />
           <RefPH1> 인플루언서 리뷰 컨텐츠</RefPH1>
         </RefTextWrapper>
       </RefWrapper>

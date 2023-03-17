@@ -7,7 +7,6 @@ import {
   Subtitle,
   BtnBox,
   BtnText,
-  ArrowBox,
   ArrowDown,
 } from "./SectionOneElements";
 import { Link } from "react-scroll";
@@ -23,9 +22,7 @@ const SectionOne = () => {
       </TextWrapper>
       <Link to="HeroSection" spy={true} smooth={true}>
         <BtnBox>
-          <ArrowBox>
-            <ArrowDown></ArrowDown>
-          </ArrowBox>
+          <ArrowDown></ArrowDown>
         </BtnBox>
       </Link>
 

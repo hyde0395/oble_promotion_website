@@ -11,7 +11,6 @@ export const ServicesContainer = styled.div`
   background-image: URL(${ArrowBg});
   background-repeat: no-repeat;
   margin: auto;
-  z-index: -999;
 
   @media screen and (max-width: 1000px) {
     height: 1400px;
@@ -34,9 +33,13 @@ export const ServicesWrapper = styled.div`
   align-items: center;
   grid-gap: 25px;
   padding: 0 40px;
+  flex-wrap: wrap;
 
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media screen and (max-width: 768px) {
@@ -47,7 +50,7 @@ export const ServicesWrapper = styled.div`
 // 각 카드 부분
 export const ServicesCard = styled.div`
   display: flex;
-  width: 250px;
+  width: 260px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -62,7 +65,7 @@ export const ServicesCard = styled.div`
   margin-bottom: 10px;
   box-shadow: 10px 5px 5px #949494;
 
-  @media screen and (max-width: 1250px) {
+  /* @media screen and (max-width: 1250px) {
     width: 200px;
   }
 
@@ -72,7 +75,7 @@ export const ServicesCard = styled.div`
 
   @media scr3een and (max-width: 480px) {
     width: 280px;
-  }
+  } */
 
   &hover {
     transform: scale(1.02);

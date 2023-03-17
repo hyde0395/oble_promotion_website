@@ -3,7 +3,7 @@ import styled from "styled-components";
 // 전체 컨테이너
 export const EightContainer = styled.div`
   height: 1000px;
-  background-color: #aeaeae;
+  background-color: #3d85c1;
 `;
 // 위쪽 메인 텍스트 감싸는 div
 export const EightTextWrap = styled.div`

@@ -11,7 +11,9 @@ import {
   SidebarRoute,
   SurveyRoute,
 } from "./SidebarElements";
+import { useLocation } from "react-router-dom";
 const Sidebar = ({ isOpen, toggle }) => {
+  const location = useLocation();
   return (
     <>
       <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -20,10 +22,21 @@ const Sidebar = ({ isOpen, toggle }) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
-            <SidebarLink to="/about">오블 소개</SidebarLink>
-            <SidebarLink to="/about">진행과정</SidebarLink>
-            <SidebarLink to="/about">제안서받기</SidebarLink>
+            {location.pathname === "/" ? (
+              <>
+                <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
+                <SidebarLink to="intro">오블 소개</SidebarLink>
+                <SidebarLink to="service">진행과정</SidebarLink>
+                <SidebarLink to="section7">제안서받기</SidebarLink>
+              </>
+            ) : (
+              <>
+                <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
+                <SidebarLink to="/">오블 소개</SidebarLink>
+                <SidebarLink to="/">진행과정</SidebarLink>
+                <SidebarLink to="/">제안서받기</SidebarLink>
+              </>
+            )}
           </SidebarMenu>
           <SideBtnWrap>
             <SidebarRoute to="/Test">상담받아보기</SidebarRoute>

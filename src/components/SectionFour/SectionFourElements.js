@@ -18,7 +18,7 @@ export const FourContent = styled.div`
 // 이미지 크기
 export const FourImg = styled.img`
   width: 500px;
-  height: 650px;
+  height: 700px;
 
   @media screen and (max-width: 960px) {
     width: 100px;
@@ -34,8 +34,9 @@ export const FourTextBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-items: center;
-  max-width: 1500px;
+  /* align-items: center; */
+  max-width: 1600px;
+  padding-left: 5%;
 `;
 export const FourH1 = styled.h1`
   margin-bottom: 10px;
@@ -65,10 +66,6 @@ export const FourP = styled.p`
 
 export const FourImgBox = styled.div`
   display: flex;
-
-  margin: auto;
-  padding-right: 100px;
-  padding-left: 400px;
 
   @media screen and (max-width: 960px) {
     margin-right: 0;

@@ -42,6 +42,7 @@ export const SixTextBox = styled.div`
   height: 300px;
   color: #ffffff;
   margin-bottom: 200px; // 텍스트 아래 여백 설정
+  
 `;
 export const SixH1 = styled.h1`
   margin-bottom: 10px;
@@ -58,7 +59,7 @@ export const SixH1Two = styled.h1`
   margin-bottom: 10px;
   text-decoration: underline;
   text-underline-offset: 14px;
-  font-size: 60px;
+  font-size: 3.5rem;
   @media screen and (max-width: 960px) {
     font-size: 3rem;
   }

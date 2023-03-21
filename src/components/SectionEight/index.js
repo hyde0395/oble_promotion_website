@@ -123,7 +123,6 @@ const SectionEight = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
-          slidesOffsetBefore={38}
           // slidesOffsetAfter={10}
           spaceBetween={5}
           slidesPerView={2}
@@ -135,11 +134,13 @@ const SectionEight = () => {
               // 브라우저가 768px 보다 클때
               slidesPerView: 3,
               spaceBetween: 10,
+              slidesOffsetBefore: 38,
             },
             1024: {
               // 브라우저가 1024px 보다 클때
               slidesPerView: 5,
               spaceBetween: 10,
+              slidesOffsetBefore: 38,
             },
           }}
         >

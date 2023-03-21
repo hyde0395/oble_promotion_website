@@ -108,6 +108,9 @@ const Reference = () => {
       <Swiper
         modules={[Navigation, Autoplay]}
         slidesOffsetBefore={30}
+        style={{
+          "--swiper-navigation-color": "#ffffff",
+        }}
         spaceBetween={10}
         slidesPerView={1} // 한번에 보여지는 슬라이드 요소 개수 (처음 모바일 기준으로 셋팅한다.)\
         breakpoints={{
@@ -120,7 +123,7 @@ const Reference = () => {
           },
           1024: {
             // 브라우저가 1024px 보다 클때
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 4,
             slidesOffsetBefore: 50,
           },

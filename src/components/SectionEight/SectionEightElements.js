@@ -3,7 +3,7 @@ import styled from "styled-components";
 // 전체 컨테이너
 export const EightContainer = styled.div`
   height: 1000px;
-  background-color: #3d85c1;
+  background-color: #3b68d9;
 `;
 // 위쪽 메인 텍스트 감싸는 div
 export const EightTextWrap = styled.div`
@@ -17,6 +17,13 @@ export const EightContent = styled.div``;
 export const EightH1 = styled.h1`
   font-size: 54px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH1Line = styled.h1`
@@ -24,6 +31,12 @@ export const EightH1Line = styled.h1`
   box-shadow: inset 0 -30px 0 #eaff2f; //-값을 높이면 두께가 더 두꺼워짐
   line-height: 21px;
   display: inline;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH2 = styled.h2`

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ArrowBg from "../../images/ArrowBg.png";
 // 전체 섹션 컨테이너
 export const ServicesContainer = styled.div`
-  height: 900px;
+  height: 1000px;
   display: flex;
   background-size: cover;
   flex-direction: column;
@@ -95,9 +95,10 @@ export const ServicesIcon = styled.img`
 export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 24px;
+  text-align: center;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 

@@ -91,4 +91,5 @@ export const SurveyRoute = styled(LinkR)`
   transition: 0.2s ease-in-out;
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
 `;

@@ -29,9 +29,15 @@ const Navbar = ({ toggle }) => {
               {location.pathname === "/" ? (
                 <>
                   <SurveyLink to="/Test">60초 자동 상담</SurveyLink>
-                  <NavLinks to="intro">오블소개</NavLinks>
-                  <NavLinks to="service">진행과정</NavLinks>
-                  <NavLinks to="section7">제안서받기</NavLinks>
+                  <NavLinks to="intro" smooth={true}>
+                    오블소개
+                  </NavLinks>
+                  <NavLinks to="service" smooth={true}>
+                    진행과정
+                  </NavLinks>
+                  <NavLinks to="section7" smooth={true}>
+                    제안서받기
+                  </NavLinks>
                 </>
               ) : (
                 <>

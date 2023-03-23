@@ -5,7 +5,6 @@ export const SurveyContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 // 맨위 제목 스타일
 export const TitleStyled = styled.div`
   margin-top: 270px;

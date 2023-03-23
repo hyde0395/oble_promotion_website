@@ -8,6 +8,7 @@ import {
   SevenCardText,
   SevenBtn,
   SevenH2,
+  Inline,
 } from "./SectionSevenElements";
 import axios from "axios";
 
@@ -33,7 +34,11 @@ const SectionSeven = () => {
   };
   return (
     <SevenContainer id="section7">
-      <SevenH1>광고주 님의 비용걱정을 해소 해드립니다!</SevenH1>
+      <SevenH1>
+        <Inline>광고주 님의 비용걱정을 </Inline>
+        <Inline>해소 해드립니다!</Inline>
+      </SevenH1>
+
       <SevenBox>
         <SevenH1Two>믿을 수 있는 후불결제</SevenH1Two>
         <SevenCard>

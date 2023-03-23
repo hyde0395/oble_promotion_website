@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SevenContainer = styled.div`
   height: 900px;
-  padding-top: 100px;
+  padding-top: 130px;
 `;
 
 export const SevenBox = styled.div`
@@ -14,9 +14,30 @@ export const SevenBox = styled.div`
   height: 600px;
   margin-top: 50px;
 `;
+
+export const Inline = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    display: block;
+  }
+`;
+
 export const SevenH1 = styled.h1`
   text-align: center;
   font-size: 72px;
+
+  @media screen and (max-width: 968px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    display: block;
+  }
 `;
 
 export const SevenH1Two = styled.h1`

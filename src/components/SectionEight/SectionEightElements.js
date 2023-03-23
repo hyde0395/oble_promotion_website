@@ -3,7 +3,7 @@ import styled from "styled-components";
 // 전체 컨테이너
 export const EightContainer = styled.div`
   height: 1000px;
-  background-color: #3d85c1;
+  background-color: #3b68d9;
 `;
 // 위쪽 메인 텍스트 감싸는 div
 export const EightTextWrap = styled.div`
@@ -17,6 +17,13 @@ export const EightContent = styled.div``;
 export const EightH1 = styled.h1`
   font-size: 54px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH1Line = styled.h1`
@@ -24,11 +31,24 @@ export const EightH1Line = styled.h1`
   box-shadow: inset 0 -30px 0 #eaff2f; //-값을 높이면 두께가 더 두꺼워짐
   line-height: 21px;
   display: inline;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH2 = styled.h2`
   font-size: 40px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH2Line = styled.h2`
@@ -36,6 +56,13 @@ export const EightH2Line = styled.h2`
   text-decoration: underline;
   text-underline-offset: 5px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 export const HeadNav = styled.div`
   top: 0;
@@ -46,11 +73,18 @@ export const HeadNav = styled.div`
 
 // 사장님들 후기 슬라이드 카드
 export const HeadCard = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 300px;
   width: 270px;
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+
+  @media (max-width: 400px) {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export const HeadTitleText = styled.p`
@@ -90,6 +124,14 @@ export const SlideImg = styled.img`
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 400px) {
+    width: 200px;
+    height: 100px;
+  }
 `;
 export const HeadSlideWrap = styled.div`
   max-width: 1780px;
@@ -98,4 +140,12 @@ export const HeadSlideWrap = styled.div`
 
 export const SubSlideWrap = styled.div`
   margin-top: 170px;
+`;
+
+export const Inline = styled.p`
+  display: inline;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;

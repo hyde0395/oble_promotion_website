@@ -18,6 +18,7 @@ import {
   HeadMainText,
   EightH1Line,
   MaintextWrapper,
+  Inline,
 } from "./SectionEightElements";
 import subImg1 from "../../images/CompanyLogo/logo1.png";
 import subImg2 from "../../images/CompanyLogo/logo2.png";
@@ -110,11 +111,16 @@ const SectionEight = () => {
   return (
     <EightContainer>
       <EightTextWrap>
-        <EightH1>오블은, 경기남부대학 </EightH1>
+        <EightH1>
+          <Inline>오블은,</Inline> <Inline>경기남부대학</Inline>
+        </EightH1>
         <EightH1Line>최우수 스타트업 기업</EightH1Line>
         <EightH1>이며</EightH1>
         <p />
-        <EightH2>수 많은 기업들이 </EightH2>
+        <Inline>
+          <EightH2>수 많은 기업들이 </EightH2>
+        </Inline>
+
         <EightH2Line>직접</EightH2Line>
         <EightH2> 찾아주시고 있습니다</EightH2>
       </EightTextWrap>
@@ -125,7 +131,7 @@ const SectionEight = () => {
           loop={true}
           // slidesOffsetAfter={10}
           spaceBetween={5}
-          slidesPerView={2}
+          slidesPerView={1}
           navigation={true} // 네비게이션 버튼
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           breakpoints={{
@@ -166,7 +172,7 @@ const SectionEight = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
-          spaceBetween={10}
+          spaceBetween={20}
           slidesPerView={2}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           breakpoints={{

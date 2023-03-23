@@ -42,6 +42,13 @@ export const EightH1Line = styled.h1`
 export const EightH2 = styled.h2`
   font-size: 40px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 
 export const EightH2Line = styled.h2`
@@ -49,6 +56,13 @@ export const EightH2Line = styled.h2`
   text-decoration: underline;
   text-underline-offset: 5px;
   display: inline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 2rem;
+  }
 `;
 export const HeadNav = styled.div`
   top: 0;
@@ -59,11 +73,18 @@ export const HeadNav = styled.div`
 
 // 사장님들 후기 슬라이드 카드
 export const HeadCard = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 300px;
   width: 270px;
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+
+  @media (max-width: 400px) {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export const HeadTitleText = styled.p`
@@ -103,6 +124,14 @@ export const SlideImg = styled.img`
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 400px) {
+    width: 200px;
+    height: 100px;
+  }
 `;
 export const HeadSlideWrap = styled.div`
   max-width: 1780px;
@@ -111,4 +140,12 @@ export const HeadSlideWrap = styled.div`
 
 export const SubSlideWrap = styled.div`
   margin-top: 170px;
+`;
+
+export const Inline = styled.p`
+  display: inline;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;

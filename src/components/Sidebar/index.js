@@ -12,6 +12,7 @@ import {
   SurveyRoute,
 } from "./SidebarElements";
 import { useLocation } from "react-router-dom";
+
 const Sidebar = ({ isOpen, toggle }) => {
   const location = useLocation();
   return (
@@ -24,23 +25,42 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarMenu>
             {location.pathname === "/" ? (
               <>
-                <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
-                <SidebarLink to="intro">오블 소개</SidebarLink>
-                <SidebarLink to="service">진행과정</SidebarLink>
-                <SidebarLink to="section7">제안서받기</SidebarLink>
+                <SurveyRoute onClick={toggle} to="/Test">
+                  60초 자동 상담
+                </SurveyRoute>
+                <SidebarLink onClick={toggle} to="intro" smooth={true}>
+                  오블 소개
+                </SidebarLink>
+                <SidebarLink onClick={toggle} to="service" smooth={true}>
+                  진행과정
+                </SidebarLink>
+                <SidebarLink onClick={toggle} to="section7" smooth={true}>
+                  제안서받기
+                </SidebarLink>
               </>
             ) : (
               <>
                 <SurveyRoute to="/Test">60초 자동 상담</SurveyRoute>
-                <SidebarLink to="/">오블 소개</SidebarLink>
-                <SidebarLink to="/">진행과정</SidebarLink>
-                <SidebarLink to="/">제안서받기</SidebarLink>
+                <SurveyRoute to="/">오블 소개</SurveyRoute>
+                <SurveyRoute to="/">진행과정</SurveyRoute>
+                <SurveyRoute to="/">제안서 받기</SurveyRoute>
               </>
             )}
           </SidebarMenu>
-          <SideBtnWrap>
-            <SidebarRoute to="/Test">상담받아보기</SidebarRoute>
-          </SideBtnWrap>
+
+          {location.pathname === "/" ? (
+            <>
+              <SideBtnWrap>
+                <SidebarRoute to="/Test">상담받아보기</SidebarRoute>
+              </SideBtnWrap>
+            </>
+          ) : (
+            <>
+              <SideBtnWrap>
+                <SidebarRoute to="/">상담받아보기</SidebarRoute>
+              </SideBtnWrap>
+            </>
+          )}
         </SidebarWrapper>
       </SidebarContainer>
     </>

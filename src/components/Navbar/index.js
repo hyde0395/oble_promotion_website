@@ -49,6 +49,7 @@ const Navbar = ({ toggle }) => {
               )}
             </NavItem>
           </NavMenu>
+
           <NavBtn>
             <NavBtnLink to="/Test">상담 받아보기</NavBtnLink>
           </NavBtn>

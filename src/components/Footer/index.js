@@ -12,7 +12,6 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <LoginA href="/login"> ddd</LoginA>
         <FooterLogo src={Logo} />
         <FooterTextWrap>
           <FooterText>오블</FooterText>
@@ -27,6 +26,7 @@ const Footer = () => {
           </FooterText>
           <FooterText>Copyright © 2023 Oble. All rights reserved.</FooterText>
         </FooterTextWrap>
+        <LoginA href="/login"> ddd</LoginA>
       </FooterWrap>
     </FooterContainer>
   );

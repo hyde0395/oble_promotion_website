@@ -75,7 +75,8 @@ export const HeadNav = styled.div`
 export const HeadCard = styled.div`
   display: flex;
   flex-direction: column;
-  height: 300px;
+  justify-content: center;
+  height: 400px;
   width: 270px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -148,4 +149,12 @@ export const Inline = styled.p`
   @media (max-width: 768px) {
     display: block;
   }
+`;
+
+export const MainImgs = styled.img`
+  height: 200px;
+  width: 220px;
+  margin: auto;
+  padding: 5px;
+  display: block;
 `;

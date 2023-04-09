@@ -9,6 +9,7 @@ import {
   BtnText,
   ArrowDown,
   ScrollText,
+  Inline,
 } from "./SectionOneElements";
 import { Link } from "react-scroll";
 
@@ -22,14 +23,20 @@ const SectionOne = () => {
             아시다 싶이 <HeadLine>입소문</HeadLine>입니다.
           </Subtitle>
           <Subtitle>
-            오블은 <HeadLine>입소문</HeadLine>을 가장 효율적으로 활용하여
-            합리적인 마케팅을 추구합니다.
+            <Inline>
+              오블은 <HeadLine>입소문</HeadLine>을 가장 효율적으로
+            </Inline>
+            활용하여 합리적인 마케팅을 추구합니다.
           </Subtitle>
-          <ScrollText>
-            -입소문으로 무장한 합리적인 마케팅 방법 확인하기
-          </ScrollText>
         </HeroTextBox>
       </TextWrapper>
+      <ScrollText>
+        -
+        <div style={{ color: "#3d85c1", display: "inline" }}>
+          입소문으로 무장한
+        </div>{" "}
+        합리적인 마케팅 방법 확인하기
+      </ScrollText>
       <Link to="HeroSection" spy={true} smooth={true}>
         <BtnBox>
           <ArrowDown></ArrowDown>

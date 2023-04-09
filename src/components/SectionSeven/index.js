@@ -35,7 +35,7 @@ const SectionSeven = () => {
   return (
     <SevenContainer id="section7">
       <SevenH1>
-        <Inline>광고주 님의 비용걱정을 </Inline>
+        <Inline>사장님의 비용걱정을 </Inline>
         <Inline>해소 해드립니다!</Inline>
       </SevenH1>
 

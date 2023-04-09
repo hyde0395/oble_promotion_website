@@ -15,6 +15,10 @@ export const HeroTextBox = styled.div`
   @media screen and (max-width: 480px) {
     margin-left: 0;
   }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 300px;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -78,10 +82,12 @@ export const BtnText = styled.div`
 `;
 
 export const ScrollText = styled.h1`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
   margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
@@ -89,5 +95,13 @@ export const ScrollText = styled.h1`
 
   @media screen and (max-width: 480px) {
     font-size: 1rem;
+  }
+`;
+
+export const Inline = styled.div`
+  display: inline;
+
+  @media screen and (max-width: 1600px) {
+    display: block;
   }
 `;

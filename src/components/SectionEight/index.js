@@ -42,7 +42,7 @@ const SectionEight = () => {
     {
       id: 1,
       src: { subImg1 },
-      topText: "평택 'ㄷ'사장님 후기",
+      topText: "평택 'ㅋ'사장님 후기",
       MainImgSrc: mainImg1,
       titleText: "후불로 결제할 수 있어서 너무 좋아요!",
       mainText:
@@ -60,7 +60,7 @@ const SectionEight = () => {
     {
       id: 3,
       src: {},
-      topText: "평택 'ㄷ'사장님 후기",
+      topText: "평택 'ㅇ'사장님 후기",
       MainImgSrc: mainImg3,
       titleText: "인플루언서의 특성을 알려줘서 마음에 쏙 들어요",
       mainText:
@@ -69,7 +69,7 @@ const SectionEight = () => {
     {
       id: 4,
       src: {},
-      topText: "평택 'ㄷ'사장님 후기",
+      topText: "평택 'ㅌ'사장님 후기",
       MainImgSrc: mainImg4,
       titleText: "소통이 너무 빠르고 1:1매칭이 만족스럽습니다",
       mainText:

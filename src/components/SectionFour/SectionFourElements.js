@@ -44,10 +44,10 @@ export const FourH1 = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 81px;
+  font-size: 3.5rem;
 
   @media screen and (max-width: 960px) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   @media screen and (max-width: 768px) {
     font-size: 3rem;

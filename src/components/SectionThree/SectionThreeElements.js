@@ -3,6 +3,7 @@ import BgImg from "../../images/part.png";
 
 export const ThreeContainer = styled.div`
   height: 300px;
+  padding-top: 130px;
 `;
 
 export const TreeTextBox = styled.div`
@@ -29,7 +30,7 @@ export const ThreeHeadBox = styled.div`
 `;
 
 export const ThreeH1 = styled.h1`
-  font-size: 3.5rem;
+  font-size: 2.8rem;
 
   @media screen and (max-width: 960px) {
     font-size: 2.5rem;

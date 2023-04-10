@@ -11,6 +11,7 @@ export const ServicesContainer = styled.div`
   background-image: URL(${ArrowBg});
   background-repeat: no-repeat;
   margin: auto;
+  overflow: hidden;
 
   @media screen and (max-width: 1000px) {
     height: 1400px;
@@ -26,14 +27,15 @@ export const ServicesContainer = styled.div`
 `;
 
 export const ServicesWrapper = styled.div`
-  max-width: 1400px;
+  max-width: 100vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  grid-gap: 25px;
+  grid-gap: 20px;
   padding: 0 40px;
   flex-wrap: wrap;
+  overflow: hidden;
 
   @media screen and (max-width: 1300px) {
     grid-template-columns: 1fr 1fr 1fr;

@@ -75,7 +75,8 @@ export const HeadNav = styled.div`
 export const HeadCard = styled.div`
   display: flex;
   flex-direction: column;
-  height: 300px;
+  justify-content: center;
+  height: 447px;
   width: 270px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -90,7 +91,7 @@ export const HeadCard = styled.div`
 export const HeadTitleText = styled.p`
   font-size: 18px;
   font-weight: 300;
-  padding: 5px 5px 10px 10px;
+  padding: 15px 5px 10px 10px;
   color: #56a2d5;
 `;
 
@@ -102,20 +103,14 @@ export const MaintextWrapper = styled.div`
 
 export const HeadMainText = styled.p`
   font-size: 14px;
-  padding: 7px 7px 13px 13px;
-`;
-// headcard Nav부분의 아이콘
-export const HeadIcon = styled.img`
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  margin-top: 9px;
+  padding: 7px 7px 30px 13px;
 `;
 
 export const HeadP = styled.p`
   font-size: 18px;
   margin: auto 0;
-  padding-left: 18px;
+  text-align: center;
+  padding-top: 15px;
 `;
 
 // 광고주 기업 로고 이미지
@@ -139,7 +134,7 @@ export const HeadSlideWrap = styled.div`
 `;
 
 export const SubSlideWrap = styled.div`
-  margin-top: 170px;
+  margin-top: 200px;
 `;
 
 export const Inline = styled.p`
@@ -148,4 +143,11 @@ export const Inline = styled.p`
   @media (max-width: 768px) {
     display: block;
   }
+`;
+
+export const MainImgs = styled.img`
+  height: 220px;
+  width: 240px;
+  margin: auto;
+  display: block;
 `;

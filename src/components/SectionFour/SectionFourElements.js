@@ -36,7 +36,7 @@ export const FourTextBox = styled.div`
   justify-content: center;
   /* align-items: center; */
   max-width: 1600px;
-  padding-left: 5%;
+  padding-left: 15%;
 `;
 export const FourH1 = styled.h1`
   margin-bottom: 10px;
@@ -44,10 +44,10 @@ export const FourH1 = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 81px;
+  font-size: 3.5rem;
 
   @media screen and (max-width: 960px) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   @media screen and (max-width: 768px) {
     font-size: 3rem;
@@ -82,7 +82,7 @@ export const FourImgBox = styled.div`
 `;
 
 export const FourListBox = styled.div`
-  margin-right: 10px;
+  padding-left: 10px;
   margin-bottom: 100px;
 `;
 

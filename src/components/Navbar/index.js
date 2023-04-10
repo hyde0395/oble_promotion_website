@@ -14,11 +14,11 @@ import {
 } from "./NavbarElements";
 import { useLocation } from "react-router-dom";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, scroll }) => {
   const location = useLocation();
   return (
     <>
-      <Nav>
+      <Nav scroll={scroll}>
         <NavbarContainer>
           <NavLogo to="/">OH! BLE</NavLogo>
           <MobileIcon onClick={toggle}>

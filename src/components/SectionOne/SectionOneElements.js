@@ -1,59 +1,55 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
   height: 100vh;
+  background: #1f274d;
 `;
 
-export const TextWrapper = styled.div`
-  height: 600px;
-  padding-top: 100px;
-  @media screen and (max-width: 768px) {
-    height: 500px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 500px;
-  }
-`;
+export const TextWrapper = styled.div``;
 
 export const HeroTextBox = styled.div`
-  text-align: center;
   margin-bottom: 200px;
-  margin-top: 50px;
-  align-items: center;
-  justify-content: center;
+  padding-top: 100px;
+  margin-left: 15%;
+
+  @media screen and (max-width: 480px) {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 300px;
+  }
 `;
 
 export const Subtitle = styled.h2`
-  font-size: 100px;
-  font-weight: 900;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
 
   @media screen and (max-width: 768px) {
-    font-size: 80px;
+    font-size: 2.5rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 60px;
+    font-size: 1.5rem;
   }
 `;
 
 export const HeadLine = styled.h1`
-  font-size: 110px;
-  font-weight: 900;
+  font-size: 3rem;
+  font-weight: 600;
   background-image: linear-gradient(120deg, #7d6ae7, #56a2d5);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  display: inline;
 
   @media screen and (max-width: 768px) {
-    font-size: 80px;
+    font-size: 2.5rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 60px;
+    font-size: 1.5rem;
   }
 `;
 
@@ -63,7 +59,6 @@ export const BtnBox = styled.div`
   height: 50px;
   border: 2px solid #3d85c1;
   border-radius: 50%;
-  margin-top: 30px;
   cursor: pointer;
 `;
 // 화살표 css
@@ -84,4 +79,29 @@ export const BtnText = styled.div`
   text-align: center;
   color: #3d85c1;
   cursor: pointer;
+`;
+
+export const ScrollText = styled.h1`
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
+
+export const Inline = styled.div`
+  display: inline;
+
+  @media screen and (max-width: 1600px) {
+    display: block;
+  }
 `;

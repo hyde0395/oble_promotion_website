@@ -12,6 +12,9 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: ${({ scroll }) => (scroll ? `none` : `2px solid`)};
+  border-image: linear-gradient(120deg, #7d6ae7, #56a2d5);
+  border-image-slice: 1;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -25,18 +28,19 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
+  bottom: solid 1px #ffffff;
 `;
 
 export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 15%;
 `;
 
 export const MobileIcon = styled.div`
@@ -59,7 +63,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  margin-right: 5%;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -79,9 +83,10 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  color: #ffffff;
 `;
 export const SurveyLink = styled(LinkR)`
-  color: #fff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -104,7 +109,7 @@ export const NavBtnLink = styled(LinkR)`
   background: #3854e0;
   white-space: nowrap;
   padding: 12px 22px;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   outline: none;
   border: none;

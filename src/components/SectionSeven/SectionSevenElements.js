@@ -29,7 +29,7 @@ export const Inline = styled.div`
 
 export const SevenH1 = styled.h1`
   text-align: center;
-  font-size: 72px;
+  font-size: 3rem;
 
   @media screen and (max-width: 968px) {
     font-size: 2rem;
@@ -41,18 +41,19 @@ export const SevenH1 = styled.h1`
 `;
 
 export const SevenH1Two = styled.h1`
-  font-size: 72px;
+  font-size: 3rem;
   text-align: center;
+  padding-top: 20px;
 `;
 
 export const SevenCard = styled.div`
   display: flex;
   justify-content: center;
   justify-items: center;
-  height: 220px;
-  width: 600px;
+  height: 120px;
+  width: 360px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 40px;
   border-radius: 18px;
   background-image: linear-gradient(135deg, #7d6ae7, #56a2d5);
@@ -71,7 +72,7 @@ export const SevenCardText = styled.h1`
   color: #ffffff;
   padding-top: 20px;
   text-align: center;
-  font-size: 117px;
+  font-size: 3rem;
   @media screen and (max-width: 768px) {
     font-size: 80px;
   }
@@ -98,4 +99,11 @@ export const SevenBtn = styled.div`
 export const SevenH2 = styled.h2`
   text-align: center;
   font-size: 24px;
+`;
+
+export const Seventext = styled.h2`
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 50px;
+  color: #ffffff;
 `;

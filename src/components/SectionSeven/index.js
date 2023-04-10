@@ -9,6 +9,7 @@ import {
   SevenBtn,
   SevenH2,
   Inline,
+  Seventext,
 } from "./SectionSevenElements";
 import axios from "axios";
 
@@ -35,14 +36,15 @@ const SectionSeven = () => {
   return (
     <SevenContainer id="section7">
       <SevenH1>
-        <Inline>광고주 님의 비용걱정을 </Inline>
+        <Inline>사장님의 비용걱정을 </Inline>
         <Inline>해소 해드립니다!</Inline>
+        <SevenH1Two>믿을 수 있는 후불결제</SevenH1Two>
       </SevenH1>
 
       <SevenBox>
-        <SevenH1Two>믿을 수 있는 후불결제</SevenH1Two>
         <SevenCard>
           <SevenCardText>12,900원</SevenCardText>
+          <Seventext>(건당)</Seventext>
         </SevenCard>
         <SevenH2>
           광고가 마무리 된 후<p />

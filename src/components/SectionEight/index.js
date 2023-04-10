@@ -12,7 +12,6 @@ import {
   SlideImg,
   SubSlideWrap,
   HeadNav,
-  HeadIcon,
   HeadP,
   HeadTitleText,
   HeadMainText,
@@ -126,7 +125,7 @@ const SectionEight = () => {
     <EightContainer>
       <EightTextWrap>
         <EightH1>
-          <Inline>오블은,</Inline> <Inline>경기남부대학</Inline>
+          <Inline>오블은 </Inline> <Inline>경기남부대학 </Inline>
         </EightH1>
         <EightH1Line>최우수 스타트업 기업</EightH1Line>
         <EightH1>이며</EightH1>
@@ -164,11 +163,9 @@ const SectionEight = () => {
             return (
               <SwiperSlide key={headItems.id}>
                 <HeadCard>
-                  <HeadNav>
-                    <HeadIcon />
-                    <HeadP>{headItems.topText}</HeadP>
-                  </HeadNav>
+                  <HeadNav></HeadNav>
                   <MainImgs src={headItems.MainImgSrc} />
+                  <HeadP>{headItems.topText}</HeadP>
                   <HeadTitleText>{headItems.titleText}</HeadTitleText>
                   <MaintextWrapper>
                     <HeadMainText>{headItems.mainText}</HeadMainText>

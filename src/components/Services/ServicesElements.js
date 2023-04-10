@@ -3,7 +3,6 @@ import ArrowBg from "../../images/ArrowBg.png";
 // 전체 섹션 컨테이너
 export const ServicesContainer = styled.div`
   height: 1000px;
-  width: 100vw;
   display: flex;
   background-size: cover;
   flex-direction: column;
@@ -28,7 +27,7 @@ export const ServicesContainer = styled.div`
 `;
 
 export const ServicesWrapper = styled.div`
-  max-width: 1700px;
+  max-width: 100vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -36,6 +35,7 @@ export const ServicesWrapper = styled.div`
   grid-gap: 20px;
   padding: 0 40px;
   flex-wrap: wrap;
+  overflow: hidden;
 
   @media screen and (max-width: 1300px) {
     grid-template-columns: 1fr 1fr 1fr;

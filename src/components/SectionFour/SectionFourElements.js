@@ -36,7 +36,7 @@ export const FourTextBox = styled.div`
   justify-content: center;
   /* align-items: center; */
   max-width: 1600px;
-  padding-left: 5%;
+  padding-left: 15%;
 `;
 export const FourH1 = styled.h1`
   margin-bottom: 10px;
@@ -82,7 +82,7 @@ export const FourImgBox = styled.div`
 `;
 
 export const FourListBox = styled.div`
-  margin-right: 10px;
+  padding-left: 10px;
   margin-bottom: 100px;
 `;
 

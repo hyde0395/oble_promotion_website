@@ -28,7 +28,6 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
   bottom: solid 1px #ffffff;
 `;
 
@@ -41,6 +40,7 @@ export const NavLogo = styled(LinkR)`
   align-items: center;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 15%;
 `;
 
 export const MobileIcon = styled.div`
@@ -63,7 +63,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  margin-right: 5%;
 
   @media screen and (max-width: 768px) {
     display: none;

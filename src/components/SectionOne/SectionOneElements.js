@@ -8,9 +8,9 @@ export const HeroContainer = styled.div`
 export const TextWrapper = styled.div``;
 
 export const HeroTextBox = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   padding-top: 100px;
-  margin-left: 20%;
+  margin-left: 15%;
 
   @media screen and (max-width: 480px) {
     margin-left: 0;
@@ -82,7 +82,7 @@ export const BtnText = styled.div`
 `;
 
 export const ScrollText = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #ffffff;
   margin-top: 30px;
